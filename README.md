@@ -9,7 +9,7 @@ DO UZUPEŁNIENIA
 
 ## Demo
 
-DO UZUPEŁNIENIA
+https://wdp-2001-01.netlify.com/
 
 ## Inicjacja projektu
 
