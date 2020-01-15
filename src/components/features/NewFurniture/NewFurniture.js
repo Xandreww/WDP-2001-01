@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 import styles from './NewFurniture.module.scss';
 import ProductBox from '../../common/ProductBox/ProductBox';
 
+import Swipeable from '../../common/Swipeable/Swipeable';
+
 class NewFurniture extends React.Component {
   state = {
     activePage: 0,
@@ -18,6 +20,16 @@ class NewFurniture extends React.Component {
     this.setState({ activeCategory: newCategory });
   }
 
+  rightAction() {
+    const newPage = this.state.activePage;
+    this.setState({ activePage: newPage + 1 });
+  }
+
+  leftAction() {
+    const newPage = this.state.activePage;
+    this.setState({ activePage: newPage - 1 });
+  }
+
   render() {
     const { categories, products } = this.props;
     const { activeCategory, activePage } = this.state;
@@ -26,6 +38,7 @@ class NewFurniture extends React.Component {
     const pagesCount = Math.ceil(categoryProducts.length / 8);
 
     const dots = [];
+    const pages = [];
     for (let i = 0; i < pagesCount; i++) {
       dots.push(
         <li>
@@ -37,7 +50,21 @@ class NewFurniture extends React.Component {
           </a>
         </li>
       );
+
+      pages.push(
+        <div className={'row' + ' ' + styles.swipeElement}>
+          {categoryProducts.slice(activePage * 8, (activePage + 1) * 8).map(item => (
+            <div key={item.id} className='col-3'>
+              <ProductBox {...item} />
+            </div>
+          ))}
+        </div>
+      );
     }
+
+    const renderPages = () => {
+      return pages;
+    };
 
     return (
       <div className={styles.root}>
@@ -66,13 +93,7 @@ class NewFurniture extends React.Component {
               </div>
             </div>
           </div>
-          <div className='row'>
-            {categoryProducts.slice(activePage * 8, (activePage + 1) * 8).map(item => (
-              <div key={item.id} className='col-3'>
-                <ProductBox {...item} />
-              </div>
-            ))}
-          </div>
+          <Swipeable>{renderPages()}</Swipeable>
         </div>
       </div>
     );
