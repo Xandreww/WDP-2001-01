@@ -11,9 +11,12 @@ import {
 import { faStar as farStar, faHeart } from '@fortawesome/free-regular-svg-icons';
 import Button from '../Button/Button';
 
-const ProductBox = ({ name, price, promo, stars }) => (
+const pathToImages = '../../../../public/images/furniture/';
+
+const ProductBox = ({ name, price, promo, stars, image }) => (
   <div className={styles.root}>
     <div className={styles.photo}>
+      <img src={pathToImages + image} alt={name} />
       {promo && <div className={styles.sale}>{promo}</div>}
       <div className={styles.buttons}>
         <Button variant='small'>Quick View</Button>
@@ -61,6 +64,7 @@ ProductBox.propTypes = {
   price: PropTypes.number,
   promo: PropTypes.string,
   stars: PropTypes.number,
+  image: PropTypes.string,
 };
 
 export default ProductBox;
