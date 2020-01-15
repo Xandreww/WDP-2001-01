@@ -11,10 +11,19 @@ import {
 import { faStar as farStar, faHeart } from '@fortawesome/free-regular-svg-icons';
 import Button from '../Button/Button';
 
-const ProductBox = ({ name, id, price, promo, stars, favorites, addToFav }) => {
+const ProductBox = ({
+  name,
+  id,
+  price,
+  promo,
+  stars,
+  isFavorite,
+  addToFav,
+  removeFromFav,
+}) => {
   const favHandler = (e, id) => {
     e.preventDefault();
-    addToFav(id);
+    isFavorite ? removeFromFav(id) : addToFav(id);
   };
 
   return (
@@ -45,15 +54,12 @@ const ProductBox = ({ name, id, price, promo, stars, favorites, addToFav }) => {
       <div className={styles.line}></div>
       <div className={styles.actions}>
         <div className={styles.outlines}>
-          {favorites ? (
-            <Button onClick={e => favHandler(e, id)} variant='outline--checked'>
-              <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
-            </Button>
-          ) : (
-            <Button onClick={e => favHandler(e, id)} variant='outline'>
-              <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
-            </Button>
-          )}
+          <Button
+            onClick={e => favHandler(e, id)}
+            variant={isFavorite ? 'outline--checked' : 'outline'}
+          >
+            <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
+          </Button>
           <Button variant='outline'>
             <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
           </Button>
@@ -75,8 +81,13 @@ ProductBox.propTypes = {
   promo: PropTypes.string,
   stars: PropTypes.number,
   addToFav: PropTypes.func,
-  id: PropTypes.string,
-  favorites: PropTypes.bool,
+  removeFromFav: PropTypes.func,
+  id: PropTypes.string.isRequired,
+  isFavorite: PropTypes.bool,
+};
+
+ProductBox.defaultProps = {
+  isFavorite: false,
 };
 
 export default ProductBox;

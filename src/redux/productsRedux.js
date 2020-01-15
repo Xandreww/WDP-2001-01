@@ -11,9 +11,11 @@ const createActionName = name => `app/${reducerName}/${name}`;
 
 /* action types */
 export const ADD_TO_FAV = createActionName('ADD_TO_FAV');
+export const REMOVE_FROM_FAV = createActionName('REMOVE_FROM_FAV');
 
 /* action creators */
 export const addToFav = payload => ({ payload, type: ADD_TO_FAV });
+export const removeFromFav = payload => ({ payload, type: REMOVE_FROM_FAV });
 
 /* reducer */
 export default function reducer(statePart = [], action = {}) {
@@ -23,7 +25,19 @@ export default function reducer(statePart = [], action = {}) {
         if (product.id === action.payload) {
           return {
             ...product,
-            favorites: !product.favorites,
+            isFavorite: true,
+          };
+        } else {
+          return product;
+        }
+      });
+    }
+    case REMOVE_FROM_FAV: {
+      return statePart.map(product => {
+        if (product.id === action.payload) {
+          return {
+            ...product,
+            isFavorite: false,
           };
         } else {
           return product;
