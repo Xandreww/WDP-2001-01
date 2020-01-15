@@ -1,13 +1,82 @@
 $base-padding: 24px;
 
-$header-topbar-bg: #434343;
-$header-bg: #363636;
+//COLORS VARIABLES - DO NOT USE IN STYLE FILES!
 
-$footer-claim-bg: #2a2a2a;
-$footer-bg: #363636;
+$light: #ffffff;
+$primaryOrangeBrown: #d58e32;
+$veryBrightCyjanBlue: #f4f5f7;
+$veryDarkCyjanBlue: rgba(1, 2, 2, 0.2);
+$veryBrightBlue: rgb(224, 227, 237);
+$veryBrightGrey1: #e2e2e2;
+$veryBrightGrey2: #e1e1e1;
+$brightGrey: rgb(216, 216, 216);
+$mediumGrey1: #b6b6b6;
+$mediumGrey2: rgb(169, 169, 169);
+$mediumGrey3: #434343;
+$darkGrey1: #2a2a2a;
+$darkGrey2: rgb(42, 42, 42);
+$darkGrey3: #292929;
+$darkGrey4: #363636;
 
-$primary: #d58e32;
+// VARIABLES - USE IN STYLE FILES!
 
-$text-color: #2a2a2a;
+$button-bg: $darkGrey1;
+$button-hover-bg: $primaryOrangeBrown;
+$button-text: $light;
 
-$form-border-color: #292929;
+$featureBox-border: $mediumGrey1;
+$featureBox-border-active: $primaryOrangeBrown;
+$featureBox-icon: $darkGrey1;
+$featureBox-icon-active: $light;
+$featureBox-bg: $light;
+$featureBox-bg-active: $primaryOrangeBrown;
+$featureBox-text: $darkGrey2;
+$featureBox-text-active: $primaryOrangeBrown;
+
+$productBox-bg: $light;
+$productBox-border: $veryBrightGrey2;
+$productBox-bg-photo: $veryBrightCyjanBlue;
+$productBox-bg-header: $darkGrey3;
+$productBox-bg-header-text: $light;
+$productBox-desc-text: $primaryOrangeBrown;
+$productBox-desc-stars: $darkGrey2;
+$productBox-line: $darkGrey1;
+$productBox-line-elem: $primaryOrangeBrown;
+
+$newFurniture-line: $veryBrightGrey1;
+$newFurniture-line-elem: $primaryOrangeBrown;
+$newFurniture-header: $primaryOrangeBrown;
+$newFurniture-menu: $darkGrey2;
+$newFurniture-bg-dots: $light;
+$newFurniture-dots: $veryBrightGrey2;
+$newFurniture-dots-hover: $primaryOrangeBrown;
+
+$search-border: $darkGrey3;
+$search-text: $darkGrey1;
+$search-icon: $primaryOrangeBrown;
+
+$companyClaim-bg: $darkGrey4;
+$companyClaim-text: $brightGrey;
+$companyClaim-logo: $primaryOrangeBrown;
+$companyClaim-basket: $light;
+$companyClaim-basket-bg: $primaryOrangeBrown;
+$companyClaim-basket-counter-bg: $darkGrey4;
+$companyClaim-basket-counter-text: $veryBrightBlue;
+
+$footer-bg: $darkGrey4;
+$footer-primary-text: $light;
+$footer-secondary-text: $mediumGrey2;
+$footer-bottom-bg: $darkGrey1;
+$footer-media-hover: $primaryOrangeBrown;
+
+$menu-shadow: $veryDarkCyjanBlue;
+$menu-bg: $light;
+$menu-text: $darkGrey1;
+$menu-text-hover: $light;
+$menu-border: $light;
+$menu-active: $primaryOrangeBrown;
+$menu-border-active: $darkGrey1;
+
+$top-bg: $mediumGrey3;
+$top-text: $light;
+$top-text-hover: $primaryOrangeBrown;
