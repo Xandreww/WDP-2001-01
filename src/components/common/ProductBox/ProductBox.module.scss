@@ -5,6 +5,8 @@
   border: 1px solid $product-box-border;
   margin-bottom: 2rem;
 
+
+
   .photo {
     position: relative;
     padding: 80% 10px 0 10px;
@@ -30,9 +32,11 @@
 
     .buttons {
       display: flex;
+      visibility: hidden;
       justify-content: space-between;
     }
   }
+
 
   .content {
     text-align: center;
@@ -74,5 +78,16 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+
+  &:hover {
+    .buttons {
+      visibility: visible;
+    }
+
+    .price > div {
+      background-color: $button-hover-bg;
+    }
+
   }
 }
