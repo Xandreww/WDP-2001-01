@@ -11,7 +11,7 @@ import {
 import { faStar as farStar, faHeart } from '@fortawesome/free-regular-svg-icons';
 import Button from '../Button/Button';
 
-const pathToImages = '../../../../public/images/furniture/';
+const pathToImages = '/images/furniture/';
 
 const ProductBox = ({ name, price, promo, stars, image }) => (
   <div className={styles.root}>
