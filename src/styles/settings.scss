@@ -1,13 +1,82 @@
 $base-padding: 24px;
 
-$header-topbar-bg: #434343;
-$header-bg: #363636;
+//COLORS VARIABLES - DO NOT USE IN STYLE FILES!
 
-$footer-claim-bg: #2a2a2a;
-$footer-bg: #363636;
+$light: #ffffff;
+$primary-orange-brown: #d58e32;
+$very-bright-cyjan-blue: #f4f5f7;
+$very-dark-cyjan-blue: rgba(1, 2, 2, 0.2);
+$very-bright-blue: rgb(224, 227, 237);
+$very-bright-grey1: #e2e2e2;
+$very-bright-grey2: #e1e1e1;
+$bright-grey: rgb(216, 216, 216);
+$medium-grey1: #b6b6b6;
+$medium-grey2: rgb(169, 169, 169);
+$medium-grey3: #434343;
+$dark-grey1: #2a2a2a;
+$dark-grey2: rgb(42, 42, 42);
+$dark-grey3: #292929;
+$dark-grey4: #363636;
 
-$primary: #d58e32;
+// VARIABLES - USE IN STYLE FILES!
 
-$text-color: #2a2a2a;
+$button-bg: $dark-grey1;
+$button-hover-bg: $primary-orange-brown;
+$button-text: $light;
 
-$form-border-color: #292929;
+$feature-box-border: $medium-grey1;
+$feature-box-border-active: $primary-orange-brown;
+$feature-box-icon: $dark-grey1;
+$feature-box-icon-active: $light;
+$feature-box-bg: $light;
+$feature-box-bg-active: $primary-orange-brown;
+$feature-box-text: $dark-grey2;
+$feature-box-text-active: $primary-orange-brown;
+
+$product-box-bg: $light;
+$product-box-border: $very-bright-grey2;
+$product-box-bg-photo: $very-bright-cyjan-blue;
+$product-box-bg-header: $dark-grey3;
+$product-box-bg-header-text: $light;
+$product-box-desc-text: $primary-orange-brown;
+$product-box-desc-stars: $dark-grey2;
+$product-box-line: $dark-grey1;
+$product-box-line-elem: $primary-orange-brown;
+
+$new-furniture-line: $very-bright-grey1;
+$new-furniture-line-elem: $primary-orange-brown;
+$new-furniture-header: $primary-orange-brown;
+$new-furniture-menu: $dark-grey2;
+$new-furniture-bg-dots: $light;
+$new-furniture-dots: $very-bright-grey2;
+$new-furniture-dots-hover: $primary-orange-brown;
+
+$search-border: $dark-grey3;
+$search-text: $dark-grey1;
+$search-icon: $primary-orange-brown;
+
+$company-claim-bg: $dark-grey4;
+$company-claim-text: $bright-grey;
+$company-claim-logo: $primary-orange-brown;
+$company-claim-basket: $light;
+$company-claim-basket-bg: $primary-orange-brown;
+$company-claim-basket-counter-bg: $dark-grey4;
+$company-claim-basket-counter-text: $very-bright-blue;
+
+$footer-bg: $dark-grey4;
+$footer-primary-text: $light;
+$footer-secondary-text: $medium-grey2;
+$footer-bottom-bg: $dark-grey1;
+$footer-media-hover: $primary-orange-brown;
+
+$menu-shadow: $very-dark-cyjan-blue;
+$menu-bg: $light;
+$menu-text: $dark-grey1;
+$menu-text-hover: $light;
+$menu-border: $light;
+$menu-active: $primary-orange-brown;
+$menu-border-active: $dark-grey1;
+
+$top-bg: $medium-grey3;
+$top-text: $light;
+$top-text-hover: $primary-orange-brown;
