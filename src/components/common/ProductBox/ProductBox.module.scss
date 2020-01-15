@@ -1,15 +1,15 @@
 @import "../../../styles/settings.scss";
 
 .root {
-  background-color: $productBox-bg;
-  border: 1px solid $productBox-border;
+  background-color: $product-box-bg;
+  border: 1px solid $product-box-border;
   margin-bottom: 2rem;
 
   .photo {
     position: relative;
     padding: 80% 10px 0 10px;
     background: {
-      color: $productBox-bg-photo;
+      color: $product-box-bg-photo;
       size: contain;
       position: center;
       repeat: no-repeat;
@@ -22,9 +22,9 @@
       top: -30px;
       left: 50%;
       transform: translateX(-50%);
-      background-color: $productBox-bg-header;
+      background-color: $product-box-bg-header;
       border-radius: 50%;
-      color: $productBox-bg-header-text;
+      color: $product-box-bg-header-text;
       padding: 30px 15px 5px 15px;
     }
 
@@ -39,7 +39,7 @@
     padding: 20px;
 
     h5 {
-      color: $productBox-desc-text;
+      color: $product-box-desc-text;
       font-size: 16px;
       line-height: 24px;
       letter-spacing: 1px;
@@ -48,14 +48,14 @@
     .stars {
       a {
         text-decoration: none;
-        color: $productBox-desc-stars;
+        color: $product-box-desc-stars;
       }
     }
   }
 
   .line {
     margin: 0 10px;
-    border-bottom: 1px solid $productBox-line;
+    border-bottom: 1px solid $product-box-line;
     position: relative;
 
     &::before {
@@ -64,7 +64,7 @@
       bottom: -1px;
       left: 50%;
       width: 30px;
-      border-bottom: 4px solid $productBox-line-elem;
+      border-bottom: 4px solid $product-box-line-elem;
       transform: translateX(-50%);
     }
   }

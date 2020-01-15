@@ -6,14 +6,14 @@
     position: relative;
 
     :global(.row) > * {
-      border-bottom: 4px solid $newFurniture-line;
+      border-bottom: 4px solid $new-furniture-line;
     }
 
     .heading {
       position: relative;
 
       h3 {
-        color: $newFurniture-header;
+        color: $new-furniture-header;
         text-transform: uppercase;
         font-size: 20px;
         line-height: 38px;
@@ -27,7 +27,7 @@
         bottom: -4px;
         left: 0;
         width: 45px;
-        border-bottom: 4px solid $newFurniture-line-elem;
+        border-bottom: 4px solid $new-furniture-line-elem;
       }
     }
 
@@ -43,7 +43,7 @@
           font-weight: 600;
 
           a {
-            color: $newFurniture-menu;
+            color: $new-furniture-menu;
             position: relative;
             text-decoration: none;
             font-size: 18px;
@@ -57,7 +57,7 @@
                 bottom: -4px;
                 left: 0;
                 width: 100%;
-                border-bottom: 4px solid $newFurniture-line-elem;
+                border-bottom: 4px solid $new-furniture-line-elem;
               }
             }
           }
@@ -74,7 +74,7 @@
         margin: 0;
         padding: 0 0 0 1rem;
         list-style: none;
-        background-color: $newFurniture-bg-dots;
+        background-color: $new-furniture-bg-dots;
         transform: translateY(15px);
 
         li {
@@ -86,12 +86,12 @@
             width: 13px;
             height: 13px;
             border-radius: 6px;
-            background-color: $newFurniture-dots;
+            background-color: $new-furniture-dots;
             font-size: 0;
 
             &.active,
             &:hover {
-              background-color: $newFurniture-dots-hover;
+              background-color: $new-furniture-dots-hover;
             }
           }
         }
