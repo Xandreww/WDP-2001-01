@@ -10,10 +10,12 @@ class NewFurniture extends React.Component {
   state = {
     activePage: 0,
     activeCategory: 'bed',
+    splittingPage: '',
   };
 
   handlePageChange(newPage) {
     this.setState({ activePage: newPage });
+    this.setState({ splittingPage: ' ' });
   }
 
   handleCategoryChange(newCategory) {
@@ -22,12 +24,20 @@ class NewFurniture extends React.Component {
 
   rightAction() {
     const newPage = this.state.activePage;
-    this.setState({ activePage: newPage + 1 });
+    if (this.state.splittingPage === '') {
+      this.setState({ activePage: newPage + 1 });
+    } else {
+      this.setState({ splittingPage: '' });
+    }
   }
 
   leftAction() {
     const newPage = this.state.activePage;
-    this.setState({ activePage: newPage - 1 });
+    if (this.state.splittingPage === '') {
+      this.setState({ activePage: newPage - 1 });
+    } else {
+      this.setState({ splittingPage: '' });
+    }
   }
 
   render() {
@@ -96,6 +106,7 @@ class NewFurniture extends React.Component {
           <Swipeable
             nextPage={this.rightAction.bind(this)}
             prevPage={this.leftAction.bind(this)}
+            currentPage={this.state.activePage}
           >
             {renderPages()}
           </Swipeable>
