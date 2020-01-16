@@ -18,9 +18,7 @@ const Swipeable = ({ children, nextPage, prevPage, currentPage }) => {
   };
 
   const goTo = pageNumber => {
-    if (swiper !== null) {
-      swiper.slideTo(pageNumber);
-    }
+    swiper !== null && swiper.slideTo(pageNumber);
   };
 
   goTo(currentPage);

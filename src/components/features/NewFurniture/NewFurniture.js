@@ -24,20 +24,20 @@ class NewFurniture extends React.Component {
 
   rightAction() {
     const newPage = this.state.activePage;
-    if (this.state.splittingPage === '') {
-      this.setState({ activePage: newPage + 1 });
-    } else {
-      this.setState({ splittingPage: '' });
-    }
+    const divider = this.state.splittingPage;
+
+    divider === ''
+      ? this.setState({ activePage: newPage + 1 })
+      : this.setState({ splittingPage: '' });
   }
 
   leftAction() {
     const newPage = this.state.activePage;
-    if (this.state.splittingPage === '') {
-      this.setState({ activePage: newPage - 1 });
-    } else {
-      this.setState({ splittingPage: '' });
-    }
+    const divider = this.state.splittingPage;
+
+    divider === ''
+      ? this.setState({ activePage: newPage - 1 })
+      : this.setState({ splittingPage: '' });
   }
 
   render() {
@@ -104,8 +104,8 @@ class NewFurniture extends React.Component {
             </div>
           </div>
           <Swipeable
-            nextPage={this.rightAction.bind(this)}
-            prevPage={this.leftAction.bind(this)}
+            nextPage={() => this.rightAction()}
+            prevPage={() => this.leftAction()}
             currentPage={this.state.activePage}
           >
             {renderPages()}
