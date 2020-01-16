@@ -55,6 +55,7 @@ const ProductBox = ({
       <div className={styles.actions}>
         <div className={styles.outlines}>
           <Button
+            data-test='button'
             onClick={e => favHandler(e, id)}
             variant={isFavorite ? 'outline--checked' : 'outline'}
           >

@@ -21,6 +21,7 @@ export const removeFromFav = payload => ({ payload, type: REMOVE_FROM_FAV });
 export default function reducer(statePart = [], action = {}) {
   switch (action.type) {
     case ADD_TO_FAV: {
+      console.log('statePart', statePart);
       return statePart.map(product => {
         if (product.id === action.payload) {
           return {
