@@ -4,9 +4,9 @@ import { addToFav, removeFromFav } from '../../../redux/productsRedux';
 
 const mapStateToProps = state => ({});
 
-const mapDispatchToProps = dispatch => ({
-  addToFav: payload => dispatch(addToFav(payload)),
-  removeFromFav: payload => dispatch(removeFromFav(payload)),
-});
+const mapDispatchToProps = {
+  addToFav,
+  removeFromFav,
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(ProductBox);
