@@ -16,21 +16,20 @@ class MenuBar extends Component {
 
   toggleMenu = e => {
     e.preventDefault();
-    this.setState({
-      menuActive: !this.state.menuActive,
-    });
+    this.setState((state, props) => ({
+      menuActive: !state.menuActive,
+    }));
   };
 
   render() {
     return (
       <div className={styles.root}>
         <div className='container'>
-          <div className='d-flex flex-row flex-sm-column-reverse flex-lg-row align-items-center'>
+          <div className='d-flex flex-row flex-sm-column-reverse flex-lg-row align-items-center flex-wrap'>
             <div className='col'>
               <ProductSearch />
             </div>
             <Button
-              href='#'
               variant='outline'
               onClick={this.toggleMenu}
               className={styles.hamburger}
@@ -46,7 +45,6 @@ class MenuBar extends Component {
               }
             >
               <Button
-                href='#'
                 variant='outline'
                 onClick={this.toggleMenu}
                 className={styles.closeMenu}
