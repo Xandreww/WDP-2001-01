@@ -93,7 +93,12 @@ class NewFurniture extends React.Component {
               </div>
             </div>
           </div>
-          <Swipeable>{renderPages()}</Swipeable>
+          <Swipeable
+            nextPage={this.rightAction.bind(this)}
+            prevPage={this.leftAction.bind(this)}
+          >
+            {renderPages()}
+          </Swipeable>
         </div>
       </div>
     );

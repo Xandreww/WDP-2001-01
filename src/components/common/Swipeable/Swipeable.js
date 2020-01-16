@@ -6,9 +6,13 @@ import styles from './Swipeable.module.scss';
 import Swiper from 'react-id-swiper';
 import 'swiper/css/swiper.css';
 
-const Swipeable = ({ children }) => {
+const Swipeable = ({ children, nextPage, prevPage }) => {
   const params = {
     spaceBetween: 30,
+    on: {
+      slideNextTransitionEnd: nextPage,
+      slidePrevTransitionEnd: prevPage,
+    },
   };
 
   return (
@@ -20,6 +24,8 @@ const Swipeable = ({ children }) => {
 
 Swipeable.propTypes = {
   children: PropTypes.node,
+  nextPage: PropTypes.func,
+  prevPage: PropTypes.func,
 };
 
 export default Swipeable;
