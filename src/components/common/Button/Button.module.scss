@@ -38,8 +38,23 @@
     background-color: $button-bg;
     color: $button-text;
   }
+
+
 }
 
+.selected {
+  background-color: $button-hover-bg;
+  color: $button-text;
+  border-color: $button-hover-bg;
+
+  &:not(.noHover):hover {
+    background-color: $button-text;
+    color: $button-bg;
+    border-color: $button-bg;
+  }
+}
+
+<<<<<<< HEAD
 .outline--checked {
   display: inline-block;
   padding: 5px 10px;
@@ -49,3 +64,6 @@
   font-size: 13px;
   line-height: 22px;
 }
+=======
+
+>>>>>>> master

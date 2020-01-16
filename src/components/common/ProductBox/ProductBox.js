@@ -20,6 +20,7 @@ const ProductBox = ({
   isFavorite,
   addToFav,
   removeFromFav,
+  image,
 }) => {
   const favHandler = (e, id) => {
     e.preventDefault();
@@ -29,6 +30,7 @@ const ProductBox = ({
   return (
     <div className={styles.root}>
       <div className={styles.photo}>
+        <img className={styles.furniture} src={image} alt={name} />
         {promo && <div className={styles.sale}>{promo}</div>}
         <div className={styles.buttons}>
           <Button variant='small'>Quick View</Button>
@@ -85,6 +87,7 @@ ProductBox.propTypes = {
   removeFromFav: PropTypes.func,
   id: PropTypes.string.isRequired,
   isFavorite: PropTypes.bool,
+  image: PropTypes.string,
 };
 
 ProductBox.defaultProps = {
