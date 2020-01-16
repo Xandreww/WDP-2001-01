@@ -7,8 +7,8 @@
   color: $search-text;
 
   .category {
+    display: none;
     border-right: 1px solid $search-border;
-    display: flex;
     align-items: center;
     position: relative;
 
@@ -55,6 +55,15 @@
       border: 0;
       background-color: transparent;
       outline: none;
+    }
+  }
+}
+
+@media (min-width: 577px) {
+  .root {
+
+    .category {
+      display: flex;
     }
   }
 }

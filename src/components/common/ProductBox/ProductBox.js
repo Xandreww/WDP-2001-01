@@ -21,9 +21,10 @@ const ProductBox = ({
   addToFav,
   removeFromFav,
   toCompare,
-  addToCompare,
   removeFromCompare,
+  addToCompare,
   products,
+  image,
 }) => {
   const favHandler = (event, id) => {
     event.preventDefault();
@@ -32,7 +33,6 @@ const ProductBox = ({
 
   const compareHandler = (event, id) => {
     event.preventDefault();
-    // toCompare ? removeFromCompare(id) : addToCompare(id);
     const prodToCompare = products
       .map(product => product.toCompare === true)
       .filter(el => el === true).length;
@@ -46,6 +46,7 @@ const ProductBox = ({
   return (
     <div className={styles.root}>
       <div className={styles.photo}>
+        <img className={styles.furniture} src={image} alt={name} />
         {promo && <div className={styles.sale}>{promo}</div>}
         <div className={styles.buttons}>
           <Button variant='small'>Quick View</Button>
@@ -100,19 +101,21 @@ ProductBox.propTypes = {
   name: PropTypes.string,
   price: PropTypes.number,
   promo: PropTypes.string,
+  id: PropTypes.string,
   stars: PropTypes.number,
-  addToFav: PropTypes.func,
-  removeFromFav: PropTypes.func,
-  addToCompare: PropTypes.func,
-  removeFromCompare: PropTypes.func,
-  id: PropTypes.string.isRequired,
   isFavorite: PropTypes.bool,
   toCompare: PropTypes.bool,
+  image: PropTypes.string,
+  addToFav: PropTypes.func,
+  addToCompare: PropTypes.func,
+  removeFromFav: PropTypes.func,
+  removeFromCompare: PropTypes.func,
   products: PropTypes.array,
 };
 
 ProductBox.defaultProps = {
   isFavorite: false,
+  toCompare: false,
 };
 
 export default ProductBox;
