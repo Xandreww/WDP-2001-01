@@ -22,7 +22,6 @@ import image21 from '../assets/images/furniture21.jpg';
 import image22 from '../assets/images/furniture22.jpg';
 import image23 from '../assets/images/furniture23.jpg';
 import image24 from '../assets/images/furniture24.jpg';
-import bed from '../assets/images/bed.jpg';
 
 const initialState = {
   categories: [
