@@ -21,9 +21,12 @@ class NewFurniture extends React.Component {
   render() {
     const { categories, products } = this.props;
     const { activeCategory, activePage } = this.state;
-
+    let productCount = 8;
     const categoryProducts = products.filter(item => item.category === activeCategory);
     const pagesCount = Math.ceil(categoryProducts.length / 8);
+
+    if (this.props.mode === 'tablet') productCount = 2;
+    else if (this.props.mode === 'mobile') productCount = 1;
 
     const dots = [];
     for (let i = 0; i < pagesCount; i++) {
@@ -67,11 +70,13 @@ class NewFurniture extends React.Component {
             </div>
           </div>
           <div className='row'>
-            {categoryProducts.slice(activePage * 8, (activePage + 1) * 8).map(item => (
-              <div key={item.id} className='col-12 col-sm-6 col-xl-3'>
-                <ProductBox {...item} />
-              </div>
-            ))}
+            {categoryProducts
+              .slice(activePage * productCount, (activePage + 1) * productCount)
+              .map(item => (
+                <div key={item.id} className='col-12 col-sm-6 col-xl-3'>
+                  <ProductBox {...item} />
+                </div>
+              ))}
           </div>
         </div>
       </div>
@@ -81,6 +86,7 @@ class NewFurniture extends React.Component {
 
 NewFurniture.propTypes = {
   children: PropTypes.node,
+  mode: PropTypes.string,
   categories: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string,

@@ -14,11 +14,11 @@ class MainLayout extends Component {
   }
 
   resize() {
-    if (window.innerWidth < 500) {
+    if (window.innerWidth < 576) {
       this.props.changeMode('mobile');
-    } else if (window.innerWidth < 1000) {
+    } else if (window.innerWidth < 1200) {
       this.props.changeMode('tablet');
-    } else if (window.innerWidth > 1300) {
+    } else if (window.innerWidth > 1200) {
       this.props.changeMode('desktop');
     }
   }
