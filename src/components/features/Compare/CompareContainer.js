@@ -6,7 +6,7 @@ const mapStateToProps = state => ({
   products: getAll(state),
 });
 
-export const mapDispatchToProps = dispatch => ({
+const mapDispatchToProps = dispatch => ({
   removeFromCompare: payload => dispatch(removeFromCompare(payload)),
 });
 

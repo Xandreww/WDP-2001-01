@@ -21,6 +21,7 @@
 
 .card {
   width: 14rem;
+  height: 320px;
   &Img {
     height: 200px;
   }
@@ -55,9 +56,10 @@
     content: "";
     position: absolute;
     width: 100%;
-    height: calc(100% - 125.778px);
+    // full card heigth - cartBody
+    height: calc(100% - 120px);
     top: 0;
-    background-color: $dark-grey1;
+    background-color: $button-bg;
     opacity: 0.6;
     z-index: 99;
   }

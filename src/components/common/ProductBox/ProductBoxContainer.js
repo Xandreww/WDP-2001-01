@@ -12,7 +12,7 @@ const mapStateToProps = state => ({
   products: getAll(state),
 });
 
-export const mapDispatchToProps = dispatch => ({
+const mapDispatchToProps = dispatch => ({
   /* idFavorite */
   addToFav: payload => dispatch(addToFav(payload)),
   removeFromFav: payload => dispatch(removeFromFav(payload)),

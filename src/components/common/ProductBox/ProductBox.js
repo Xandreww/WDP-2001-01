@@ -33,14 +33,12 @@ const ProductBox = ({
 
   const compareHandler = (event, id) => {
     event.preventDefault();
-    const prodToCompare = products
-      .map(product => product.toCompare === true)
-      .filter(el => el === true).length;
-    prodToCompare <= 3
-      ? toCompare
-        ? removeFromCompare(id)
-        : addToCompare(id)
-      : alert('You can compare only four products');
+    const prodToCompare = products.filter(product => product.toCompare).length;
+    if (prodToCompare <= 3) {
+      toCompare ? removeFromCompare(id) : addToCompare(id);
+    } else {
+      alert('You can compare only four products');
+    }
   };
 
   return (

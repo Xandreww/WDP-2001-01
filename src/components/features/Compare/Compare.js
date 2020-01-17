@@ -32,17 +32,13 @@ const Compare = ({ products, removeFromCompare }) => {
                 <CompareCard
                   key={product.id}
                   id={product.id}
+                  image={product.image}
                   removeFromCompare={removeFromCompare}
                   name={product.name}
                 />
               ))}
           </div>
         </Modal.Body>
-        <Modal.Footer>
-          <Button variant='small' onClick={handleClose}>
-            Close
-          </Button>
-        </Modal.Footer>
       </Modal>
     </>
   );
