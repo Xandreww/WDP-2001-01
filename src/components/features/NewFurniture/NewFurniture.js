@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import styles from './NewFurniture.module.scss';
-import ProductBox from '../../common/ProductBox/ProductBox';
+import ProductBox from '../../common/ProductBox/ProductBoxContainer';
 
 import Swipeable from '../../common/Swipeable/Swipeable';
 
@@ -68,7 +68,7 @@ class NewFurniture extends React.Component {
       pages.push(
         <div className={'row' + ' ' + styles.swipeElement}>
           {categoryProducts.slice(activePage * 8, (activePage + 1) * 8).map(item => (
-            <div key={item.id} className='col-3'>
+            <div key={item.id} className='col-12 col-sm-6 col-xl-3'>
               <ProductBox {...item} />
             </div>
           ))}
@@ -137,6 +137,8 @@ NewFurniture.propTypes = {
       stars: PropTypes.number,
       promo: PropTypes.string,
       newFurniture: PropTypes.bool,
+      favourited: PropTypes.bool,
+      addedToCompare: PropTypes.bool,
     })
   ),
 };

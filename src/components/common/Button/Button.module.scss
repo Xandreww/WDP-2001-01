@@ -39,3 +39,25 @@
     color: $button-text;
   }
 }
+
+.selected {
+  background-color: $button-hover-bg;
+  color: $button-text;
+  border-color: $button-hover-bg;
+
+  &:not(.noHover):hover {
+    background-color: $button-text;
+    color: $button-bg;
+    border-color: $button-bg;
+  }
+}
+
+.outline--checked {
+  display: inline-block;
+  padding: 5px 10px;
+  border: 1px solid $button-bg;
+  background-color: $button-bg;
+  color: $light;
+  font-size: 13px;
+  line-height: 22px;
+}
