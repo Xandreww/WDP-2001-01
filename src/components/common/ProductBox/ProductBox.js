@@ -15,6 +15,7 @@ const ProductBox = ({
   name,
   id,
   price,
+  oldPrice,
   promo,
   stars,
   isFavorite,
@@ -84,6 +85,11 @@ const ProductBox = ({
             <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
           </Button>
         </div>
+        {oldPrice && (
+          <div className={styles.price}>
+            <span className={styles.oldPrice}>$ {oldPrice}</span>
+          </div>
+        )}
         <div className={styles.price}>
           <Button noHover variant='small'>
             $ {price}
@@ -98,6 +104,7 @@ ProductBox.propTypes = {
   children: PropTypes.node,
   name: PropTypes.string,
   price: PropTypes.number,
+  oldPrice: PropTypes.number,
   promo: PropTypes.string,
   id: PropTypes.string,
   stars: PropTypes.number,
