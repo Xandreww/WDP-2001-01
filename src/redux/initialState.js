@@ -23,6 +23,17 @@ import image22 from '../assets/images/furniture22.jpg';
 import image23 from '../assets/images/furniture23.jpg';
 import image24 from '../assets/images/furniture24.jpg';
 
+import sampleBrand1 from '../assets/images/sampleBrand1.jpg';
+import sampleBrand2 from '../assets/images/sampleBrand2.jpg';
+import sampleBrand3 from '../assets/images/sampleBrand3.jpg';
+import sampleBrand4 from '../assets/images/sampleBrand4.jpg';
+import sampleBrand5 from '../assets/images/sampleBrand5.jpg';
+import sampleBrand6 from '../assets/images/sampleBrand6.jpg';
+import sampleBrand7 from '../assets/images/sampleBrand7.jpg';
+import sampleBrand8 from '../assets/images/sampleBrand8.jpg';
+import sampleBrand9 from '../assets/images/sampleBrand9.jpg';
+import sampleBrand10 from '../assets/images/sampleBrand10.jpg';
+
 const initialState = {
   categories: [
     { id: 'bed', name: 'Bed' },
@@ -320,6 +331,18 @@ const initialState = {
       toCompare: false,
       image: image24,
     },
+  ],
+  sampleBrands: [
+    sampleBrand1,
+    sampleBrand2,
+    sampleBrand3,
+    sampleBrand4,
+    sampleBrand5,
+    sampleBrand6,
+    sampleBrand7,
+    sampleBrand8,
+    sampleBrand9,
+    sampleBrand10,
   ],
   cart: {
     products: [],
