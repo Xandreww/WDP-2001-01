@@ -38,8 +38,6 @@
     background-color: $button-bg;
     color: $button-text;
   }
-
-
 }
 
 .selected {
@@ -54,4 +52,12 @@
   }
 }
 
-
+.outline--checked {
+  display: inline-block;
+  padding: 5px 10px;
+  border: 1px solid $button-bg;
+  background-color: $button-bg;
+  color: $light;
+  font-size: 13px;
+  line-height: 22px;
+}
