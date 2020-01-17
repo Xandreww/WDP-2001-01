@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import styles from './Feedback.module.scss';
-import SingleFeedback from './SingleFeedback';
+import SingleFeedback from '../../common/SingleFeedback/SingleFeedback';
 
 class Feedback extends React.Component {
   state = {
@@ -39,7 +39,7 @@ class Feedback extends React.Component {
           <div className={styles.panelBar}>
             <div className='row no-gutters align-items-end'>
               <div className={'col-auto ' + styles.heading}>
-                <h3>Feedback</h3>
+                <h3>Client Feedback</h3>
               </div>
               <div className={'col ' + styles.menu}></div>
               <div className={'col-auto ' + styles.dots}>

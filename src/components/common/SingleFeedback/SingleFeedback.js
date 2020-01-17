@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Feedback.module.scss';
+import styles from './SingleFeedback.module.scss';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faQuoteRight } from '@fortawesome/free-solid-svg-icons';
@@ -8,12 +8,20 @@ const SingleFeedback = ({ text, image, name }) => {
   return (
     <div className={styles.root}>
       <div className={styles.content}>
-        <FontAwesomeIcon icon={faQuoteRight}></FontAwesomeIcon>
-        {text}
+        <div>
+          <FontAwesomeIcon
+            className={styles.icon}
+            icon={faQuoteRight}
+          ></FontAwesomeIcon>
+        </div>
+        <div>{text}</div>
       </div>
       <div className={styles.photo}>
         <img className={styles.clientPhoto} src={image} alt={`client ${name}`} />
-        {name} Furniture client
+        <div className={styles.photoDescription}>
+          <p className={styles.clientName}>{name}</p>
+          <p>Furniture client</p>
+        </div>
       </div>
     </div>
   );
