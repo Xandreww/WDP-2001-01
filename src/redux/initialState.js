@@ -22,6 +22,7 @@ import image21 from '../assets/images/furniture21.jpg';
 import image22 from '../assets/images/furniture22.jpg';
 import image23 from '../assets/images/furniture23.jpg';
 import image24 from '../assets/images/furniture24.jpg';
+import bed from '../assets/images/bed.jpg';
 
 const initialState = {
   categories: [
@@ -323,6 +324,28 @@ const initialState = {
   ],
   cart: {
     products: [],
+  },
+
+  sale: {
+    leftBox: {
+      title: 'Guest room',
+      subTitle: 'Sofa',
+      sale: '-20%',
+      bgc: image10,
+    },
+    rightTopBox: {
+      boldTitle: 'office',
+      title: 'chair',
+      subTitle: 'collection',
+      price: '$200.00',
+      bgc: image11,
+    },
+    rightBottomBox: {
+      boldTitle: 'special',
+      title: 'colection',
+      subTitle: 'save up 45% of furniture',
+      bgc: image12,
+    },
   },
 };
 
