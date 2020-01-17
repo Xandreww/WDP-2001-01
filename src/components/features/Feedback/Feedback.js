@@ -48,11 +48,9 @@ class Feedback extends React.Component {
             </div>
           </div>
           <div className='row'>
-            {feedbacks.map(item => (
-              <div key={item.id}>
-                <SingleFeedback {...item} />
-              </div>
-            ))}
+            <div key={feedbacks[this.state.activePage].id}>
+              <SingleFeedback {...feedbacks[this.state.activePage]} />
+            </div>
           </div>
         </div>
       </div>
