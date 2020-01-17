@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 import styles from './Swipeable.module.scss';
@@ -7,7 +7,7 @@ import Swiper from 'react-id-swiper';
 import 'swiper/css/swiper.css';
 
 const Swipeable = ({ children, nextPage, prevPage, currentPage }) => {
-  const [swiper, updateSwiper] = useState(null);
+  const [swiper, setSwiper] = useState(null);
 
   const params = {
     spaceBetween: 30,
@@ -22,10 +22,16 @@ const Swipeable = ({ children, nextPage, prevPage, currentPage }) => {
   };
 
   goTo(currentPage);
+  /*
+  useEffect(() => {
+    goTo(currentPage);
+  }, [currentPage]);
+  */
+  console.log('currentPage:', currentPage);
 
   return (
     <div>
-      <Swiper {...params} getSwiper={updateSwiper}>
+      <Swiper {...params} getSwiper={setSwiper}>
         {children}
       </Swiper>
     </div>
