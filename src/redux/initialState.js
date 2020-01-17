@@ -30,9 +30,6 @@ import sampleBrand4 from '../assets/images/sampleBrand4.jpg';
 import sampleBrand5 from '../assets/images/sampleBrand5.jpg';
 import sampleBrand6 from '../assets/images/sampleBrand6.jpg';
 import sampleBrand7 from '../assets/images/sampleBrand7.jpg';
-import sampleBrand8 from '../assets/images/sampleBrand8.jpg';
-import sampleBrand9 from '../assets/images/sampleBrand9.jpg';
-import sampleBrand10 from '../assets/images/sampleBrand10.jpg';
 
 const initialState = {
   categories: [
@@ -340,9 +337,6 @@ const initialState = {
     sampleBrand5,
     sampleBrand6,
     sampleBrand7,
-    sampleBrand8,
-    sampleBrand9,
-    sampleBrand10,
   ],
   cart: {
     products: [],
