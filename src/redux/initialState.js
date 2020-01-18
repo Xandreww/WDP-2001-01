@@ -397,6 +397,38 @@ const initialState = {
       image: clientPhoto3,
     },
   ],
+  promoted: {
+    leftProduct: {
+      topBarTitle: 'hot deals',
+      image: image20,
+      imageTitle: 'image',
+      dealCounter: {
+        days: {
+          value: '25',
+          unit: 'days',
+        },
+        hrs: {
+          value: '10',
+          unit: 'hrs',
+        },
+        mins: {
+          value: '45',
+          unit: 'mins',
+        },
+        secs: {
+          value: '30',
+          unit: 'secs',
+        },
+      },
+    },
+    rightProduct: {
+      title: 'indoor',
+      titleBold: 'furniture',
+      dealDescription: 'save up 50% of furniture',
+      image: image12,
+      imageTitle: 'image',
+    },
+  },
 };
 
 export default initialState;
