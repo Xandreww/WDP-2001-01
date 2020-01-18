@@ -7,8 +7,8 @@
   color: $search-text;
 
   .category {
-    display: none;
     border-right: 1px solid $search-border;
+    display: flex;
     align-items: center;
     position: relative;
 
@@ -16,22 +16,35 @@
       color: $search-icon;
       position: absolute;
       left: 10px;
-      z-index: 0;
+      z-index: 2;
     }
 
     .icon:last-child {
       position: absolute;
       right: 10px;
-      z-index: 0;
+      z-index: 2;
     }
 
     select {
+      outline: none;
       -webkit-appearance: none;
       border: 0;
+      font-size: 14px;
       background-color: transparent;
-      padding: 5px 30px 5px 35px;
+      padding: 12px 30px 12px 35px;
       position: relative;
+      cursor: pointer;
       z-index: 1;
+      transition: .2s;
+
+      &:hover, &:focus {
+        background-color: $select-hover;
+        color: $light;
+      }
+
+      &:hover + .icon, &:focus + .icon {
+        color: $light;
+      }
     }
   }
 
@@ -59,11 +72,3 @@
   }
 }
 
-@media (min-width: 577px) {
-  .root {
-
-    .category {
-      display: flex;
-    }
-  }
-}
