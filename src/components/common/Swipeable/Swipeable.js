@@ -40,13 +40,9 @@ const Swipeable = ({ children, nextPage, prevPage, currentPage }) => {
     },
   };
 
-  const goTo = pageNumber => {
-    swiper !== null && swiper.slideTo(pageNumber);
-  };
-
   useEffect(() => {
-    goTo(currentPage);
-  }, [currentPage, goTo]);
+    swiper !== null && swiper.slideTo(currentPage);
+  }, [currentPage, swiper]);
 
   return (
     <div>
