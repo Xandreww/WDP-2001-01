@@ -352,6 +352,28 @@ const initialState = {
   cart: {
     products: [],
   },
+
+  sale: {
+    leftBox: {
+      title: 'Guest room',
+      subTitle: 'Sofa',
+      sale: '-20%',
+      bgc: image10,
+    },
+    rightTopBox: {
+      boldTitle: 'office',
+      title: 'chair',
+      subTitle: 'collection',
+      price: '$200.00',
+      bgc: image11,
+    },
+    rightBottomBox: {
+      boldTitle: 'special',
+      title: 'colection',
+      subTitle: 'save up 45% of furniture',
+      bgc: image12,
+    },
+  },
   feedbacks: [
     {
       id: 1,
