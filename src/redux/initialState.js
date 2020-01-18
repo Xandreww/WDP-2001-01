@@ -23,6 +23,17 @@ import image22 from '../assets/images/furniture22.jpg';
 import image23 from '../assets/images/furniture23.jpg';
 import image24 from '../assets/images/furniture24.jpg';
 
+import clientPhoto1 from '../assets/images/clientPhoto1.jpg';
+import clientPhoto2 from '../assets/images/clientPhoto2.jpg';
+import clientPhoto3 from '../assets/images/clientPhoto3.jpg';
+import sampleBrand1 from '../assets/images/sampleBrand1.jpg';
+import sampleBrand2 from '../assets/images/sampleBrand2.jpg';
+import sampleBrand3 from '../assets/images/sampleBrand3.jpg';
+import sampleBrand4 from '../assets/images/sampleBrand4.jpg';
+import sampleBrand5 from '../assets/images/sampleBrand5.jpg';
+import sampleBrand6 from '../assets/images/sampleBrand6.jpg';
+import sampleBrand7 from '../assets/images/sampleBrand7.jpg';
+
 const initialState = {
   categories: [
     { id: 'bed', name: 'Bed' },
@@ -329,9 +340,63 @@ const initialState = {
       image: image24,
     },
   ],
+  sampleBrands: [
+    sampleBrand1,
+    sampleBrand2,
+    sampleBrand3,
+    sampleBrand4,
+    sampleBrand5,
+    sampleBrand6,
+    sampleBrand7,
+  ],
   cart: {
     products: [],
   },
+
+  sale: {
+    leftBox: {
+      title: 'Guest room',
+      subTitle: 'Sofa',
+      sale: '-20%',
+      bgc: image10,
+    },
+    rightTopBox: {
+      boldTitle: 'office',
+      title: 'chair',
+      subTitle: 'collection',
+      price: '$200.00',
+      bgc: image11,
+    },
+    rightBottomBox: {
+      boldTitle: 'special',
+      title: 'colection',
+      subTitle: 'save up 45% of furniture',
+      bgc: image12,
+    },
+  },
+  feedbacks: [
+    {
+      id: 1,
+      name: 'John Smith',
+      text:
+        'Vestibulum vulputate nisl sed lacus porttitor, sed mollis nibh tempus. Morbi a nisi sit amet est cursus rhoncus. Integer faucibus magna sapien, ut auctor mi hendrerit ut. Mauris fermentum placerat risus, a aliquam mi blandit a. Vivamus sit amet feugiat.',
+      image: clientPhoto1,
+    },
+    {
+      id: 2,
+      name: 'Andrew Doe',
+      text:
+        'Aenean vestibulum leo magna. Nam in sodales ex. Integer cursus condimentum diam at sagittis. Fusce non nulla dolor. Curabitur mauris arcu, scelerisque sed aliquet ut, tristique non massa. Nunc porttitor vel enim tincidunt dictum. Vestibulum vitae pretium enim. Maecenas suscipit.',
+      image: clientPhoto2,
+    },
+    {
+      id: 3,
+      name: 'Simon Simson',
+      text:
+        'Nullam tincidunt vel est vel convallis. Donec viverra lacus eget consectetur feugiat. Cras odio neque, imperdiet ac risus sed, efficitur condimentum quam. Donec gravida ante id felis laoreet tristique. Vestibulum commodo efficitur neque a vehicula. Suspendisse quis sagittis tortor, in.',
+      image: clientPhoto3,
+    },
+  ],
 };
 
 export default initialState;
