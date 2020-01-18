@@ -1,0 +1,15 @@
+@import "../../../styles/settings.scss";
+
+.stars {
+  a {
+    text-decoration: none;
+    color: $product-box-desc-stars;
+  }
+}
+
+.starsRated {
+  a {
+    text-decoration: none;
+    color: $button-hover-bg;
+  }
+}
