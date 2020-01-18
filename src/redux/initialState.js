@@ -26,6 +26,13 @@ import image24 from '../assets/images/furniture24.jpg';
 import clientPhoto1 from '../assets/images/clientPhoto1.jpg';
 import clientPhoto2 from '../assets/images/clientPhoto2.jpg';
 import clientPhoto3 from '../assets/images/clientPhoto3.jpg';
+import sampleBrand1 from '../assets/images/sampleBrand1.jpg';
+import sampleBrand2 from '../assets/images/sampleBrand2.jpg';
+import sampleBrand3 from '../assets/images/sampleBrand3.jpg';
+import sampleBrand4 from '../assets/images/sampleBrand4.jpg';
+import sampleBrand5 from '../assets/images/sampleBrand5.jpg';
+import sampleBrand6 from '../assets/images/sampleBrand6.jpg';
+import sampleBrand7 from '../assets/images/sampleBrand7.jpg';
 
 const initialState = {
   categories: [
@@ -41,6 +48,7 @@ const initialState = {
       name: 'Aenean Ru Bristique 1',
       category: 'bed',
       price: 30,
+      oldPrice: 45,
       stars: 2,
       promo: 'sale',
       newFurniture: true,
@@ -53,6 +61,7 @@ const initialState = {
       name: 'Aenean Ru Bristique 2',
       category: 'bed',
       price: 30,
+      oldPrice: null,
       stars: 2,
       promo: 'sale',
       newFurniture: true,
@@ -65,6 +74,7 @@ const initialState = {
       name: 'Aenean Ru Bristique 3',
       category: 'bed',
       price: 30,
+      oldPrice: 55,
       stars: 2,
       promo: 'sale',
       newFurniture: true,
@@ -77,6 +87,7 @@ const initialState = {
       name: 'Aenean Ru Bristique 4',
       category: 'bed',
       price: 30,
+      oldPrice: 75,
       stars: 2,
       promo: 'sale',
       newFurniture: true,
@@ -89,6 +100,7 @@ const initialState = {
       name: 'Aenean Ru Bristique 5',
       category: 'bed',
       price: 30,
+      oldPrice: 60,
       stars: 2,
       promo: 'sale',
       newFurniture: true,
@@ -101,6 +113,7 @@ const initialState = {
       name: 'Aenean Ru Bristique 6',
       category: 'bed',
       price: 30,
+      oldPrice: null,
       stars: 2,
       promo: 'sale',
       newFurniture: true,
@@ -113,6 +126,7 @@ const initialState = {
       name: 'Aenean Ru Bristique 7',
       category: 'bed',
       price: 30,
+      oldPrice: null,
       stars: 2,
       promo: 'sale',
       newFurniture: true,
@@ -125,6 +139,7 @@ const initialState = {
       name: 'Aenean Ru Bristique 8',
       category: 'bed',
       price: 30,
+      oldPrice: 55,
       stars: 2,
       promo: 'sale',
       newFurniture: true,
@@ -324,6 +339,15 @@ const initialState = {
       toCompare: false,
       image: image24,
     },
+  ],
+  sampleBrands: [
+    sampleBrand1,
+    sampleBrand2,
+    sampleBrand3,
+    sampleBrand4,
+    sampleBrand5,
+    sampleBrand6,
+    sampleBrand7,
   ],
   cart: {
     products: [],
