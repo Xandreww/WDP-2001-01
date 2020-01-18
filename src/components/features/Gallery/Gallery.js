@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import styles from './Gallery.module.scss';
 import MiniGallery from '../../common/MiniGallery/MiniGallery';
 // import Button from '../../common/Button/Button';
@@ -26,7 +25,7 @@ class Gallery extends Component {
               <div>Navbar</div>
               <div className={styles.photo}>
                 <img
-                  className={styles.rightImage}
+                  className={styles.leftImage}
                   src={products[0].image}
                   alt={products[0].name}
                 />
