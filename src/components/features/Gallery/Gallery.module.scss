@@ -30,4 +30,30 @@
       }
     }
   }
+
+  .photo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .furniture {
+      width: 100%;
+      height: 330px;
+      object-fit: cover;
+    }
+  }
+
+  .rightColumn {
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+
+    .rightImage {
+      padding: 10px 0;
+    }
+  }
+
+  .miniGallery {
+    width: 100%;
+  }
 }

@@ -1,0 +1,30 @@
+@import "../../../styles/settings.scss";
+
+.root {
+  background-color: $product-box-bg;
+
+  .photos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid $product-box-border;
+    border-bottom: 1px solid $product-box-border;
+
+    .miniGalleryImage {
+      width: 50px;
+      height: 50px;
+      object-fit: cover;
+      margin: 5px 5px;
+    }
+
+    .iconBackground {
+      background-color: $button-bg;
+    }
+
+    .icon {
+      font-size: 20px;
+      color: $button-text;
+      background-color: $button-bg;
+    }
+  }
+}
