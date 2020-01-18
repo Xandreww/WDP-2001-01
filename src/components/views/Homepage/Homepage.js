@@ -2,7 +2,7 @@ import React from 'react';
 // import PropTypes from 'prop-types';
 
 import styles from './Homepage.module.scss';
-import Promoted from '../../features/Promoted/Promoted';
+import Promoted from '../../features/Promoted/PromotedContainer';
 import FeatureBoxes from '../../features/FeatureBoxes/FeatureBoxes';
 import NewFurniture from '../../features/NewFurniture/NewFurnitureContainer';
 import SaleContainer from '../../features/Sale/SaleContainer';
