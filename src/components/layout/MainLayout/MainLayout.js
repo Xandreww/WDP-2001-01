@@ -7,13 +7,14 @@ import Footer from '../Footer/Footer';
 class MainLayout extends Component {
   componentDidMount() {
     this.resize();
-
-    window.addEventListener('resize', () => {
-      this.resize();
-    });
+    window.addEventListener('resize', this.resize);
   }
 
-  resize() {
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.resize);
+  }
+
+  resize = () => {
     if (window.innerWidth < 576) {
       this.props.changeMode('mobile');
     } else if (window.innerWidth < 1200) {
@@ -21,7 +22,7 @@ class MainLayout extends Component {
     } else if (window.innerWidth > 1200) {
       this.props.changeMode('desktop');
     }
-  }
+  };
 
   render() {
     const { children } = this.props;

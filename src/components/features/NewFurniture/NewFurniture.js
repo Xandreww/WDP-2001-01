@@ -18,15 +18,23 @@ class NewFurniture extends React.Component {
     this.setState({ activeCategory: newCategory });
   }
 
+  getProductCountFromMode(mode) {
+    switch (mode) {
+      case 'tablet':
+        return 2;
+      case 'mobile':
+        return 1;
+      default:
+        return 8;
+    }
+  }
+
   render() {
-    const { categories, products } = this.props;
+    const { categories, products, mode } = this.props;
     const { activeCategory, activePage } = this.state;
-    let productCount = 8;
+    const productCount = this.getProductCountFromMode(mode);
     const categoryProducts = products.filter(item => item.category === activeCategory);
     const pagesCount = Math.ceil(categoryProducts.length / 8);
-
-    if (this.props.mode === 'tablet') productCount = 2;
-    else if (this.props.mode === 'mobile') productCount = 1;
 
     const dots = [];
     for (let i = 0; i < pagesCount; i++) {
