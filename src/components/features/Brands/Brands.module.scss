@@ -1,0 +1,35 @@
+@import "../../../styles/settings.scss";
+
+.root {
+  background-color: $product-box-bg;
+  margin-bottom: 2rem;
+
+  .photos {
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid $product-box-border;
+    border-bottom: 1px solid $product-box-border;
+
+    .brandImage {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      margin: 5px 15px;
+      border: 1px solid $product-box-border;
+    }
+
+    .iconBackground {
+      background-color: $button-bg;
+      padding: 38px 10px;
+      margin: 0 15px;
+    }
+
+    .icon {
+      font-size: 20px;
+      color: $button-text;
+      background-color: $button-bg;
+    }
+  }
+}
