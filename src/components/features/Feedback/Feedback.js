@@ -4,22 +4,50 @@ import PropTypes from 'prop-types';
 import styles from './Feedback.module.scss';
 import SingleFeedback from '../../common/SingleFeedback/SingleFeedback';
 
+import Swipeable from '../../common/Swipeable/Swipeable';
+
 class Feedback extends React.Component {
   state = {
     activePage: 0,
+    splitPage: true,
   };
 
   handlePageChange(newPage) {
-    this.setState({ activePage: newPage });
+    this.setState({
+      activePage: newPage,
+      splitPage: false,
+    });
+  }
+
+  rightAction() {
+    const newPage = this.state.activePage;
+
+    if (this.state.splitPage) {
+      this.setState({ activePage: newPage + 1 });
+    } else {
+      this.setState({ splitPage: true });
+    }
+  }
+
+  leftAction() {
+    const newPage = this.state.activePage;
+
+    if (this.state.splitPage) {
+      this.setState({ activePage: newPage - 1 });
+    } else {
+      this.setState({ splitPage: true });
+    }
   }
 
   render() {
     const { feedbacks } = this.props;
     const { activePage } = this.state;
 
-    const pagesCount = 3;
+    const pagesNumberOnSlide = 1;
+    const pagesCount = Math.ceil(feedbacks.length / pagesNumberOnSlide);
 
     const dots = [];
+    const pages = [];
     for (let i = 0; i < pagesCount; i++) {
       dots.push(
         <li>
@@ -31,7 +59,17 @@ class Feedback extends React.Component {
           </a>
         </li>
       );
+
+      pages.push(
+        <div className={'row' + ' ' + styles.swipeContainer}>
+          <SingleFeedback {...feedbacks[i]} />
+        </div>
+      );
     }
+
+    const renderPages = () => {
+      return pages;
+    };
 
     return (
       <div className={styles.root}>
@@ -47,13 +85,13 @@ class Feedback extends React.Component {
               </div>
             </div>
           </div>
-          <div className='row'>
-            {feedbacks[this.state.activePage] && (
-              <div key={feedbacks[this.state.activePage].id}>
-                <SingleFeedback {...feedbacks[this.state.activePage]} />
-              </div>
-            )}
-          </div>
+          <Swipeable
+            nextPage={() => this.rightAction()}
+            prevPage={() => this.leftAction()}
+            currentPage={this.state.activePage}
+          >
+            {renderPages()}
+          </Swipeable>
         </div>
       </div>
     );
