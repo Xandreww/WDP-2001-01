@@ -1,0 +1,15 @@
+@import "../../../styles/settings.scss";
+
+.button {
+  color: $dark-grey1;
+  font-size: 3rem;
+  transition: 0.3s;
+  padding-bottom: 2rem;
+  &::after {
+    content: "";
+  }
+  &:hover {
+    color: $primary-orange-brown;
+    transition: 0.3s;
+  }
+}
