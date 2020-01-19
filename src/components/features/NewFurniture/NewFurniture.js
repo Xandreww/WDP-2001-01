@@ -44,12 +44,23 @@ class NewFurniture extends React.Component {
     }
   }
 
-  render() {
-    const { categories, products } = this.props;
-    const { activeCategory, activePage } = this.state;
+  getProductCountFromMode(mode) {
+    switch (mode) {
+      case 'tablet':
+        return 2;
+      case 'mobile':
+        return 1;
+      default:
+        return 8;
+    }
+  }
 
+  render() {
+    const { categories, products, mode } = this.props;
+    const { activeCategory, activePage } = this.state;
+    const productCount = this.getProductCountFromMode(mode);
     const categoryProducts = products.filter(item => item.category === activeCategory);
-    const pagesCount = Math.ceil(categoryProducts.length / 8);
+    const pagesCount = Math.ceil(categoryProducts.length / productCount);
 
     const dots = [];
     const pages = [];
@@ -66,12 +77,14 @@ class NewFurniture extends React.Component {
       );
 
       pages.push(
-        <div className={'row' + ' ' + styles.swipeElement}>
-          {categoryProducts.slice(i * 8, (i + 1) * 8).map(item => (
-            <div key={item.id} className='col-12 col-sm-6 col-xl-3'>
-              <ProductBox {...item} />
-            </div>
-          ))}
+        <div className={`row + ' ' + ${styles.swipeElement}`}>
+          {categoryProducts
+            .slice(i * productCount, (i + 1) * productCount)
+            .map(item => (
+              <div key={item.id} className='col-12 col-sm-6 col-xl-3'>
+                <ProductBox {...item} />
+              </div>
+            ))}
         </div>
       );
     }
@@ -122,6 +135,7 @@ class NewFurniture extends React.Component {
 
 NewFurniture.propTypes = {
   children: PropTypes.node,
+  mode: PropTypes.string,
   categories: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string,
