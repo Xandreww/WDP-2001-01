@@ -21,11 +21,25 @@ const ProductBox = ({
   isFavorite,
   addToFav,
   removeFromFav,
+  toCompare,
+  removeFromCompare,
+  addToCompare,
+  products,
   image,
 }) => {
-  const favHandler = (e, id) => {
-    e.preventDefault();
+  const favHandler = (event, id) => {
+    event.preventDefault();
     isFavorite ? removeFromFav(id) : addToFav(id);
+  };
+
+  const compareHandler = (event, id) => {
+    event.preventDefault();
+    const prodToCompare = products.filter(product => product.toCompare).length;
+    if (prodToCompare <= 3) {
+      toCompare ? removeFromCompare(id) : addToCompare(id);
+    } else {
+      alert('You can compare only four products');
+    }
   };
 
   return (
@@ -64,7 +78,10 @@ const ProductBox = ({
           >
             <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
           </Button>
-          <Button variant='outline'>
+          <Button
+            onClick={e => compareHandler(e, id)}
+            variant={toCompare ? 'outline--checked' : 'outline'}
+          >
             <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
           </Button>
         </div>
@@ -89,16 +106,21 @@ ProductBox.propTypes = {
   price: PropTypes.number,
   oldPrice: PropTypes.number,
   promo: PropTypes.string,
+  id: PropTypes.string,
   stars: PropTypes.number,
-  addToFav: PropTypes.func,
-  removeFromFav: PropTypes.func,
-  id: PropTypes.string.isRequired,
   isFavorite: PropTypes.bool,
+  toCompare: PropTypes.bool,
   image: PropTypes.string,
+  addToFav: PropTypes.func,
+  addToCompare: PropTypes.func,
+  removeFromFav: PropTypes.func,
+  removeFromCompare: PropTypes.func,
+  products: PropTypes.array,
 };
 
 ProductBox.defaultProps = {
   isFavorite: false,
+  toCompare: false,
 };
 
 export default ProductBox;
