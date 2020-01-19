@@ -38,7 +38,7 @@
         border-radius: 3px;
         display: flex;
         align-items: center;
-        justify-content: center;
+        padding-left: 5px;
         font-size: 20px;
 
         .icon {
@@ -47,18 +47,19 @@
       }
 
       .cartCounter {
-        width: 28px;
+        width: 30px;
         height: 27px;
         border-radius: 14px;
         background-color: $company-claim-basket-counter-bg;
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: left;
         font-size: 14px;
         color: $company-claim-basket-counter-text;
         position: absolute;
         top: 50%;
         right: 0;
+        padding-left: 5px;
         transform: translate(50%, -50%);
       }
 
