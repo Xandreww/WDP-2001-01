@@ -352,6 +352,9 @@ const initialState = {
   cart: {
     products: [],
   },
+  other: {
+    mode: '',
+  },
 
   sale: {
     leftBox: {
