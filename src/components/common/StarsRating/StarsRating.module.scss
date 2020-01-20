@@ -5,6 +5,24 @@
     text-decoration: none;
     color: $product-box-desc-stars;
   }
+
+  a::before {
+    text-decoration: none;
+    color: $button-hover-bg;
+  }
+}
+
+.stars:hover {
+  a {
+    color: $button-hover-bg;
+  }
+  a:not(:hover) {
+    color: $button-hover-bg;
+  }
+
+  a:hover ~ a {
+    color: $product-box-desc-stars;
+  }
 }
 
 .starsRated {
