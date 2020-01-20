@@ -5,29 +5,45 @@ import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingBasket } from '@fortawesome/free-solid-svg-icons';
 import Button from '../Button/Button';
-
-import styles from './HotDealsProductBox.module.scss';
+import ProductBox from '../ProductBox/ProductBox';
 import Timer from '../Timer/Timer';
 
-const HotDealsProductBox = ({ name, image }) => {
+import styles from './HotDealsProductBox.module.scss';
+
+const HotDealsProductBox = ({
+  id,
+  name,
+  image,
+  stars,
+  isFavorite,
+  addToFav,
+  price,
+  oldPrice,
+  closePromotionTime,
+}) => {
   return (
     <div className={styles.root}>
-      <div className={styles.photo}>
-        <img src={image} alt={name} />
-        <Button className={styles.addToCartBtn} variant='small'>
-          <FontAwesomeIcon icon={faShoppingBasket}></FontAwesomeIcon> ADD TO CART
-        </Button>
-        <div className={styles.photo}>
-          <Timer />
-        </div>
+      <ProductBox />
+      <Button className={styles.addToCartBtn} variant='small'>
+        <FontAwesomeIcon icon={faShoppingBasket}></FontAwesomeIcon> ADD TO CART
+      </Button>
+      <div className={styles.timer}>
+        <Timer />
       </div>
     </div>
   );
 };
 
 HotDealsProductBox.propTypes = {
+  id: PropTypes.string,
   name: PropTypes.string,
   image: PropTypes.string,
+  stars: PropTypes.number,
+  closePromotionTime: PropTypes.number,
+  price: PropTypes.number,
+  oldPrice: PropTypes.number,
+  isFavorite: PropTypes.bool,
+  addToFav: PropTypes.func,
 };
 
 export default HotDealsProductBox;
