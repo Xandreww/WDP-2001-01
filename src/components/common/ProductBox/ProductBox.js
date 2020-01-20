@@ -5,6 +5,7 @@ import styles from './ProductBox.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faStar,
+  faEye,
   faExchangeAlt,
   faShoppingBasket,
 } from '@fortawesome/free-solid-svg-icons';
@@ -71,6 +72,9 @@ const ProductBox = ({
       <div className={styles.line}></div>
       <div className={styles.actions}>
         <div className={styles.outlines}>
+          <Button variant={'outline'}>
+            <FontAwesomeIcon icon={faEye}>Favorite</FontAwesomeIcon>
+          </Button>
           <Button
             data-test='button'
             onClick={e => favHandler(e, id)}
