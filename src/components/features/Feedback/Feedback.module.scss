@@ -2,7 +2,6 @@
 
 .root {
   .panelBar {
-    margin-bottom: 30px;
     position: relative;
 
     :global(.row) > * {
@@ -100,6 +99,7 @@
   }
 }
 
-.swipeElement {
-  margin: 0;
+.swipeContainer {
+  margin-top: 10px;
+  margin-left: 0;
 }

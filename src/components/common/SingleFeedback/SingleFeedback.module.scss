@@ -1,0 +1,40 @@
+@import "../../../styles/settings.scss";
+
+.root {
+  background-color: $product-box-bg;
+  margin: 0 auto 2rem;
+
+  .icon {
+    font-size: 20px;
+    margin: 20px 0;
+  }
+
+  .photo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .clientPhoto {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      margin: 10px 20px 30px 0;
+      border-radius: 5px;
+    }
+
+    .photoDescription {
+      text-align: center;
+
+      .clientName {
+        font-weight: 700;
+        margin-bottom: 5px;
+      }
+    }
+  }
+
+  .content {
+    text-align: center;
+    text-align: center;
+    padding: 20px 100px;
+  }
+}
