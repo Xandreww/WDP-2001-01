@@ -1,0 +1,66 @@
+@import "../../../styles/settings.scss";
+
+.bottomSheet {
+  position: fixed;
+  bottom: 0;
+  margin: 0;
+  width: 100%;
+  max-width: none !important;
+}
+
+.modalBody {
+  display: flex;
+  background-color: $product-box-bg;
+}
+
+.compareButton {
+  position: fixed;
+  bottom: 0;
+  left: 150px;
+}
+
+.card {
+  width: 14rem;
+  height: 320px;
+  &Img {
+    height: 200px;
+  }
+
+  .cardIcon {
+    visibility: hidden;
+    position: absolute;
+    top: calc(50% - 70px);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    z-index: 99;
+    color: $button-hover-bg;
+  }
+
+  .cardBody {
+    padding-top: 0.8rem;
+  }
+
+  .imgContainer {
+    transition: 0.4s;
+  }
+
+  .imgContainer:hover {
+    cursor: pointer;
+    .cardIcon {
+      visibility: visible;
+    }
+  }
+
+  .imgContainer:hover::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    // full card heigth - cartBody
+    height: calc(100% - 120px);
+    top: 0;
+    background-color: $button-bg;
+    opacity: 0.6;
+    z-index: 99;
+  }
+}

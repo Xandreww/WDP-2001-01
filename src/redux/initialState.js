@@ -26,6 +26,7 @@ import image24 from '../assets/images/furniture24.jpg';
 import clientPhoto1 from '../assets/images/clientPhoto1.jpg';
 import clientPhoto2 from '../assets/images/clientPhoto2.jpg';
 import clientPhoto3 from '../assets/images/clientPhoto3.jpg';
+import clientPhoto4 from '../assets/images/clientPhoto4.jpg';
 import sampleBrand1 from '../assets/images/sampleBrand1.jpg';
 import sampleBrand2 from '../assets/images/sampleBrand2.jpg';
 import sampleBrand3 from '../assets/images/sampleBrand3.jpg';
@@ -352,6 +353,9 @@ const initialState = {
   cart: {
     products: [],
   },
+  other: {
+    mode: '',
+  },
 
   sale: {
     leftBox: {
@@ -395,6 +399,12 @@ const initialState = {
       text:
         'Nullam tincidunt vel est vel convallis. Donec viverra lacus eget consectetur feugiat. Cras odio neque, imperdiet ac risus sed, efficitur condimentum quam. Donec gravida ante id felis laoreet tristique. Vestibulum commodo efficitur neque a vehicula. Suspendisse quis sagittis tortor, in.',
       image: clientPhoto3,
+    },
+    {
+      id: 4,
+      name: 'Cain Velasquez',
+      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+      image: clientPhoto4,
     },
   ],
   promoted: {
