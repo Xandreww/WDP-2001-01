@@ -2,6 +2,14 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styles from './Gallery.module.scss';
 import MiniGallery from '../../common/MiniGallery/MiniGallery';
+import GalleryNavbar from '../../layout/GalleryNavbar/GalleryNavbar';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faHeart,
+  faExchangeAlt,
+  faEye,
+  faShoppingBag,
+} from '@fortawesome/free-solid-svg-icons';
 // import Button from '../../common/Button/Button';
 
 class Gallery extends Component {
@@ -22,16 +30,47 @@ class Gallery extends Component {
                   <div className={'col'}></div>
                 </div>
               </div>
-              <div>Navbar</div>
-              <div className={styles.photo}>
-                <img
-                  className={styles.leftImage}
-                  src={products[0].image}
-                  alt={products[0].name}
-                />
-              </div>
-              <div className={styles.miniGallery}>
-                <MiniGallery products={products} />
+              <div className={styles.leftBorder}>
+                <GalleryNavbar />
+                <div className={styles.photo}>
+                  <img
+                    className={styles.leftImage}
+                    src={products[0].image}
+                    alt={products[0].name}
+                  />
+                </div>
+                <ul className={styles.icons}>
+                  <li>
+                    <FontAwesomeIcon
+                      className={styles.icon + ' ' + styles.heart}
+                      icon={faHeart}
+                    ></FontAwesomeIcon>
+                  </li>
+                  <li>
+                    {' '}
+                    <FontAwesomeIcon
+                      className={styles.icon}
+                      icon={faExchangeAlt}
+                    ></FontAwesomeIcon>
+                  </li>
+                  <li>
+                    {' '}
+                    <FontAwesomeIcon
+                      className={styles.icon}
+                      icon={faEye}
+                    ></FontAwesomeIcon>
+                  </li>
+                  <li>
+                    {' '}
+                    <FontAwesomeIcon
+                      className={styles.icon}
+                      icon={faShoppingBag}
+                    ></FontAwesomeIcon>
+                  </li>
+                </ul>
+                <div className={styles.miniGallery}>
+                  <MiniGallery products={products} />
+                </div>
               </div>
             </div>
             {/* col 1 ends here */}

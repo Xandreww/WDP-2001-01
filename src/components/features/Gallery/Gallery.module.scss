@@ -1,8 +1,11 @@
 @import "../../../styles/settings.scss";
 
 .root {
+  margin: 30px;
+
   .panelBar {
     position: relative;
+    margin-bottom: 30px;
 
     :global(.row) > * {
       border-bottom: 4px solid $new-furniture-line;
@@ -31,6 +34,24 @@
     }
   }
 
+  .icons {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    padding: 0;
+    position: absolute;
+    top: 150px;
+    left: 0;
+
+    .icon {
+      border: 1px solid black;
+      font-size: 25px;
+    }
+  }
+
   .photo {
     display: flex;
     align-items: center;
@@ -43,13 +64,19 @@
     }
   }
 
+  .leftBorder {
+    border: 1px solid $gallery-border;
+    position: relative;
+  }
+
   .rightColumn {
-    // display: flex;
-    // align-items: center;
-    // justify-content: center;
+    width: 100%;
+    height: 100%;
 
     .rightImage {
-      padding: 10px 0;
+      padding: 10px 0 0 0;
+      height: 100%;
+      width: 100%;
     }
   }
 
