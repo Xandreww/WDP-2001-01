@@ -1,0 +1,31 @@
+@import "../../../styles/settings.scss";
+
+.root {
+  display: flex;
+  justify-content: space-around;
+
+  .timerItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.7);
+
+    span {
+      color: #fff;
+      line-height: 1.2;
+      font-weight: bold;
+    }
+
+    .time {
+      font-size: 20px;
+    }
+
+    .unit {
+      font-size: 12px;
+    }
+  }
+}
