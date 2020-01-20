@@ -13,25 +13,28 @@ const MiniGallery = ({ products }) => {
         className={styles.miniGalleryImage}
         src={products[i].image}
         alt={products[i].name}
+        key={products[i].name}
       />
     );
   }
 
   return (
     <div className={styles.root}>
-      <div className={styles.photos}>
+      <div className={styles.photoContainer}>
         <div className={styles.iconBackground}>
           <FontAwesomeIcon
             className={styles.icon}
             icon={faChevronLeft}
           ></FontAwesomeIcon>
-          {photos}
-          <div className={styles.iconBackground}>
-            <FontAwesomeIcon
-              className={styles.icon}
-              icon={faChevronRight}
-            ></FontAwesomeIcon>
-          </div>
+        </div>
+
+        <div className={styles.photos}>{photos}</div>
+
+        <div className={styles.iconBackground}>
+          <FontAwesomeIcon
+            className={styles.icon}
+            icon={faChevronRight}
+          ></FontAwesomeIcon>
         </div>
       </div>
     </div>
