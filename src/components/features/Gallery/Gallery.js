@@ -9,8 +9,9 @@ import {
   faExchangeAlt,
   faEye,
   faShoppingBag,
+  faCaretLeft,
 } from '@fortawesome/free-solid-svg-icons';
-// import Button from '../../common/Button/Button';
+import Button from '../../common/Button/Button';
 
 class Gallery extends Component {
   render() {
@@ -35,38 +36,79 @@ class Gallery extends Component {
                 <div className={styles.photo}>
                   <img
                     className={styles.leftImage}
-                    src={products[0].image}
-                    alt={products[0].name}
+                    src={products[1].image}
+                    alt={products[1].name}
                   />
                 </div>
                 <ul className={styles.icons}>
-                  <li>
-                    <FontAwesomeIcon
-                      className={styles.icon + ' ' + styles.heart}
-                      icon={faHeart}
-                    ></FontAwesomeIcon>
-                  </li>
-                  <li>
-                    {' '}
-                    <FontAwesomeIcon
-                      className={styles.icon}
-                      icon={faExchangeAlt}
-                    ></FontAwesomeIcon>
-                  </li>
-                  <li>
-                    {' '}
-                    <FontAwesomeIcon
-                      className={styles.icon}
-                      icon={faEye}
-                    ></FontAwesomeIcon>
-                  </li>
-                  <li>
-                    {' '}
-                    <FontAwesomeIcon
-                      className={styles.icon}
-                      icon={faShoppingBag}
-                    ></FontAwesomeIcon>
-                  </li>
+                  <a href='#'>
+                    <li>
+                      <FontAwesomeIcon
+                        className={styles.icon}
+                        icon={faHeart}
+                        fixedWidth
+                        border
+                      ></FontAwesomeIcon>
+                    </li>
+                    <span>
+                      <FontAwesomeIcon
+                        className={styles.caretLeft}
+                        icon={faCaretLeft}
+                      ></FontAwesomeIcon>
+                      Add to favorities
+                    </span>
+                  </a>
+                  <a href='#'>
+                    <li>
+                      <FontAwesomeIcon
+                        className={styles.icon}
+                        icon={faExchangeAlt}
+                        fixedWidth
+                        border
+                      ></FontAwesomeIcon>
+                    </li>
+                    <span>
+                      <FontAwesomeIcon
+                        className={styles.caretLeft}
+                        icon={faCaretLeft}
+                      ></FontAwesomeIcon>
+                      Add to compare
+                    </span>
+                  </a>
+                  <a href='#'>
+                    <li>
+                      <FontAwesomeIcon
+                        className={styles.icon}
+                        icon={faEye}
+                        fixedWidth
+                        border
+                      ></FontAwesomeIcon>
+                    </li>
+                    <span>
+                      <FontAwesomeIcon
+                        className={styles.caretLeft}
+                        icon={faCaretLeft}
+                      ></FontAwesomeIcon>
+                      View details
+                    </span>
+                  </a>
+                  <a href='#' className={styles.linkActive}>
+                    <li>
+                      <FontAwesomeIcon
+                        className={styles.icon}
+                        icon={faShoppingBag}
+                        fixedWidth
+                        border
+                      ></FontAwesomeIcon>
+                    </li>
+                    <span>
+                      <FontAwesomeIcon
+                        className={styles.caretLeft}
+                        icon={faCaretLeft}
+                      ></FontAwesomeIcon>
+                      Add to cart
+                    </span>
+                  </a>
                 </ul>
                 <div className={styles.miniGallery}>
                   <MiniGallery products={products} />
@@ -79,10 +121,20 @@ class Gallery extends Component {
                 {
                   <img
                     className={styles.rightImage}
-                    src={products[1].image}
-                    alt={products[1].name}
+                    src={products[0].image}
+                    alt={products[0].name}
                   />
                 }
+                <article>
+                  <h2>
+                    <span className={styles.from}>From</span>{' '}
+                    <span className={styles.price}>$50.80</span>{' '}
+                  </h2>
+                  <h2 className={styles.furniture}>Bedroom Bed</h2>
+                  <Button variant='main' className={styles.button}>
+                    Shop now
+                  </Button>
+                </article>
               </div>
             </div>
           </div>

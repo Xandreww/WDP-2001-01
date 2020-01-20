@@ -50,16 +50,10 @@
       display: flex;
       justify-content: center;
 
-      // &:hover,
-      // &.active {
-      //   background-color: $menu-active;
-      //   border-color: $menu-active;
-      // }
-
       &:hover,
       &.active {
         background-color: $galleryNavbar-background-active;
-        color: $galleryNavbar-text-active;
+        color: $gallery-text-active;
         border-color: $galleryNavbar-border-active;
       }
 
