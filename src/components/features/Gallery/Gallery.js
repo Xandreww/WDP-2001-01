@@ -100,15 +100,8 @@ class Gallery extends Component {
 Gallery.propTypes = {
   products: PropTypes.arrayOf(
     PropTypes.shape({
-      // id: PropTypes.string,
       name: PropTypes.string,
-      // category: PropTypes.string,
-      // price: PropTypes.number,
       stars: PropTypes.number,
-      // promo: PropTypes.string,
-      // newFurniture: PropTypes.bool,
-      // favourited: PropTypes.bool,
-      // addedToCompare: PropTypes.bool,
       image: PropTypes.string,
     })
   ),
