@@ -1,13 +1,11 @@
 // ANIMATION TIME VARIABLES - YOU CAN CHANGE THEM
 $animation-text-time: 250ms;
 $animation-background-time: 250ms;
-//$translateX: 5px;
 
 //CALLING EXTEND
 :hover,
 :hover * {
   @extend %animation;
-  //@extend %transform;
 }
 
 //@EXTEND DECLARATION
@@ -15,7 +13,3 @@ $animation-background-time: 250ms;
   transition: color $animation-text-time ease-in-out,
   background-color $animation-background-time ease-in-out;
 }
-
-//%transform {
-//  transform: translateX($translateX);
-//}
