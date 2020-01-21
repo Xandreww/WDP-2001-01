@@ -407,6 +407,26 @@ const initialState = {
       image: clientPhoto4,
     },
   ],
+  blogBox: {
+    leftBox: {
+      image: image14,
+      imageName: 'image',
+      text:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Magna etiam tempor orci eu lobortis elementum. Lobortis elementum nibh tellus molestie nunc non. Egestas tellus rutrum tellus pellentesque eu. Ornare suspendisse sed nisi lacus sed viverra tellus in.',
+    },
+    middleBox: {
+      image: image16,
+      imageName: 'image',
+      text:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Magna etiam tempor orci eu lobortis elementum. Lobortis elementum nibh tellus molestie nunc non. Egestas tellus rutrum tellus pellentesque eu. Ornare suspendisse sed nisi lacus sed viverra tellus in.',
+    },
+    rightBox: {
+      image: image18,
+      imageName: 'image',
+      text:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Magna etiam tempor orci eu lobortis elementum. Lobortis elementum nibh tellus molestie nunc non. Egestas tellus rutrum tellus pellentesque eu. Ornare suspendisse sed nisi lacus sed viverra tellus in.',
+    },
+  },
 };
 
 export default initialState;
