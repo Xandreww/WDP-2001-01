@@ -7,7 +7,7 @@ const SingleBrand = ({ image }) => {
   return (
     <div className={styles.root}>
       <div className={styles.photo}>
-        <img className={styles.brandImage} src={image} alt='brnad logo' />
+        <img className={styles.brandImage} src={image} alt='brand logo' />
       </div>
     </div>
   );

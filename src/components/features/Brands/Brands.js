@@ -12,15 +12,15 @@ class Brands extends React.Component {
   };
 
   rightAction() {
-    const newPage = this.state.activePage;
-
-    this.setState({ activePage: newPage + 1 });
+    this.setState(state => ({
+      activePage: state.activePage + 1,
+    }));
   }
 
   leftAction() {
-    const newPage = this.state.activePage;
-
-    this.setState({ activePage: newPage - 1 });
+    this.setState(state => ({
+      activePage: state.activePage - 1,
+    }));
   }
 
   getBrandsCountFromMode(mode) {
