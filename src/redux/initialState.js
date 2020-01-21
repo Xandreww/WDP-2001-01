@@ -407,37 +407,25 @@ const initialState = {
       image: clientPhoto4,
     },
   ],
-  promoted: {
-    leftProduct: {
-      topBarTitle: 'hot deals',
-      image: image20,
-      imageTitle: 'image',
-      dealCounter: {
-        days: {
-          value: '25',
-          unit: 'days',
-        },
-        hrs: {
-          value: '10',
-          unit: 'hrs',
-        },
-        mins: {
-          value: '45',
-          unit: 'mins',
-        },
-        secs: {
-          value: '30',
-          unit: 'secs',
-        },
-      },
-    },
-    rightProduct: {
-      title: 'indoor',
-      titleBold: 'furniture',
-      dealDescription: 'save up 50% of furniture',
-      image: image12,
-      imageTitle: 'image',
-    },
+  promotedProductBox: {
+    image: image9,
+    imageName: 'image',
+    softTitle: 'indoor',
+    strongTitle: 'furniture',
+    description: 'save up 50% of furniture',
+  },
+  hotDealsProductBox: {
+    id: 'aenean-ru-bristique-1',
+    name: 'Aenean Ru Bristique 1',
+    category: 'bed',
+    price: 30,
+    oldPrice: 45,
+    stars: 2,
+    promo: 'sale',
+    newFurniture: true,
+    isFavorite: false,
+    toCompare: false,
+    image: image20,
   },
 };
 
