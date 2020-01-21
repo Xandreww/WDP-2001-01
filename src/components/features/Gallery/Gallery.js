@@ -3,15 +3,11 @@ import PropTypes from 'prop-types';
 import styles from './Gallery.module.scss';
 import MiniGallery from '../../common/MiniGallery/MiniGallery';
 import GalleryNavbar from '../../layout/GalleryNavbar/GalleryNavbar';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faHeart,
-  faExchangeAlt,
-  faEye,
-  faShoppingBag,
-  faCaretLeft,
-} from '@fortawesome/free-solid-svg-icons';
+import Icons from '../../common/Icons/Icons';
 import Button from '../../common/Button/Button';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faStar } from '@fortawesome/free-solid-svg-icons';
+import { faStar as farStar } from '@fortawesome/free-regular-svg-icons';
 
 class Gallery extends Component {
   render() {
@@ -40,78 +36,35 @@ class Gallery extends Component {
                     alt={products[1].name}
                   />
                 </div>
-                <ul className={styles.icons}>
-                  <a href='#'>
-                    <li>
-                      <FontAwesomeIcon
-                        className={styles.icon}
-                        icon={faHeart}
-                        fixedWidth
-                        border
-                      ></FontAwesomeIcon>
-                    </li>
-                    <span>
-                      <FontAwesomeIcon
-                        className={styles.caretLeft}
-                        icon={faCaretLeft}
-                      ></FontAwesomeIcon>
-                      Add to favorities
-                    </span>
-                  </a>
-                  <a href='#'>
-                    <li>
-                      <FontAwesomeIcon
-                        className={styles.icon}
-                        icon={faExchangeAlt}
-                        fixedWidth
-                        border
-                      ></FontAwesomeIcon>
-                    </li>
-                    <span>
-                      <FontAwesomeIcon
-                        className={styles.caretLeft}
-                        icon={faCaretLeft}
-                      ></FontAwesomeIcon>
-                      Add to compare
-                    </span>
-                  </a>
-                  <a href='#'>
-                    <li>
-                      <FontAwesomeIcon
-                        className={styles.icon}
-                        icon={faEye}
-                        fixedWidth
-                        border
-                      ></FontAwesomeIcon>
-                    </li>
-                    <span>
-                      <FontAwesomeIcon
-                        className={styles.caretLeft}
-                        icon={faCaretLeft}
-                      ></FontAwesomeIcon>
-                      View details
-                    </span>
-                  </a>
-                  <a href='#' className={styles.linkActive}>
-                    <li>
-                      <FontAwesomeIcon
-                        className={styles.icon}
-                        icon={faShoppingBag}
-                        fixedWidth
-                        border
-                      ></FontAwesomeIcon>
-                    </li>
-                    <span>
-                      <FontAwesomeIcon
-                        className={styles.caretLeft}
-                        icon={faCaretLeft}
-                      ></FontAwesomeIcon>
-                      Add to cart
-                    </span>
-                  </a>
-                </ul>
+                <Icons />
                 <div className={styles.miniGallery}>
                   <MiniGallery products={products} />
+                </div>
+                <div className={styles.rating}>
+                  <div className={styles.priceRating}>
+                    <h2 className={styles.priceLower}>$120.00</h2>
+                    <h2 className={styles.priceHigher}>$160.00</h2>
+                  </div>
+                  <div className={styles.starRating}>
+                    <h5>{products[1].name}</h5>
+                    <div className={styles.stars}>
+                      {[1, 2, 3, 4, 5].map(i => (
+                        <a key={i} href='#'>
+                          {i <= products[1].stars ? (
+                            <FontAwesomeIcon icon={faStar}>
+                              {i} products[1].stars
+                            </FontAwesomeIcon>
+                          ) : (
+                            <FontAwesomeIcon icon={farStar}>
+                              {i} products[1].stars
+                            </FontAwesomeIcon>
+                          )}
+                        </a>
+                      ))}
+                    </div>
+                    <div className={styles.corner + ' ' + styles.leftCorner}></div>
+                    <div className={styles.corner + ' ' + styles.rightCorner}></div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -151,7 +104,7 @@ Gallery.propTypes = {
       name: PropTypes.string,
       // category: PropTypes.string,
       // price: PropTypes.number,
-      // stars: PropTypes.number,
+      stars: PropTypes.number,
       // promo: PropTypes.string,
       // newFurniture: PropTypes.bool,
       // favourited: PropTypes.bool,
