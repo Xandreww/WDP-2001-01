@@ -6,6 +6,7 @@ import {
   removeFromFav,
   addToCompare,
   removeFromCompare,
+  changeRating,
 } from '../../../redux/productsRedux';
 
 const mapStateToProps = state => ({
@@ -19,6 +20,8 @@ const mapDispatchToProps = dispatch => ({
   /* toCompare */
   addToCompare: payload => dispatch(addToCompare(payload)),
   removeFromCompare: payload => dispatch(removeFromCompare(payload)),
+  /* rating */
+  changeRating: (payload, stars) => dispatch(changeRating(payload, stars)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ProductBox);
