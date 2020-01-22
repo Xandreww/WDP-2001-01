@@ -26,7 +26,7 @@ class Brands extends React.Component {
   getBrandsCountFromMode(mode) {
     switch (mode) {
       case 'laptop':
-        return 4;
+        return 5;
       case 'tablet':
         return 3;
       case 'mobile':
@@ -49,7 +49,7 @@ class Brands extends React.Component {
           {sampleBrands
             .slice(i * brandsNumberOnSlide, (i + 1) * brandsNumberOnSlide)
             .map(item => (
-              <div key={item.id} className={'col-6 col-sm-3 col-xl-2'}>
+              <div key={item.id}>
                 <SingleBrand {...item} />
               </div>
             ))}
