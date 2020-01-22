@@ -103,3 +103,52 @@
 .swipeElement {
   margin: 0;
 }
+
+@media (max-width: 1200px) {
+  .root {
+    .panelBar {
+      .menu {
+        text-align: unset;
+        padding-left: 10%;
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .root {
+    .panelBar {
+      margin-bottom: 60px;
+      .menu {
+        text-align: center;
+        padding-left: 0;
+      }
+      .dots {
+        width: 100%;
+        margin-top: 30px;
+        text-align: center;
+        ul {
+          padding: 0;
+          li {
+            margin-left: 0.25rem;
+            margin-right: 0.25rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .root {
+    .panelBar {
+      margin-bottom: 30px;
+      .panelBarElement {
+        display: block;
+        .dots {
+          display: none;
+        }
+      }
+    }
+  }
+}
