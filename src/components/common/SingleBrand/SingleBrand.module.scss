@@ -1,0 +1,20 @@
+@import "../../../styles/settings.scss";
+
+.root {
+  background-color: $product-box-bg;
+  margin-bottom: 2rem;
+
+  .photo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .brandImage {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      margin: 5px 15px;
+      border: 1px solid $product-box-border;
+    }
+  }
+}

@@ -46,6 +46,8 @@ class NewFurniture extends React.Component {
 
   getProductCountFromMode(mode) {
     switch (mode) {
+      case 'laptop':
+        return 2;
       case 'tablet':
         return 2;
       case 'mobile':
