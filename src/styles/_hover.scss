@@ -1,0 +1,15 @@
+// ANIMATION TIME VARIABLES - YOU CAN CHANGE THEM
+$animation-text-time: 250ms;
+$animation-background-time: 250ms;
+
+//CALLING EXTEND
+:hover,
+:hover * {
+  @extend %animation;
+}
+
+//@EXTEND DECLARATION
+%animation {
+  transition: color $animation-text-time ease-in-out,
+  background-color $animation-background-time ease-in-out;
+}

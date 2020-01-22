@@ -366,13 +366,13 @@ const initialState = {
     },
   ],
   sampleBrands: [
-    sampleBrand1,
-    sampleBrand2,
-    sampleBrand3,
-    sampleBrand4,
-    sampleBrand5,
-    sampleBrand6,
-    sampleBrand7,
+    { id: 1, image: sampleBrand1 },
+    { id: 2, image: sampleBrand2 },
+    { id: 3, image: sampleBrand3 },
+    { id: 4, image: sampleBrand4 },
+    { id: 5, image: sampleBrand5 },
+    { id: 6, image: sampleBrand6 },
+    { id: 7, image: sampleBrand7 },
   ],
   cart: {
     products: [],
@@ -431,6 +431,26 @@ const initialState = {
       image: clientPhoto4,
     },
   ],
+  promotedProductBox: {
+    image: image9,
+    imageName: 'image',
+    softTitle: 'indoor',
+    strongTitle: 'furniture',
+    description: 'save up 50% of furniture',
+  },
+  hotDealsProductBox: {
+    id: 'aenean-ru-bristique-1',
+    name: 'Aenean Ru Bristique 1',
+    category: 'bed',
+    price: 30,
+    oldPrice: 45,
+    stars: 2,
+    promo: 'sale',
+    newFurniture: true,
+    isFavorite: false,
+    toCompare: false,
+    image: image20,
+  },
 };
 
 export default initialState;

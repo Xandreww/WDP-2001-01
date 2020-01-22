@@ -1,0 +1,39 @@
+@import "../../../styles/settings.scss";
+
+.root {
+  padding: 16px;
+
+  .photo {
+    position: relative;
+    width: 100%;
+    height: 250px;
+
+    .addToCartBtn {
+      display: none;
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  .timer {
+    display: none;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    width: 75%;
+    transform: translateX(-50%);
+
+  }
+
+  &:hover {
+    .addToCartBtn {
+      display: block;
+    }
+
+    .timer {
+      display: block;
+    }
+  }
+}
