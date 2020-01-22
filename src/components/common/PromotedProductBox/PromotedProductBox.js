@@ -20,7 +20,13 @@ const PromotedProductBox = ({ promotedProductBox }) => {
 };
 
 PromotedProductBox.propTypes = {
-  promotedProductBox: PropTypes.object,
+  promotedProductBox: PropTypes.shape({
+    image: PropTypes.number,
+    imageName: PropTypes.string,
+    softTitle: PropTypes.string,
+    strongTitle: PropTypes.string,
+    description: PropTypes.string,
+  }),
 };
 
 export default PromotedProductBox;
