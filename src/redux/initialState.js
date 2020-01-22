@@ -431,6 +431,26 @@ const initialState = {
       image: clientPhoto4,
     },
   ],
+  promotedProductBox: {
+    image: image9,
+    imageName: 'image',
+    softTitle: 'indoor',
+    strongTitle: 'furniture',
+    description: 'save up 50% of furniture',
+  },
+  hotDealsProductBox: {
+    id: 'aenean-ru-bristique-1',
+    name: 'Aenean Ru Bristique 1',
+    category: 'bed',
+    price: 30,
+    oldPrice: 45,
+    stars: 2,
+    promo: 'sale',
+    newFurniture: true,
+    isFavorite: false,
+    toCompare: false,
+    image: image20,
+  },
 };
 
 export default initialState;
