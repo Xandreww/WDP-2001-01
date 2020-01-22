@@ -50,11 +50,12 @@ const initialState = {
       category: 'bed',
       price: 30,
       oldPrice: 45,
-      stars: 2,
+      stars: 4,
       promo: 'sale',
       newFurniture: true,
       isFavorite: false,
       toCompare: false,
+      rated: true,
       image: image1,
     },
     {
@@ -63,11 +64,12 @@ const initialState = {
       category: 'bed',
       price: 30,
       oldPrice: null,
-      stars: 2,
+      stars: 1,
       promo: 'sale',
       newFurniture: true,
       isFavorite: false,
       toCompare: true,
+      rated: true,
       image: image2,
     },
     {
@@ -81,6 +83,7 @@ const initialState = {
       newFurniture: true,
       isFavorite: true,
       toCompare: true,
+      rated: false,
       image: image3,
     },
     {
@@ -94,6 +97,7 @@ const initialState = {
       newFurniture: true,
       isFavorite: true,
       toCompare: false,
+      rated: false,
       image: image4,
     },
     {
@@ -107,6 +111,7 @@ const initialState = {
       newFurniture: true,
       isFavorite: false,
       toCompare: false,
+      rated: false,
       image: image5,
     },
     {
@@ -120,6 +125,7 @@ const initialState = {
       newFurniture: true,
       isFavorite: false,
       toCompare: false,
+      rated: false,
       image: image6,
     },
     {
@@ -133,6 +139,7 @@ const initialState = {
       newFurniture: true,
       isFavorite: false,
       toCompare: false,
+      rated: false,
       image: image7,
     },
     {
@@ -146,6 +153,7 @@ const initialState = {
       newFurniture: true,
       isFavorite: false,
       toCompare: false,
+      rated: false,
       image: image8,
     },
     {
@@ -158,6 +166,7 @@ const initialState = {
       newFurniture: true,
       isFavorite: false,
       toCompare: false,
+      rated: false,
       image: image9,
     },
     {
@@ -170,6 +179,7 @@ const initialState = {
       newFurniture: true,
       isFavorite: false,
       toCompare: false,
+      rated: false,
       image: image10,
     },
     {
@@ -182,6 +192,7 @@ const initialState = {
       newFurniture: true,
       isFavorite: false,
       toCompare: false,
+      rated: false,
       image: image11,
     },
     {
@@ -194,6 +205,7 @@ const initialState = {
       newFurniture: true,
       isFavorite: false,
       toCompare: false,
+      rated: false,
       image: image12,
     },
     {
@@ -206,6 +218,7 @@ const initialState = {
       newFurniture: true,
       isFavorite: false,
       toCompare: false,
+      rated: false,
       image: image13,
     },
     {
@@ -218,6 +231,7 @@ const initialState = {
       newFurniture: true,
       isFavorite: false,
       toCompare: false,
+      rated: false,
       image: image14,
     },
     {
@@ -230,6 +244,7 @@ const initialState = {
       newFurniture: true,
       isFavorite: false,
       toCompare: false,
+      rated: false,
       image: image15,
     },
     {
@@ -242,6 +257,7 @@ const initialState = {
       newFurniture: true,
       isFavorite: false,
       toCompare: false,
+      rated: false,
       image: image16,
     },
     {
@@ -254,6 +270,7 @@ const initialState = {
       newFurniture: true,
       isFavorite: false,
       toCompare: false,
+      rated: false,
       image: image17,
     },
     {
@@ -266,6 +283,7 @@ const initialState = {
       newFurniture: true,
       isFavorite: false,
       toCompare: false,
+      rated: false,
       image: image18,
     },
     {
@@ -278,6 +296,7 @@ const initialState = {
       newFurniture: true,
       isFavorite: false,
       toCompare: false,
+      rated: false,
       image: image19,
     },
     {
@@ -290,6 +309,7 @@ const initialState = {
       newFurniture: true,
       isFavorite: false,
       toCompare: false,
+      rated: false,
       image: image20,
     },
     {
@@ -302,6 +322,7 @@ const initialState = {
       newFurniture: true,
       isFavorite: false,
       toCompare: false,
+      rated: false,
       image: image21,
     },
     {
@@ -314,6 +335,7 @@ const initialState = {
       newFurniture: true,
       isFavorite: false,
       toCompare: false,
+      rated: false,
       image: image22,
     },
     {
@@ -326,6 +348,7 @@ const initialState = {
       newFurniture: true,
       isFavorite: false,
       toCompare: false,
+      rated: false,
       image: image23,
     },
     {
@@ -338,17 +361,18 @@ const initialState = {
       newFurniture: true,
       isFavorite: false,
       toCompare: false,
+      rated: false,
       image: image24,
     },
   ],
   sampleBrands: [
-    sampleBrand1,
-    sampleBrand2,
-    sampleBrand3,
-    sampleBrand4,
-    sampleBrand5,
-    sampleBrand6,
-    sampleBrand7,
+    { id: 1, image: sampleBrand1 },
+    { id: 2, image: sampleBrand2 },
+    { id: 3, image: sampleBrand3 },
+    { id: 4, image: sampleBrand4 },
+    { id: 5, image: sampleBrand5 },
+    { id: 6, image: sampleBrand6 },
+    { id: 7, image: sampleBrand7 },
   ],
   cart: {
     products: [],
@@ -407,6 +431,26 @@ const initialState = {
       image: clientPhoto4,
     },
   ],
+  promotedProductBox: {
+    image: image9,
+    imageName: 'image',
+    softTitle: 'indoor',
+    strongTitle: 'furniture',
+    description: 'save up 50% of furniture',
+  },
+  hotDealsProductBox: {
+    id: 'aenean-ru-bristique-1',
+    name: 'Aenean Ru Bristique 1',
+    category: 'bed',
+    price: 30,
+    oldPrice: 45,
+    stars: 2,
+    promo: 'sale',
+    newFurniture: true,
+    isFavorite: false,
+    toCompare: false,
+    image: image20,
+  },
 };
 
 export default initialState;
