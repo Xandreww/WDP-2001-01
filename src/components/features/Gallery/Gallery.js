@@ -30,11 +30,13 @@ class Gallery extends Component {
               <div className={styles.leftBorder}>
                 <GalleryNavbar />
                 <div className={styles.photo}>
-                  <img
-                    className={styles.leftImage}
-                    src={products[1].image}
-                    alt={products[1].name}
-                  />
+                  {products[1] && (
+                    <img
+                      className={styles.leftImage}
+                      src={products[1].image}
+                      alt={products[1].name}
+                    />
+                  )}
                 </div>
                 <Icons />
                 <div className={styles.miniGallery}>
@@ -45,39 +47,41 @@ class Gallery extends Component {
                     <h2 className={styles.priceLower}>$120.00</h2>
                     <h2 className={styles.priceHigher}>$160.00</h2>
                   </div>
-                  <div className={styles.starRating}>
-                    <h5>{products[1].name}</h5>
-                    <div className={styles.stars}>
-                      {[1, 2, 3, 4, 5].map(i => (
-                        <a key={i} href='#'>
-                          {i <= products[1].stars ? (
-                            <FontAwesomeIcon icon={faStar}>
-                              {i} products[1].stars
-                            </FontAwesomeIcon>
-                          ) : (
-                            <FontAwesomeIcon icon={farStar}>
-                              {i} products[1].stars
-                            </FontAwesomeIcon>
-                          )}
-                        </a>
-                      ))}
+                  {products[1] && (
+                    <div className={styles.starRating}>
+                      <h5>{products[1].name}</h5>
+                      <div className={styles.stars}>
+                        {[1, 2, 3, 4, 5].map(i => (
+                          <a key={i} href='#'>
+                            {i <= products[1].stars ? (
+                              <FontAwesomeIcon icon={faStar}>
+                                {i} products[1].stars
+                              </FontAwesomeIcon>
+                            ) : (
+                              <FontAwesomeIcon icon={farStar}>
+                                {i} products[1].stars
+                              </FontAwesomeIcon>
+                            )}
+                          </a>
+                        ))}
+                      </div>
+                      <div className={styles.corner + ' ' + styles.leftCorner}></div>
+                      <div className={styles.corner + ' ' + styles.rightCorner}></div>
                     </div>
-                    <div className={styles.corner + ' ' + styles.leftCorner}></div>
-                    <div className={styles.corner + ' ' + styles.rightCorner}></div>
-                  </div>
+                  )}
                 </div>
               </div>
             </div>
             {/* col 1 ends here */}
             <div className={'col-6'}>
               <div className={styles.rightColumn}>
-                {
+                {products[0] && (
                   <img
                     className={styles.rightImage}
                     src={products[0].image}
                     alt={products[0].name}
                   />
-                }
+                )}
                 <article>
                   <h2>
                     <span className={styles.from}>From</span>{' '}

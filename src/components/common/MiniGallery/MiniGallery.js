@@ -6,16 +6,28 @@ import { faChevronRight, faChevronLeft } from '@fortawesome/free-solid-svg-icons
 
 const MiniGallery = ({ products }) => {
   const photos = [];
+  const numberOfProducts = products.length;
 
-  for (let i = 0; i < 7; i++) {
-    photos.push(
-      <img
-        className={styles.miniGalleryImage}
-        src={products[i].image}
-        alt={products[i].name}
-        key={products[i].name}
-      />
-    );
+  if (numberOfProducts > 0) {
+    const productsToDisplay = () => {
+      if (numberOfProducts >= 6) {
+        return 6;
+      } else {
+        return numberOfProducts;
+      }
+    };
+
+    for (let i = 0; i <= productsToDisplay(); i++) {
+      photos &&
+        photos.push(
+          <img
+            className={styles.miniGalleryImage}
+            src={products[i].image}
+            alt={products[i].name}
+            key={products[i].name}
+          />
+        );
+    }
   }
 
   return (
@@ -46,13 +58,6 @@ MiniGallery.propTypes = {
     PropTypes.shape({
       id: PropTypes.string,
       name: PropTypes.string,
-      // category: PropTypes.string,
-      // price: PropTypes.number,
-      // stars: PropTypes.number,
-      // promo: PropTypes.string,
-      // newFurniture: PropTypes.bool,
-      // favourited: PropTypes.bool,
-      // addedToCompare: PropTypes.bool,
       image: PropTypes.string,
     })
   ),
