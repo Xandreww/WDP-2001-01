@@ -29,14 +29,14 @@
       -webkit-appearance: none;
       border: 0;
       background-color: transparent;
-      padding: 20px 30px 5px 40px;
+      padding: 20px 30px 0 40px;
       position: relative;
       list-style-type: none;
       z-index: 1;
 
       li {
         display: inline-block;
-        margin-right: 36px;
+        margin-left: 0;
 
         &:hover ul {
           display: block;
@@ -48,8 +48,9 @@
         position: absolute;
         display: none;
         left: 50%;
+        background: $search-product-category-bg;
         transform: translateX(-50%);
-        padding: 12px 0 0 0;
+        padding: 0 0;
 
       li {
         display: block;
@@ -60,10 +61,10 @@
 
     a {
       text-decoration: none;
-      color: $dark-grey1;
+      color: $search-product-category;
 
       &:hover {
-        color: $primary-orange-brown;
+        color: $search-product-category-active;
       }
     }
   }
