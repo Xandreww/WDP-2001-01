@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import styles from './GalleryNavbar.module.scss';
@@ -11,7 +10,7 @@ class GalleryNavbar extends Component {
 
   toggleMenu = e => {
     e.preventDefault();
-    this.setState((state, props) => ({
+    this.setState(state => ({
       menuActive: !state.menuActive,
     }));
   };
@@ -56,9 +55,5 @@ class GalleryNavbar extends Component {
     );
   }
 }
-
-GalleryNavbar.propTypes = {
-  children: PropTypes.node,
-};
 
 export default GalleryNavbar;
