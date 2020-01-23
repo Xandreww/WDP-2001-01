@@ -36,7 +36,7 @@
       "prettier --write",
       "git add"
     ],
-    "src/**/*.html": [
+    "public/*.html": [
       "prettier --write",
       "git add"
     ]
