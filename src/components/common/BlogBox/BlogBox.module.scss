@@ -2,32 +2,29 @@
 
 .root{
   padding: 10px;
-  ;
+
   .row {
-    margin-bottom: 2rem;
     display: block;
     text-decoration: none;
-    cursor: pointer;
 
     &:hover {
       text-decoration: none;
-      .post-info .blog-header {
-        color: orange;
+      .postDetails .postDetailsHeader {
+        color: $blog-postDetails-color-hoover;
       }
-      .post-info .btn-main {
-        background-color: red;
+      .postDetails .btn {
+        background-color: $blog-postDetails-color-hoover;
+        border: none;
       }
     }
 
     .imgs {
       position: relative;
       background: {
-        color: $light;
+        color: $blog-details-background-color;
         size: cover;
         position: center;
       }
-
-
 
       img {
         width: 100%;
@@ -36,7 +33,7 @@
       .details {
         padding: 15px 20px;
         display: flex;
-        background-color: $light;
+        background-color: $blog-details-background-color;
         font-size: 14px;
         position: absolute;
         margin-left: 10%;
@@ -50,12 +47,12 @@
 
         .date {
           text-align: left;
-          color: $dark-grey1;
+          color: $blog-icon-color;
         }
 
         .comments {
           text-align: right;
-          color: $dark-grey1;
+          color: $blog-icon-color;
         }
       }
     }
@@ -64,7 +61,7 @@
       padding: 25px;
 
       .postDetailsHeader {
-        color: $dark-grey1;
+        color: $blog-postDetails-color;
         font-size: 18px;
         line-height: 24px;
         letter-spacing: 1px;
@@ -73,34 +70,24 @@
       p {
         font-size: 16px;
         line-height: 24px;
-        color: $dark-grey4;
+        color: $blog-postDetails-color;
         text-align: justify;
       }
 
+    .icon {
+      color: $blog-postDetails-color;
+      font-size: 16px;
     }
-  }
-  .icon {
-    color: $dark-grey4;
-    font-size: 16px;
-  }
-  .btn {
-    position: relative;
-    left:30%;
-    text-align:center;
-    background-color: $dark-grey1;
-    color:  $very-bright-cyjan-blue;
-    text-transform: uppercase;
-    font-weight: bold;
-    padding: 12px 18px;
-    border-radius: 2px;
-    transition: .2s;
-
-    &:hover {
-      border: none;
-      cursor: pointer;
-      box-shadow: 0px 0px 12px $dark-grey1;
-      background-color: $primary-orange-brown;
+    .btn {
+      position: relative;
+      left:30%;
+      text-align:center;
+      background-color: $blog-postDetails-background-color;
+      color:  $blog-postDetails-btn-color;
+      text-transform: uppercase;
+      font-weight: bold;
+      padding: 12px 18px;
+      }
     }
-
   }
 }
