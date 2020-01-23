@@ -30,6 +30,15 @@
       "eslint --fix",
       "prettier --write",
       "git add"
+    ],
+    "src/**/*.scss": [
+      "stylelint --syntax=scss --fix",
+      "prettier --write",
+      "git add"
+    ],
+    "src/**/*.html": [
+      "prettier --write",
+      "git add"
     ]
   },
   "browserslist": {
