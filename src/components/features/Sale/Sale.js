@@ -7,7 +7,7 @@ const Sale = ({ sale }) => {
     <div className={styles.root}>
       <div className='container'>
         <div className='row'>
-          <div className={'col-12 col-sm-6 mb-3 mb-sm-0 ' + styles.leftBox}>
+          <div className={'col-12 col-md-6 mb-3 mb-md-0 ' + styles.leftBox}>
             <img src={sale.leftBox.bgc} alt={sale.leftBox.title} />
             <div className={styles.leftBoxBgc}>
               <h2 className={styles.title}>{sale.leftBox.title}</h2>
@@ -15,9 +15,9 @@ const Sale = ({ sale }) => {
               <h2 className={styles.sale}>{sale.leftBox.sale}</h2>
             </div>
           </div>
-          <div className='col-12 col-sm-6'>
-            <div className='row ml-sm-1'>
-              <div className={'col-12 mb-3 ' + styles.rightTop}>
+          <div className='col-12 col-md-6 '>
+            <div className='row ml-md-1'>
+              <div className={'col-12 mb-3  ' + styles.rightTop}>
                 <img src={sale.rightTopBox.bgc} alt={sale.rightTopBox.title} />
                 <div className={styles.rightTopBox}>
                   <h2 className={styles.title}>
@@ -28,7 +28,7 @@ const Sale = ({ sale }) => {
                   <h2 className={styles.price}>{sale.rightTopBox.price}</h2>
                 </div>
               </div>
-              <div className={'col-12 ' + styles.rightBottom}>
+              <div className={'col-12  ' + styles.rightBottom}>
                 <img src={sale.rightBottomBox.bgc} alt={sale.rightBottomBox.title} />
                 <div className={styles.rightBottomBox}>
                   <h2 className={styles.title}>
