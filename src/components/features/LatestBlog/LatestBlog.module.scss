@@ -2,7 +2,6 @@
 
 .root {
   .panelBar {
-    margin-bottom: 30px;
     position: relative;
 
     :global(.row) > * {
@@ -31,6 +30,39 @@
       }
     }
 
+    .menu {
+      text-align: center;
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        li {
+          display: inline-block;
+          margin: 0 0.5rem;
+          font-weight: 600;
+
+          a {
+            color: $new-furniture-menu;
+            position: relative;
+            text-decoration: none;
+            font-size: 18px;
+            display: block;
+
+            &.active,
+            &:hover {
+              &::before {
+                content: "";
+                position: absolute;
+                bottom: -4px;
+                left: 0;
+                width: 100%;
+                border-bottom: 4px solid $new-furniture-line-elem;
+              }
+            }
+          }
+        }
+      }
+    }
 
     .dots {
       position: absolute;
@@ -65,14 +97,10 @@
       }
     }
   }
+}
 
 .blogBox {
     display: flex;
     justify-content: space-between;
     background-color: $light;
   }
-
-}
-
-
-
