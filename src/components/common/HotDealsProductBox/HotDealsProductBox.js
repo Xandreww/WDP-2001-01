@@ -2,7 +2,7 @@ import React from 'react';
 
 import PropTypes from 'prop-types';
 
-import ProductBox from '../ProductBox/ProductBox';
+import ProductBox from '../ProductBox/ProductBoxContainer';
 import Timer from '../Timer/Timer';
 
 import styles from './HotDealsProductBox.module.scss';
