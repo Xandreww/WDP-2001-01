@@ -1,9 +1,10 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import styles from './LatestBlog.module.scss';
 import BlogBox from '../../common/BlogBox/BlogBoxContainer';
 
-const LatestBlog = blogBox => {
+const LatestBlog = ({ blogBox1, blogBox2, blogBox3 }) => {
   return (
     <div className={styles.root}>
       <div className='container'>
@@ -29,13 +30,31 @@ const LatestBlog = blogBox => {
           </div>
         </div>
         <div className={styles.blogBox}>
-          <BlogBox />
-          <BlogBox />
-          <BlogBox />
+          <BlogBox {...blogBox1} />
+          <BlogBox {...blogBox2} />
+          <BlogBox {...blogBox3} />
         </div>
       </div>
     </div>
   );
+};
+
+LatestBlog.propTypes = {
+  blogBox1: PropTypes.shape({
+    image: PropTypes.number,
+    imageName: PropTypes.string,
+    text: PropTypes.string,
+  }),
+  blogBox2: PropTypes.shape({
+    image: PropTypes.number,
+    imageName: PropTypes.string,
+    text: PropTypes.string,
+  }),
+  blogBox3: PropTypes.shape({
+    image: PropTypes.number,
+    imageName: PropTypes.string,
+    text: PropTypes.string,
+  }),
 };
 
 export default LatestBlog;
