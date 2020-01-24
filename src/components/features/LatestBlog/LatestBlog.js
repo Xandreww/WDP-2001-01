@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import styles from './LatestBlog.module.scss';
-import BlogBox from '../../common/BlogBox/BlogBoxContainer';
+import BlogBox from '../../common/BlogBox/BlogBox';
 
 const LatestBlog = ({ blogBox1, blogBox2, blogBox3 }) => {
   return (
