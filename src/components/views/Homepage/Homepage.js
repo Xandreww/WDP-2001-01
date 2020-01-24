@@ -8,7 +8,7 @@ import NewFurniture from '../../features/NewFurniture/NewFurnitureContainer';
 import SaleContainer from '../../features/Sale/SaleContainer';
 import Feedback from '../../features/Feedback/FeedbackContainer';
 import Brands from '../../features/Brands/BrandsContainer';
-import LatestBlog from '../../features/LatestBlog/LatestBlog.js';
+import LatestBlog from '../../features/LatestBlog/LatestBlogContainer.js';
 
 const Homepage = () => (
   <div className={styles.root}>
