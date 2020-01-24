@@ -1,9 +1,14 @@
 import { connect } from 'react-redux';
-
 import Gallery from './Gallery';
+import { getAll, changeRating } from '../../../redux/productsRedux';
 
 const mapStateToProps = state => ({
-  products: state.products,
+  products: getAll(state),
 });
 
-export default connect(mapStateToProps)(Gallery);
+const mapDispatchToProps = dispatch => ({
+  /* rating */
+  changeRating: (payload, stars) => dispatch(changeRating(payload, stars)),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Gallery);

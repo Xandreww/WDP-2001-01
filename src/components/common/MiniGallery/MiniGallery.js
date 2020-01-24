@@ -5,6 +5,20 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronRight, faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 
 const MiniGallery = ({ products }) => {
+  const numberOfProducts = products.length;
+
+  const countProductsToDisplay = () => {
+    if (numberOfProducts > 0) {
+      if (numberOfProducts >= 6) {
+        return 6;
+      } else {
+        return numberOfProducts;
+      }
+    }
+  };
+
+  const productsToDisplay = countProductsToDisplay();
+
   return (
     <div className={styles.root}>
       <div className={styles.photoContainer}>
@@ -17,7 +31,7 @@ const MiniGallery = ({ products }) => {
         <div className={styles.photos}>
           {products &&
             products
-              .filter((product, index) => index <= 6)
+              .filter((product, index) => index <= productsToDisplay)
               .map(product => (
                 <img
                   className={styles.miniGalleryImage}

@@ -5,13 +5,11 @@ import MiniGallery from '../../common/MiniGallery/MiniGallery';
 import GalleryNavbar from '../../layout/GalleryNavbar/GalleryNavbar';
 import Icons from '../../common/Icons/Icons';
 import Button from '../../common/Button/Button';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faStar } from '@fortawesome/free-solid-svg-icons';
-import { faStar as farStar } from '@fortawesome/free-regular-svg-icons';
+import StarsRating from '../../common/StarsRating/StarsRating';
 
 class Gallery extends Component {
   render() {
-    const { products } = this.props;
+    const { products, changeRating } = this.props;
 
     return (
       <div className={styles.root}>
@@ -50,21 +48,12 @@ class Gallery extends Component {
                   {products[1] && (
                     <div className={styles.starRating}>
                       <h5>{products[1].name}</h5>
-                      <div className={styles.stars}>
-                        {[1, 2, 3, 4, 5].map(i => (
-                          <a key={i} href='#'>
-                            {i <= products[1].stars ? (
-                              <FontAwesomeIcon icon={faStar}>
-                                {i} products[1].stars
-                              </FontAwesomeIcon>
-                            ) : (
-                              <FontAwesomeIcon icon={farStar}>
-                                {i} products[1].stars
-                              </FontAwesomeIcon>
-                            )}
-                          </a>
-                        ))}
-                      </div>
+                      <StarsRating
+                        stars={products.stars}
+                        rated={products.rated}
+                        changeRating={changeRating}
+                        id={products.id}
+                      />
                       <div className={styles.corner + ' ' + styles.leftCorner}></div>
                       <div className={styles.corner + ' ' + styles.rightCorner}></div>
                     </div>
@@ -104,11 +93,14 @@ class Gallery extends Component {
 Gallery.propTypes = {
   products: PropTypes.arrayOf(
     PropTypes.shape({
+      id: PropTypes.string,
       name: PropTypes.string,
       stars: PropTypes.number,
+      rated: PropTypes.bool,
       image: PropTypes.string,
     })
   ),
+  changeRating: PropTypes.func,
 };
 
 Gallery.defaultProps = {
