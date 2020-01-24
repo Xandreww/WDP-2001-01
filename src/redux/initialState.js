@@ -434,20 +434,26 @@ const initialState = {
   blogBox1: {
     image: image14,
     imageName: 'image',
+    date: '18 Nov 2018',
+    comments: ' 5 Comments',
     text:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Magna etiam tempor orci eu lobortis elementum. Lobortis elementum nibh tellus molestie nunc non. Egestas tellus rutrum tellus pellentesque eu. Ornare suspendisse sed nisi lacus sed viverra tellus in.',
+      'Wherry Cat onine tails draft league line Jack Ketch Nelsons folly Sink me lanyard case shot. Gabion bowsprit bring a spring upon her cable port pink hardtack yawl gunwalls starboard ahoy. Execution dock dead men tell no tales barkadeer yo-ho-ho poop deck barque weigh anchor sheet maroon bilge water.',
   },
   blogBox2: {
-    image: image16,
+    image: image20,
     imageName: 'image',
+    date: '12 Dec 2017',
+    comments: ' 6 Comments',
     text:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Magna etiam tempor orci eu lobortis elementum. Lobortis elementum nibh tellus molestie nunc non. Egestas tellus rutrum tellus pellentesque eu. Ornare suspendisse sed nisi lacus sed viverra tellus in.',
+      'Splice the main brace yu Shiver me timbers Jack Ketch long clothes poop deck scuttle Sail ho schooner. Salmagundi holystone log hulk skysail lugsail cutlass Admiral of the Black gangplank long clothes. Pressgang hogshead Gold Road scuttle heave down jack loot spyglass clipper rutters sheet maroon bilge.',
   },
   blogBox3: {
     image: image18,
     imageName: 'image',
+    date: '12 Jan 2020',
+    comments: ' 4 Comments',
     text:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Magna etiam tempor orci eu lobortis elementum. Lobortis elementum nibh tellus molestie nunc non. Egestas tellus rutrum tellus pellentesque eu. Ornare suspendisse sed nisi lacus sed viverra tellus in.',
+      'Starboard hempen bilge gally no prey, no pay mutiny deadlights dance the hempen jig Arr nipperkin. Square-rigged jury mast rigging grog blossom Arr cackle fruit nipper weigh anchor sutler hardtack. Swab hearties cackle fruit cutlass grog blossom man-of-war barkadeer dead men tell no tales schooner cog. ',
   },
 
   promotedProductBox: {
