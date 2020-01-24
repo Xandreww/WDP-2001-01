@@ -50,7 +50,7 @@ class Feedback extends React.Component {
     const pages = [];
     for (let i = 0; i < pagesCount; i++) {
       dots.push(
-        <li key={i + activePage}>
+        <li key={'feedbackDotList' + i + '-' + activePage}>
           <a
             onClick={() => this.handlePageChange(i)}
             className={i === activePage ? styles.active : null}
@@ -61,7 +61,10 @@ class Feedback extends React.Component {
       );
 
       pages.push(
-        <div className={'row ' + styles.swipeContainer} key={i + activePage}>
+        <div
+          className={'row ' + styles.swipeContainer}
+          key={'feedbackPagesList' + i + '-' + activePage}
+        >
           <SingleFeedback {...feedbacks[i]} />
         </div>
       );
