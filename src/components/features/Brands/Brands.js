@@ -45,7 +45,7 @@ class Brands extends React.Component {
     const pages = [];
     for (let i = 0; i < pagesCount; i++) {
       pages.push(
-        <div className={'row' + ' ' + styles.brandsElement}>
+        <div className={'row ' + styles.brandsElement} key={i}>
           {sampleBrands
             .slice(i * brandsNumberOnSlide, (i + 1) * brandsNumberOnSlide)
             .map(item => (

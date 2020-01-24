@@ -21,7 +21,7 @@ const PromotedProductBox = ({ promotedProductBox }) => {
 
 PromotedProductBox.propTypes = {
   promotedProductBox: PropTypes.shape({
-    image: PropTypes.number,
+    image: PropTypes.string,
     imageName: PropTypes.string,
     softTitle: PropTypes.string,
     strongTitle: PropTypes.string,
