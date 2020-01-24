@@ -81,7 +81,7 @@ class NewFurniture extends React.Component {
       pages.push(
         <div
           className={`row + ' ' + ${styles.swipeElement}`}
-          key={'furnitureDotList' + i + '-' + activePage}
+          key={'furniturePagesList' + i + '-' + activePage}
         >
           {categoryProducts
             .slice(i * productCount, (i + 1) * productCount)
