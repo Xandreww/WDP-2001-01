@@ -3,7 +3,66 @@
 .root {
   .row {
     border-bottom: 1px solid black;
-    margin-bottom: 50px;
-    padding-bottom: 20px;
+    margin: 20px 0 100px 0;
+    padding: 20px 0;
+
+    .header {
+      text-transform: uppercase;
+    }
+
+    .colTwo,
+    .colThree,
+    .colFour {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      p {
+        margin: 0;
+      }
+    }
+
+    ul {
+      background: darkorange;
+      list-style-type: none;
+      margin: 0;
+      padding-left: 0;
+      display: none;
+
+      li {
+        float: left;
+        position: relative;
+        text-decoration: none;
+        width: 100%;
+
+        a {
+          text-decoration: none;
+          color: black;
+        }
+      }
+    }
+
+    .dropdown {
+      button {
+        margin-left: 5px;
+      }
+      &:hover {
+        ul {
+          display: block;
+        }
+      }
+    }
+
+    .icons {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid black;
+
+      .icon {
+        font-size: 35px;
+        padding: 5px;
+      }
+    }
   }
 }
