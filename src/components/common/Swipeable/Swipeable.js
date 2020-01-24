@@ -40,6 +40,12 @@ const Swipeable = ({ children, nextPage, prevPage, currentPage }) => {
     },
   };
 
+  if (currentPage < 0) {
+    currentPage = swiper.slides.length - swiper.slides.length;
+  } else if (currentPage > 3) {
+    currentPage = swiper.slides.length - 1;
+  }
+
   useEffect(() => {
     swiper !== null && swiper.slideTo(currentPage);
   }, [currentPage, swiper]);
