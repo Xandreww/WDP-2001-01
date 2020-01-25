@@ -13,6 +13,22 @@ class Promoted extends React.Component {
     activePage: 0,
   };
 
+  fade() {
+    const fadeableElement = document.getElementById('fade');
+    const fadeable = fadeableElement.classList;
+
+    fadeable.add(styles.fadeOut);
+
+    setTimeout(() => {
+      fadeable.add(styles.fadeIn);
+    }, 550);
+
+    setTimeout(() => {
+      fadeable.remove(styles.fadeOut);
+      fadeable.remove(styles.fadeIn);
+    }, 1000);
+  }
+
   rightAction() {
     this.setState(state => ({
       activePage: state.activePage + 1,
@@ -25,7 +41,37 @@ class Promoted extends React.Component {
     }));
   }
 
+  handlePageChange(newPage) {
+    this.setState({
+      activePage: newPage,
+    });
+  }
+
   render() {
+    const { hotDeals } = this.props;
+    const { activePage } = this.state;
+
+    const dots = [];
+    const pagesHotDeals = [];
+    for (let i = 0; i < 3; i++) {
+      dots.push(
+        <li>
+          <a
+            onClick={() => this.handlePageChange(i)}
+            className={i === activePage && styles.active}
+          >
+            page {i}
+          </a>
+        </li>
+      );
+
+      pagesHotDeals.push(<HotDealsProductBox {...hotDeals} />);
+    }
+
+    const renderPages = () => {
+      return pagesHotDeals;
+    };
+
     return (
       <div className={styles.root}>
         <div className='container'>
@@ -45,7 +91,7 @@ class Promoted extends React.Component {
                   </a>
                 </p>
               </div>
-              <HotDealsProductBox />
+              <HotDealsProductBox {...hotDeals} />
             </div>
             <div className='col-8'>
               <PromotedProductBox />
@@ -66,8 +112,8 @@ class Promoted extends React.Component {
 }
 
 Promoted.propTypes = {
-  promotedProductBox: PropTypes.object,
-  hotDealsProductBox: PropTypes.object,
+  hotDeals: PropTypes.array,
+  promoted: PropTypes.array,
 };
 
 export default Promoted;
