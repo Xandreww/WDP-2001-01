@@ -6,8 +6,6 @@ import ProductBox from '../../common/ProductBox/ProductBoxContainer';
 
 import Swipeable from '../../common/Swipeable/Swipeable';
 
-//import Reveal from 'react-reveal/Reveal';
-
 class NewFurniture extends React.Component {
   state = {
     activePage: 0,
