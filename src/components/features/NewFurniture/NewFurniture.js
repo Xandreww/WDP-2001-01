@@ -6,12 +6,30 @@ import ProductBox from '../../common/ProductBox/ProductBoxContainer';
 
 import Swipeable from '../../common/Swipeable/Swipeable';
 
+//import Reveal from 'react-reveal/Reveal';
+
 class NewFurniture extends React.Component {
   state = {
     activePage: 0,
     activeCategory: 'bed',
     splitPage: true,
   };
+
+  fade() {
+    const fadeableElement = document.getElementById('fade');
+    const fadeable = fadeableElement.classList;
+
+    fadeable.add(styles.fadeOut);
+
+    setTimeout(() => {
+      fadeable.add(styles.fadeIn);
+    }, 550);
+
+    setTimeout(() => {
+      fadeable.remove(styles.fadeOut);
+      fadeable.remove(styles.fadeIn);
+    }, 600);
+  }
 
   handlePageChange(newPage) {
     this.setState({
@@ -21,7 +39,22 @@ class NewFurniture extends React.Component {
   }
 
   handleCategoryChange(newCategory) {
-    this.setState({ activeCategory: newCategory });
+    this.fade();
+    setTimeout(() => {
+      this.setState({
+        activeCategory: newCategory,
+      });
+    }, 450);
+    setTimeout(() => {
+      this.setState({
+        activePage: 0,
+      });
+    }, 350);
+    setTimeout(() => {
+      this.setState({
+        activePage: 0,
+      });
+    }, 700);
   }
 
   rightAction() {
@@ -79,7 +112,7 @@ class NewFurniture extends React.Component {
       );
 
       pages.push(
-        <div className={`row + ' ' + ${styles.swipeElement}`}>
+        <div className={'row ' + styles.swipeElement}>
           {categoryProducts
             .slice(i * productCount, (i + 1) * productCount)
             .map(item => (

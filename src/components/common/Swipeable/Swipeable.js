@@ -54,7 +54,7 @@ const Swipeable = ({ children, nextPage, prevPage, currentPage }) => {
   }, [currentPage, swiper]);
 
   return (
-    <div>
+    <div id='fade'>
       <Swiper {...params} getSwiper={setSwiper}>
         {children}
       </Swiper>
