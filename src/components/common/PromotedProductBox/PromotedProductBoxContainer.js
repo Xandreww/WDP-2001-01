@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import PromotedProductBox from './PromotedProductBox';
 
 const mapStateToProps = state => ({
-  promoted: state.PromotedProductBox,
+  promoted: state.promoted,
 });
 
 export default connect(mapStateToProps)(PromotedProductBox);

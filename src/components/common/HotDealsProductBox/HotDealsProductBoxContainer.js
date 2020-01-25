@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import HotDealsProductBox from './HotDealsProductBox';
 
 const mapStateToProps = state => ({
-  hotDeals: state.hotDealsProductBox,
+  hotDeals: state.hotDeals,
 });
 
 export default connect(mapStateToProps)(HotDealsProductBox);
