@@ -26,7 +26,7 @@ class NewFurniture extends React.Component {
     setTimeout(() => {
       fadeable.remove(styles.fadeOut);
       fadeable.remove(styles.fadeIn);
-    }, 600);
+    }, 1000);
   }
 
   handlePageChange(newPage) {
