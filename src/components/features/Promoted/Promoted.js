@@ -5,8 +5,8 @@ import PropTypes from 'prop-types';
 import Button from '../../common/Button/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
-import PromotedProductBox from '../../common/PromotedProductBox/PromotedProductBoxContainer';
-import HotDealsProductBox from '../../common/HotDealsProductBox/HotDealsProductBoxContainer';
+import PromotedProductBox from '../../common/PromotedProductBox/PromotedProductBox';
+import HotDealsProductBox from '../../common/HotDealsProductBox/HotDealsProductBox';
 
 class Promoted extends React.Component {
   state = {
