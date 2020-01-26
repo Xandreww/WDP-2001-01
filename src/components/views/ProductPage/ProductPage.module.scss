@@ -1,5 +1,77 @@
 @import "../../../styles/settings.scss";
 
 .root {
-  padding: $base-padding 0;
+  height: 300px;
+  background-color: #7f7f7f;
+}
+
+.container {
+  padding: $base-padding;
+  margin: -250px auto 100px;
+  background-color: white;
+}
+
+.descrow {
+  margin: 0;
+  padding: 3px 0;
+}
+
+.simpleButtons {
+  > * {
+    margin-right: 8px;
+  }
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.description {
+  padding: 10px;
+
+  .title {
+    text-transform: uppercase;
+    font-size: 25px;
+  }
+
+  .divider {
+    border-top: 1px solid #7f7f7f;
+  }
+
+  .oldPrice {
+    display: inline-block;
+    padding: 0 5px;
+    font-weight: 300;
+    font-size: 20px;
+    color: $dark-grey4;
+    text-decoration-line: line-through;
+    text-decoration-color: $primary-orange-brown;
+    text-decoration-thickness: 3px;
+  }
+}
+
+.fb:hover {
+  background-color: #3b5998 !important;
+  text-decoration: none;
+}
+.gplus:hover {
+  background-color: #ea4335 !important;
+  text-decoration: none;
+}
+.tweet:hover {
+  background-color: #1da1f2 !important;
+  text-decoration: none;
+}
+.pinterest:hover {
+  background-color: #bd081c !important;
+  text-decoration: none;
+}
+.linkedin:hover {
+  background-color: #007bb5 !important;
+  text-decoration: none;
 }
