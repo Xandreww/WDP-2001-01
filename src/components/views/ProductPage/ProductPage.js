@@ -5,7 +5,7 @@ import { useParams, Redirect } from 'react-router-dom';
 
 const ProductPage = ({ products }) => {
   const { productId } = useParams();
-  const product = products.filter(prod => prod.id === productId)[0];
+  const product = products.find(prod => prod.id === productId);
 
   if (!product) {
     return <Redirect to='/not-found' />;
