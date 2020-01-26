@@ -30,6 +30,15 @@
       "eslint --fix",
       "prettier --write",
       "git add"
+    ],
+    "src/**/*.scss": [
+      "stylelint --fix --syntax scss",
+      "prettier --write",
+      "git add"
+    ],
+    "public/*.html": [
+      "prettier --write",
+      "git add"
     ]
   },
   "browserslist": {
@@ -65,6 +74,8 @@
     "react-scripts": "3.1.2",
     "react-test-renderer": "^16.9.0",
     "redux": "^4.0.4",
+    "stylelint": "^13.0.0",
+    "stylelint-scss": "^3.13.0",
     "swiper": "^5.3.0"
   },
   "devDependencies": {

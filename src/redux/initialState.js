@@ -1,32 +1,93 @@
-import image1 from '../assets/images/furniture1.jpg';
-import image2 from '../assets/images/furniture2.jpg';
-import image3 from '../assets/images/furniture3.jpg';
-import image4 from '../assets/images/furniture4.jpg';
-import image5 from '../assets/images/furniture5.jpg';
-import image6 from '../assets/images/furniture6.jpg';
-import image7 from '../assets/images/furniture7.jpg';
-import image8 from '../assets/images/furniture8.jpg';
-import image9 from '../assets/images/furniture9.jpg';
-import image10 from '../assets/images/furniture10.jpg';
-import image11 from '../assets/images/furniture11.jpg';
-import image12 from '../assets/images/furniture12.jpg';
-import image13 from '../assets/images/furniture13.jpg';
-import image14 from '../assets/images/furniture14.jpg';
-import image15 from '../assets/images/furniture15.jpg';
-import image16 from '../assets/images/furniture16.jpg';
-import image17 from '../assets/images/furniture17.jpg';
-import image18 from '../assets/images/furniture18.jpg';
-import image19 from '../assets/images/furniture19.jpg';
-import image20 from '../assets/images/furniture20.jpg';
-import image21 from '../assets/images/furniture21.jpg';
-import image22 from '../assets/images/furniture22.jpg';
-import image23 from '../assets/images/furniture23.jpg';
-import image24 from '../assets/images/furniture24.jpg';
+import image1 from '../assets/images/furnitureBed1.jpg';
+import image2 from '../assets/images/furnitureBed2.jpg';
+import image3 from '../assets/images/furnitureBed3.jpg';
+import image4 from '../assets/images/furnitureBed4.jpg';
+import image5 from '../assets/images/furnitureBed5.jpg';
+import image6 from '../assets/images/furnitureBed6.jpg';
+import image7 from '../assets/images/furnitureBed7.jpg';
+import image8 from '../assets/images/furnitureBed8.jpg';
+import image9 from '../assets/images/furnitureBed9.jpg';
+import image10 from '../assets/images/furnitureBed10.jpg';
+import image11 from '../assets/images/furnitureBed11.jpg';
+import image12 from '../assets/images/furnitureBed12.jpg';
+import image13 from '../assets/images/furnitureBed13.jpg';
+import image14 from '../assets/images/furnitureBed14.jpg';
+import image15 from '../assets/images/furnitureBed15.jpg';
+import image16 from '../assets/images/furnitureBed16.jpg';
+import image17 from '../assets/images/furnitureBed17.jpg';
+import image18 from '../assets/images/furnitureBed18.jpg';
+import image19 from '../assets/images/furnitureBed19.jpg';
+import image20 from '../assets/images/furnitureBed20.jpg';
+import image21 from '../assets/images/furnitureBed21.jpg';
+import image22 from '../assets/images/furnitureBed22.jpg';
+import image23 from '../assets/images/furnitureBed23.jpg';
+import image24 from '../assets/images/furnitureBed24.jpg';
+
+import image25 from '../assets/images/furnitureChair1.jpg';
+import image26 from '../assets/images/furnitureChair2.jpg';
+import image27 from '../assets/images/furnitureChair3.jpg';
+import image28 from '../assets/images/furnitureChair4.jpg';
+import image29 from '../assets/images/furnitureChair5.jpg';
+import image30 from '../assets/images/furnitureChair6.jpg';
+import image31 from '../assets/images/furnitureChair7.jpg';
+import image32 from '../assets/images/furnitureChair8.jpg';
+import image33 from '../assets/images/furnitureChair9.jpg';
+import image34 from '../assets/images/furnitureChair10.jpg';
+import image35 from '../assets/images/furnitureChair11.jpg';
+import image36 from '../assets/images/furnitureChair12.jpg';
+import image37 from '../assets/images/furnitureChair13.jpg';
+import image38 from '../assets/images/furnitureChair14.jpg';
+import image39 from '../assets/images/furnitureChair15.jpg';
+import image40 from '../assets/images/furnitureChair16.jpg';
+import image41 from '../assets/images/furnitureChair17.jpg';
+import image42 from '../assets/images/furnitureChair18.jpg';
+import image43 from '../assets/images/furnitureChair19.jpg';
+
+import image44 from '../assets/images/furnitureSofa1.jpg';
+import image45 from '../assets/images/furnitureSofa2.jpg';
+import image46 from '../assets/images/furnitureSofa3.jpg';
+import image47 from '../assets/images/furnitureSofa4.jpg';
+import image48 from '../assets/images/furnitureSofa5.jpg';
+import image49 from '../assets/images/furnitureSofa6.jpg';
+import image50 from '../assets/images/furnitureSofa7.jpg';
+import image51 from '../assets/images/furnitureSofa8.jpg';
+import image52 from '../assets/images/furnitureSofa9.jpg';
+import image53 from '../assets/images/furnitureSofa10.jpg';
+import image54 from '../assets/images/furnitureSofa11.jpg';
+import image55 from '../assets/images/furnitureSofa12.jpg';
+import image56 from '../assets/images/furnitureSofa13.jpg';
+
+import image57 from '../assets/images/furnitureTable1.jpg';
+import image58 from '../assets/images/furnitureTable2.jpg';
+import image59 from '../assets/images/furnitureTable3.jpg';
+import image60 from '../assets/images/furnitureTable4.jpg';
+import image61 from '../assets/images/furnitureTable5.jpg';
+import image62 from '../assets/images/furnitureTable6.jpg';
+import image63 from '../assets/images/furnitureTable7.jpg';
+import image64 from '../assets/images/furnitureTable8.jpg';
+import image65 from '../assets/images/furnitureTable9.jpg';
+import image66 from '../assets/images/furnitureTable10.jpg';
+import image67 from '../assets/images/furnitureTable11.jpg';
+import image68 from '../assets/images/furnitureTable12.jpg';
+import image69 from '../assets/images/furnitureTable13.jpg';
+import image70 from '../assets/images/furnitureTable14.jpg';
+import image71 from '../assets/images/furnitureTable15.jpg';
+
+import image72 from '../assets/images/furnitureDining1.jpg';
+import image73 from '../assets/images/furnitureDining2.jpg';
+import image74 from '../assets/images/furnitureDining3.jpg';
+import image75 from '../assets/images/furnitureDining4.jpg';
+import image76 from '../assets/images/furnitureDining5.jpg';
+import image77 from '../assets/images/furnitureDining6.jpg';
+import image78 from '../assets/images/furnitureDining7.jpg';
+import image79 from '../assets/images/furnitureDining8.jpg';
+import image80 from '../assets/images/furnitureDining9.jpg';
 
 import clientPhoto1 from '../assets/images/clientPhoto1.jpg';
 import clientPhoto2 from '../assets/images/clientPhoto2.jpg';
 import clientPhoto3 from '../assets/images/clientPhoto3.jpg';
 import clientPhoto4 from '../assets/images/clientPhoto4.jpg';
+
 import sampleBrand1 from '../assets/images/sampleBrand1.jpg';
 import sampleBrand2 from '../assets/images/sampleBrand2.jpg';
 import sampleBrand3 from '../assets/images/sampleBrand3.jpg';
@@ -363,6 +424,734 @@ const initialState = {
       toCompare: false,
       rated: false,
       image: image24,
+    },
+    {
+      id: 'aenean-ru-bristique-25',
+      name: 'Aenean Ru Bristique 25',
+      category: 'chair',
+      price: 15,
+      stars: 2,
+      promo: 'sale',
+      newFurniture: true,
+      isFavorite: false,
+      toCompare: false,
+      rated: false,
+      image: image25,
+    },
+    {
+      id: 'aenean-ru-bristique-26',
+      name: 'Aenean Ru Bristique 26',
+      category: 'chair',
+      price: 15,
+      stars: 2,
+      promo: 'sale',
+      newFurniture: true,
+      isFavorite: false,
+      toCompare: false,
+      rated: false,
+      image: image26,
+    },
+    {
+      id: 'aenean-ru-bristique-27',
+      name: 'Aenean Ru Bristique 27',
+      category: 'chair',
+      price: 15,
+      stars: 2,
+      promo: 'sale',
+      newFurniture: true,
+      isFavorite: false,
+      toCompare: false,
+      rated: false,
+      image: image27,
+    },
+    {
+      id: 'aenean-ru-bristique-28',
+      name: 'Aenean Ru Bristique 28',
+      category: 'chair',
+      price: 15,
+      stars: 2,
+      promo: 'sale',
+      newFurniture: true,
+      isFavorite: false,
+      toCompare: false,
+      rated: false,
+      image: image28,
+    },
+    {
+      id: 'aenean-ru-bristique-29',
+      name: 'Aenean Ru Bristique 29',
+      category: 'chair',
+      price: 15,
+      stars: 2,
+      promo: 'sale',
+      newFurniture: true,
+      isFavorite: false,
+      toCompare: false,
+      rated: false,
+      image: image29,
+    },
+    {
+      id: 'aenean-ru-bristique-30',
+      name: 'Aenean Ru Bristique 30',
+      category: 'chair',
+      price: 15,
+      stars: 2,
+      promo: 'sale',
+      newFurniture: true,
+      isFavorite: false,
+      toCompare: false,
+      rated: false,
+      image: image30,
+    },
+    {
+      id: 'aenean-ru-bristique-31',
+      name: 'Aenean Ru Bristique 31',
+      category: 'chair',
+      price: 15,
+      stars: 2,
+      promo: 'sale',
+      newFurniture: true,
+      isFavorite: false,
+      toCompare: false,
+      rated: false,
+      image: image31,
+    },
+    {
+      id: 'aenean-ru-bristique-32',
+      name: 'Aenean Ru Bristique 32',
+      category: 'chair',
+      price: 15,
+      stars: 2,
+      promo: 'sale',
+      newFurniture: true,
+      isFavorite: false,
+      toCompare: false,
+      rated: false,
+      image: image32,
+    },
+    {
+      id: 'aenean-ru-bristique-33',
+      name: 'Aenean Ru Bristique 33',
+      category: 'chair',
+      price: 15,
+      stars: 2,
+      promo: 'sale',
+      newFurniture: true,
+      isFavorite: false,
+      toCompare: false,
+      rated: false,
+      image: image33,
+    },
+    {
+      id: 'aenean-ru-bristique-34',
+      name: 'Aenean Ru Bristique 34',
+      category: 'chair',
+      price: 15,
+      stars: 2,
+      promo: 'sale',
+      newFurniture: true,
+      isFavorite: false,
+      toCompare: false,
+      rated: false,
+      image: image34,
+    },
+    {
+      id: 'aenean-ru-bristique-35',
+      name: 'Aenean Ru Bristique 35',
+      category: 'chair',
+      price: 15,
+      stars: 2,
+      promo: 'sale',
+      newFurniture: true,
+      isFavorite: false,
+      toCompare: false,
+      rated: false,
+      image: image35,
+    },
+    {
+      id: 'aenean-ru-bristique-36',
+      name: 'Aenean Ru Bristique 36',
+      category: 'chair',
+      price: 15,
+      stars: 2,
+      promo: 'sale',
+      newFurniture: true,
+      isFavorite: false,
+      toCompare: false,
+      rated: false,
+      image: image36,
+    },
+    {
+      id: 'aenean-ru-bristique-37',
+      name: 'Aenean Ru Bristique 37',
+      category: 'chair',
+      price: 15,
+      stars: 2,
+      promo: 'sale',
+      newFurniture: true,
+      isFavorite: false,
+      toCompare: false,
+      rated: false,
+      image: image37,
+    },
+    {
+      id: 'aenean-ru-bristique-38',
+      name: 'Aenean Ru Bristique 38',
+      category: 'chair',
+      price: 15,
+      stars: 2,
+      promo: 'sale',
+      newFurniture: true,
+      isFavorite: false,
+      toCompare: false,
+      rated: false,
+      image: image38,
+    },
+    {
+      id: 'aenean-ru-bristique-39',
+      name: 'Aenean Ru Bristique 39',
+      category: 'chair',
+      price: 15,
+      stars: 2,
+      promo: 'sale',
+      newFurniture: true,
+      isFavorite: false,
+      toCompare: false,
+      rated: false,
+      image: image39,
+    },
+    {
+      id: 'aenean-ru-bristique-40',
+      name: 'Aenean Ru Bristique 40',
+      category: 'chair',
+      price: 15,
+      stars: 2,
+      promo: 'sale',
+      newFurniture: true,
+      isFavorite: false,
+      toCompare: false,
+      rated: false,
+      image: image40,
+    },
+    {
+      id: 'aenean-ru-bristique-41',
+      name: 'Aenean Ru Bristique 41',
+      category: 'chair',
+      price: 15,
+      stars: 2,
+      promo: 'sale',
+      newFurniture: true,
+      isFavorite: false,
+      toCompare: false,
+      rated: false,
+      image: image41,
+    },
+    {
+      id: 'aenean-ru-bristique-42',
+      name: 'Aenean Ru Bristique 42',
+      category: 'chair',
+      price: 15,
+      stars: 2,
+      promo: 'sale',
+      newFurniture: true,
+      isFavorite: false,
+      toCompare: false,
+      rated: false,
+      image: image42,
+    },
+    {
+      id: 'aenean-ru-bristique-43',
+      name: 'Aenean Ru Bristique 43',
+      category: 'chair',
+      price: 15,
+      stars: 2,
+      promo: 'sale',
+      newFurniture: true,
+      isFavorite: false,
+      toCompare: false,
+      rated: false,
+      image: image43,
+    },
+    {
+      id: 'aenean-ru-bristique-44',
+      name: 'Aenean Ru Bristique 44',
+      category: 'sofa',
+      price: 50,
+      stars: 2,
+      promo: 'sale',
+      newFurniture: true,
+      isFavorite: false,
+      toCompare: false,
+      rated: false,
+      image: image44,
+    },
+    {
+      id: 'aenean-ru-bristique-45',
+      name: 'Aenean Ru Bristique 45',
+      category: 'sofa',
+      price: 50,
+      stars: 2,
+      promo: 'sale',
+      newFurniture: true,
+      isFavorite: false,
+      toCompare: false,
+      rated: false,
+      image: image45,
+    },
+    {
+      id: 'aenean-ru-bristique-46',
+      name: 'Aenean Ru Bristique 46',
+      category: 'sofa',
+      price: 50,
+      stars: 2,
+      promo: 'sale',
+      newFurniture: true,
+      isFavorite: false,
+      toCompare: false,
+      rated: false,
+      image: image46,
+    },
+    {
+      id: 'aenean-ru-bristique-47',
+      name: 'Aenean Ru Bristique 47',
+      category: 'sofa',
+      price: 50,
+      stars: 2,
+      promo: 'sale',
+      newFurniture: true,
+      isFavorite: false,
+      toCompare: false,
+      rated: false,
+      image: image47,
+    },
+    {
+      id: 'aenean-ru-bristique-48',
+      name: 'Aenean Ru Bristique 48',
+      category: 'sofa',
+      price: 50,
+      stars: 2,
+      promo: 'sale',
+      newFurniture: true,
+      isFavorite: false,
+      toCompare: false,
+      rated: false,
+      image: image48,
+    },
+    {
+      id: 'aenean-ru-bristique-49',
+      name: 'Aenean Ru Bristique 49',
+      category: 'sofa',
+      price: 50,
+      stars: 2,
+      promo: 'sale',
+      newFurniture: true,
+      isFavorite: false,
+      toCompare: false,
+      rated: false,
+      image: image49,
+    },
+    {
+      id: 'aenean-ru-bristique-50',
+      name: 'Aenean Ru Bristique 50',
+      category: 'sofa',
+      price: 50,
+      stars: 2,
+      promo: 'sale',
+      newFurniture: true,
+      isFavorite: false,
+      toCompare: false,
+      rated: false,
+      image: image50,
+    },
+    {
+      id: 'aenean-ru-bristique-51',
+      name: 'Aenean Ru Bristique 51',
+      category: 'sofa',
+      price: 50,
+      stars: 2,
+      promo: 'sale',
+      newFurniture: true,
+      isFavorite: false,
+      toCompare: false,
+      rated: false,
+      image: image51,
+    },
+    {
+      id: 'aenean-ru-bristique-52',
+      name: 'Aenean Ru Bristique 52',
+      category: 'sofa',
+      price: 50,
+      stars: 2,
+      promo: 'sale',
+      newFurniture: true,
+      isFavorite: false,
+      toCompare: false,
+      rated: false,
+      image: image52,
+    },
+    {
+      id: 'aenean-ru-bristique-53',
+      name: 'Aenean Ru Bristique 53',
+      category: 'sofa',
+      price: 50,
+      stars: 2,
+      promo: 'sale',
+      newFurniture: true,
+      isFavorite: false,
+      toCompare: false,
+      rated: false,
+      image: image53,
+    },
+    {
+      id: 'aenean-ru-bristique-54',
+      name: 'Aenean Ru Bristique 54',
+      category: 'sofa',
+      price: 50,
+      stars: 2,
+      promo: 'sale',
+      newFurniture: true,
+      isFavorite: false,
+      toCompare: false,
+      rated: false,
+      image: image54,
+    },
+    {
+      id: 'aenean-ru-bristique-55',
+      name: 'Aenean Ru Bristique 55',
+      category: 'sofa',
+      price: 50,
+      stars: 2,
+      promo: 'sale',
+      newFurniture: true,
+      isFavorite: false,
+      toCompare: false,
+      rated: false,
+      image: image55,
+    },
+    {
+      id: 'aenean-ru-bristique-56',
+      name: 'Aenean Ru Bristique 56',
+      category: 'sofa',
+      price: 50,
+      stars: 2,
+      promo: 'sale',
+      newFurniture: true,
+      isFavorite: false,
+      toCompare: false,
+      rated: false,
+      image: image56,
+    },
+    {
+      id: 'aenean-ru-bristique-57',
+      name: 'Aenean Ru Bristique 57',
+      category: 'table',
+      price: 45,
+      stars: 2,
+      promo: 'sale',
+      newFurniture: true,
+      isFavorite: false,
+      toCompare: false,
+      rated: false,
+      image: image57,
+    },
+    {
+      id: 'aenean-ru-bristique-58',
+      name: 'Aenean Ru Bristique 58',
+      category: 'table',
+      price: 45,
+      stars: 2,
+      promo: 'sale',
+      newFurniture: true,
+      isFavorite: false,
+      toCompare: false,
+      rated: false,
+      image: image58,
+    },
+    {
+      id: 'aenean-ru-bristique-59',
+      name: 'Aenean Ru Bristique 59',
+      category: 'table',
+      price: 45,
+      stars: 2,
+      promo: 'sale',
+      newFurniture: true,
+      isFavorite: false,
+      toCompare: false,
+      rated: false,
+      image: image59,
+    },
+    {
+      id: 'aenean-ru-bristique-60',
+      name: 'Aenean Ru Bristique 60',
+      category: 'table',
+      price: 45,
+      stars: 2,
+      promo: 'sale',
+      newFurniture: true,
+      isFavorite: false,
+      toCompare: false,
+      rated: false,
+      image: image60,
+    },
+    {
+      id: 'aenean-ru-bristique-61',
+      name: 'Aenean Ru Bristique 61',
+      category: 'table',
+      price: 45,
+      stars: 2,
+      promo: 'sale',
+      newFurniture: true,
+      isFavorite: false,
+      toCompare: false,
+      rated: false,
+      image: image61,
+    },
+    {
+      id: 'aenean-ru-bristique-62',
+      name: 'Aenean Ru Bristique 62',
+      category: 'table',
+      price: 45,
+      stars: 2,
+      promo: 'sale',
+      newFurniture: true,
+      isFavorite: false,
+      toCompare: false,
+      rated: false,
+      image: image62,
+    },
+    {
+      id: 'aenean-ru-bristique-63',
+      name: 'Aenean Ru Bristique 63',
+      category: 'table',
+      price: 45,
+      stars: 2,
+      promo: 'sale',
+      newFurniture: true,
+      isFavorite: false,
+      toCompare: false,
+      rated: false,
+      image: image63,
+    },
+    {
+      id: 'aenean-ru-bristique-64',
+      name: 'Aenean Ru Bristique 64',
+      category: 'table',
+      price: 45,
+      stars: 2,
+      promo: 'sale',
+      newFurniture: true,
+      isFavorite: false,
+      toCompare: false,
+      rated: false,
+      image: image64,
+    },
+    {
+      id: 'aenean-ru-bristique-65',
+      name: 'Aenean Ru Bristique 65',
+      category: 'table',
+      price: 45,
+      stars: 2,
+      promo: 'sale',
+      newFurniture: true,
+      isFavorite: false,
+      toCompare: false,
+      rated: false,
+      image: image65,
+    },
+    {
+      id: 'aenean-ru-bristique-66',
+      name: 'Aenean Ru Bristique 66',
+      category: 'table',
+      price: 45,
+      stars: 2,
+      promo: 'sale',
+      newFurniture: true,
+      isFavorite: false,
+      toCompare: false,
+      rated: false,
+      image: image66,
+    },
+    {
+      id: 'aenean-ru-bristique-67',
+      name: 'Aenean Ru Bristique 67',
+      category: 'table',
+      price: 45,
+      stars: 2,
+      promo: 'sale',
+      newFurniture: true,
+      isFavorite: false,
+      toCompare: false,
+      rated: false,
+      image: image67,
+    },
+    {
+      id: 'aenean-ru-bristique-68',
+      name: 'Aenean Ru Bristique 68',
+      category: 'table',
+      price: 45,
+      stars: 2,
+      promo: 'sale',
+      newFurniture: true,
+      isFavorite: false,
+      toCompare: false,
+      rated: false,
+      image: image68,
+    },
+    {
+      id: 'aenean-ru-bristique-69',
+      name: 'Aenean Ru Bristique 69',
+      category: 'table',
+      price: 45,
+      stars: 2,
+      promo: 'sale',
+      newFurniture: true,
+      isFavorite: false,
+      toCompare: false,
+      rated: false,
+      image: image69,
+    },
+    {
+      id: 'aenean-ru-bristique-70',
+      name: 'Aenean Ru Bristique 70',
+      category: 'table',
+      price: 45,
+      stars: 2,
+      promo: 'sale',
+      newFurniture: true,
+      isFavorite: false,
+      toCompare: false,
+      rated: false,
+      image: image70,
+    },
+    {
+      id: 'aenean-ru-bristique-71',
+      name: 'Aenean Ru Bristique 71',
+      category: 'table',
+      price: 45,
+      stars: 2,
+      promo: 'sale',
+      newFurniture: true,
+      isFavorite: false,
+      toCompare: false,
+      rated: false,
+      image: image71,
+    },
+    {
+      id: 'aenean-ru-bristique-72',
+      name: 'Aenean Ru Bristique 72',
+      category: 'dining',
+      price: 75,
+      stars: 2,
+      promo: 'sale',
+      newFurniture: true,
+      isFavorite: false,
+      toCompare: false,
+      rated: false,
+      image: image72,
+    },
+    {
+      id: 'aenean-ru-bristique-73',
+      name: 'Aenean Ru Bristique 73',
+      category: 'dining',
+      price: 75,
+      stars: 2,
+      promo: 'sale',
+      newFurniture: true,
+      isFavorite: false,
+      toCompare: false,
+      rated: false,
+      image: image73,
+    },
+    {
+      id: 'aenean-ru-bristique-74',
+      name: 'Aenean Ru Bristique 74',
+      category: 'dining',
+      price: 75,
+      stars: 2,
+      promo: 'sale',
+      newFurniture: true,
+      isFavorite: false,
+      toCompare: false,
+      rated: false,
+      image: image74,
+    },
+    {
+      id: 'aenean-ru-bristique-75',
+      name: 'Aenean Ru Bristique 75',
+      category: 'dining',
+      price: 75,
+      stars: 2,
+      promo: 'sale',
+      newFurniture: true,
+      isFavorite: false,
+      toCompare: false,
+      rated: false,
+      image: image75,
+    },
+    {
+      id: 'aenean-ru-bristique-76',
+      name: 'Aenean Ru Bristique 76',
+      category: 'dining',
+      price: 75,
+      stars: 2,
+      promo: 'sale',
+      newFurniture: true,
+      isFavorite: false,
+      toCompare: false,
+      rated: false,
+      image: image76,
+    },
+    {
+      id: 'aenean-ru-bristique-77',
+      name: 'Aenean Ru Bristique 77',
+      category: 'dining',
+      price: 75,
+      stars: 2,
+      promo: 'sale',
+      newFurniture: true,
+      isFavorite: false,
+      toCompare: false,
+      rated: false,
+      image: image77,
+    },
+    {
+      id: 'aenean-ru-bristique-78',
+      name: 'Aenean Ru Bristique 78',
+      category: 'dining',
+      price: 75,
+      stars: 2,
+      promo: 'sale',
+      newFurniture: true,
+      isFavorite: false,
+      toCompare: false,
+      rated: false,
+      image: image78,
+    },
+    {
+      id: 'aenean-ru-bristique-79',
+      name: 'Aenean Ru Bristique 79',
+      category: 'dining',
+      price: 75,
+      stars: 2,
+      promo: 'sale',
+      newFurniture: true,
+      isFavorite: false,
+      toCompare: false,
+      rated: false,
+      image: image79,
+    },
+    {
+      id: 'aenean-ru-bristique-80',
+      name: 'Aenean Ru Bristique 80',
+      category: 'dining',
+      price: 75,
+      stars: 2,
+      promo: 'sale',
+      newFurniture: true,
+      isFavorite: false,
+      toCompare: false,
+      rated: false,
+      image: image80,
     },
   ],
   sampleBrands: [
