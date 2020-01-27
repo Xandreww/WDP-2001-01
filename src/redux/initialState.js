@@ -57,6 +57,7 @@ const initialState = {
       toCompare: false,
       rated: true,
       image: image1,
+      hotDeal: true,
     },
     {
       id: 'aenean-ru-bristique-2',

@@ -7,10 +7,10 @@ import Timer from '../Timer/Timer';
 
 import styles from './HotDealsProductBox.module.scss';
 
-const HotDealsProductBox = ({ hotDealsProductBox }) => {
+const HotDealsProductBox = ({ products }) => {
   return (
     <div className={styles.root}>
-      <ProductBox {...hotDealsProductBox} />
+      <ProductBox {...products} />
       <div className={styles.timer}>
         <Timer />
       </div>
@@ -19,7 +19,7 @@ const HotDealsProductBox = ({ hotDealsProductBox }) => {
 };
 
 HotDealsProductBox.propTypes = {
-  hotDealsProductBox: PropTypes.object,
+  products: PropTypes.object,
 };
 
 export default HotDealsProductBox;
