@@ -11,7 +11,7 @@ const ProductSearch = () => (
     <div className={styles.category}>
       <FontAwesomeIcon className={styles.icon} icon={faListUl} />
       <ul className={styles.categoryList}>
-        <li className={styles.topcategory}>
+        <ul className={styles.topcategory}>
           <a href='#'>
             <option value=''>Select a category</option>
           </a>
@@ -30,7 +30,7 @@ const ProductSearch = () => (
           <li className={styles.selected}>
             <a href='#'>Dining</a>
           </li>
-        </li>
+        </ul>
       </ul>
       <FontAwesomeIcon className={styles.icon} icon={faCaretDown} />
     </div>
