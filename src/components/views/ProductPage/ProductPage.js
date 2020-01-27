@@ -1,9 +1,27 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import styles from './ProductPage.module.scss';
+import { useParams, Redirect } from 'react-router-dom';
 
-const ProductPage = () => <div className={styles.root}>This is ProductPage</div>;
+const ProductPage = ({ products }) => {
+  const { productId } = useParams();
+  const product = products.find(prod => prod.id === productId);
 
-// ProductPage.propTypes = {};
+  if (!product) {
+    return <Redirect to='/not-found' />;
+  } else {
+    const { name, category } = product;
+    return (
+      <div className={styles.root}>
+        <p>Category: {category} </p>
+        <p>This is ProductPage: {name}</p>
+      </div>
+    );
+  }
+};
+
+ProductPage.propTypes = {
+  products: PropTypes.array,
+};
 
 export default ProductPage;

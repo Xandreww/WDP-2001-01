@@ -9,6 +9,7 @@ import SaleContainer from '../../features/Sale/SaleContainer';
 import Feedback from '../../features/Feedback/FeedbackContainer';
 import Brands from '../../features/Brands/BrandsContainer';
 import Gallery from '../../features/Gallery/GalleryContainer';
+import LatestBlog from '../../features/LatestBlog/LatestBlogContainer.js';
 
 const Homepage = () => (
   <div className={styles.root}>
@@ -17,6 +18,8 @@ const Homepage = () => (
     <SaleContainer />
     <NewFurniture />
     <Gallery />
+    <LatestBlog />
+    <Feedback />
     <Brands />
     <Feedback />
   </div>

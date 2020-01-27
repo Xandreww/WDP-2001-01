@@ -13,6 +13,22 @@ class NewFurniture extends React.Component {
     splitPage: true,
   };
 
+  fade() {
+    const fadeableElement = document.getElementById('fade');
+    const fadeable = fadeableElement.classList;
+
+    fadeable.add(styles.fadeOut);
+
+    setTimeout(() => {
+      fadeable.add(styles.fadeIn);
+    }, 550);
+
+    setTimeout(() => {
+      fadeable.remove(styles.fadeOut);
+      fadeable.remove(styles.fadeIn);
+    }, 1000);
+  }
+
   handlePageChange(newPage) {
     this.setState({
       activePage: newPage,
@@ -21,7 +37,22 @@ class NewFurniture extends React.Component {
   }
 
   handleCategoryChange(newCategory) {
-    this.setState({ activeCategory: newCategory });
+    this.fade();
+    setTimeout(() => {
+      this.setState({
+        activeCategory: newCategory,
+      });
+    }, 450);
+    setTimeout(() => {
+      this.setState({
+        activePage: 0,
+      });
+    }, 350);
+    setTimeout(() => {
+      this.setState({
+        activePage: 0,
+      });
+    }, 700);
   }
 
   rightAction() {
@@ -79,7 +110,7 @@ class NewFurniture extends React.Component {
       );
 
       pages.push(
-        <div className={`row + ' ' + ${styles.swipeElement}`}>
+        <div className={'row ' + styles.swipeElement}>
           {categoryProducts
             .slice(i * productCount, (i + 1) * productCount)
             .map(item => (
