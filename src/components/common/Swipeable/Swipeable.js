@@ -22,6 +22,7 @@ const Swipeable = ({ children, nextPage, prevPage, currentPage }) => {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
+    threshold: 10,
     // eslint-disable-next-line react/display-name
     renderPrevButton: () => {
       return (
@@ -40,12 +41,20 @@ const Swipeable = ({ children, nextPage, prevPage, currentPage }) => {
     },
   };
 
+  if (swiper !== null) {
+    if (currentPage < 0) {
+      currentPage = 0;
+    } else if (currentPage > swiper.slides.length - 1) {
+      currentPage = swiper.slides.length - 1;
+    }
+  }
+
   useEffect(() => {
     swiper !== null && swiper.slideTo(currentPage);
   }, [currentPage, swiper]);
 
   return (
-    <div>
+    <div id='fade'>
       <Swiper {...params} getSwiper={setSwiper}>
         {children}
       </Swiper>

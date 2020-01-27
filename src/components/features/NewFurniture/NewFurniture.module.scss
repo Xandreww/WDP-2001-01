@@ -33,10 +33,13 @@
 
     .menu {
       text-align: center;
+
       ul {
         margin: 0;
         padding: 0;
         list-style: none;
+        cursor: default;
+
         li {
           display: inline-block;
           margin: 0 0.5rem;
@@ -104,6 +107,16 @@
   margin: 0;
 }
 
+.fadeOut {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.fadeIn {
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+
 @media (max-width: 1200px) {
   .root {
     .panelBar {
@@ -119,16 +132,20 @@
   .root {
     .panelBar {
       margin-bottom: 60px;
+
       .menu {
         text-align: center;
         padding-left: 0;
       }
+
       .dots {
         width: 100%;
         margin-top: 30px;
         text-align: center;
+
         ul {
           padding: 0;
+
           li {
             margin-left: 0.25rem;
             margin-right: 0.25rem;
@@ -143,11 +160,14 @@
   .root {
     .panelBar {
       margin-bottom: 30px;
+
       .panelBarElement {
         display: block;
+
         .menu {
           margin-top: 20px;
         }
+
         .dots {
           display: none;
         }
