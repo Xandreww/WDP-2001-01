@@ -49,10 +49,10 @@ class Gallery extends Component {
                     <div className={styles.starRating}>
                       <h5>{products[1].name}</h5>
                       <StarsRating
-                        stars={products.stars}
-                        rated={products.rated}
+                        stars={products[1].stars}
+                        rated={products[1].rated}
                         changeRating={changeRating}
-                        id={products.id}
+                        id={products[1].id}
                       />
                       <div className={styles.corner + ' ' + styles.leftCorner}></div>
                       <div className={styles.corner + ' ' + styles.rightCorner}></div>
