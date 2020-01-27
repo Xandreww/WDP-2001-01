@@ -61,7 +61,7 @@ class Feedback extends React.Component {
       );
 
       pages.push(
-        <div className={'row' + ' ' + styles.swipeContainer} key={`div-${i}`}>
+        <div className={'row ' + styles.swipeContainer} key={`div-${i}`}>
           <SingleFeedback {...feedbacks[i]} />
         </div>
       );
