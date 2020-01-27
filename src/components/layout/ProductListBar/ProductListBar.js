@@ -58,7 +58,10 @@ const ProductListBar = () => (
         </div>
         <div className={'col-2 ' + styles.colFour}>
           <div className={styles.icons}>
-            <FontAwesomeIcon className={styles.icon} icon={faThLarge}></FontAwesomeIcon>
+            <FontAwesomeIcon
+              className={styles.icon + ' ' + styles.active}
+              icon={faThLarge}
+            ></FontAwesomeIcon>
             <FontAwesomeIcon className={styles.icon} icon={faList}></FontAwesomeIcon>
           </div>
         </div>

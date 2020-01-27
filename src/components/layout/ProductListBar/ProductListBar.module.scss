@@ -43,6 +43,7 @@
         padding: 5px;
         border: 1px solid $bar-borderbutton;
         border-top: none;
+        background-color: $bar-backgroundhover;
 
         &:hover {
           a {
@@ -72,6 +73,7 @@
 
         &:hover {
           color: $bar-colorhover;
+          background-color: $bar-backgroundhover;
         }
 
         p {
@@ -113,6 +115,10 @@
         &:hover {
           color: $bar-colorhover;
         }
+      }
+
+      .active {
+        color: $bar-colorhover;
       }
     }
   }
