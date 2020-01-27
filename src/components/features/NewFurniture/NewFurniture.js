@@ -80,7 +80,7 @@ class NewFurniture extends React.Component {
 
       pages.push(
         <div
-          className={`row + ' ' + ${styles.swipeElement}`}
+          className={'row ' + styles.swipeElement}
           key={'furniturePagesList' + i + '-' + activePage}
         >
           {categoryProducts
