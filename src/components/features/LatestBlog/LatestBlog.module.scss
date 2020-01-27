@@ -97,10 +97,16 @@
       }
     }
   }
-}
 
-.blogBox {
+  .blogBox {
     display: flex;
     justify-content: space-between;
     background-color: $menu-bg;
   }
+}
+
+@media (max-width: 992px) {
+  .blogBox {
+    flex-direction: column;
+  }
+}
