@@ -2,9 +2,9 @@
 
 .root {
   .row {
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid $bar-borderbottom;
     margin: 20px 0 100px 0;
-    padding: 20px 0;
+    padding: 10px 0;
 
     .header {
       text-transform: uppercase;
@@ -20,31 +20,76 @@
       p {
         margin: 0;
       }
+
+      .description {
+        font-weight: 500;
+      }
     }
 
     ul {
-      background: darkorange;
       list-style-type: none;
       margin: 0;
       padding-left: 0;
       display: none;
+      position: absolute;
+      left: 10px;
+      background-color: $bar-background;
 
       li {
         float: left;
         position: relative;
         text-decoration: none;
         width: 100%;
+        padding: 5px;
+        border: 1px solid $bar-borderbutton;
+        border-top: none;
+
+        &:hover {
+          a {
+            color: $bar-colorhover;
+          }
+        }
 
         a {
           text-decoration: none;
-          color: black;
+          color: inherit;
+          padding-left: 6px;
         }
       }
     }
 
     .dropdown {
+      position: relative;
+
       button {
-        margin-left: 5px;
+        margin-left: 10px;
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid $bar-colorlink;
+        height: 40px;
+
+        &:hover {
+          color: $bar-colorhover;
+        }
+
+        p {
+          padding: 5px;
+        }
+
+        .dropdownIconOne,
+        .dropdownIconTwo {
+          margin-right: 5px;
+        }
+
+        .dropdownIconOne {
+          margin-left: 40px;
+        }
+
+        .dropdownIconTwo {
+          margin-left: 20px;
+        }
       }
       &:hover {
         ul {
@@ -58,10 +103,16 @@
       align-items: center;
       justify-content: center;
       border: 1px solid black;
+      height: 40px;
+      width: 70px;
 
       .icon {
-        font-size: 35px;
+        font-size: 30px;
         padding: 5px;
+
+        &:hover {
+          color: $bar-colorhover;
+        }
       }
     }
   }
