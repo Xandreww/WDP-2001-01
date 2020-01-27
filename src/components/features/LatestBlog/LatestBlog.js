@@ -41,17 +41,17 @@ const LatestBlog = ({ blogBox1, blogBox2, blogBox3 }) => {
 
 LatestBlog.propTypes = {
   blogBox1: PropTypes.shape({
-    image: PropTypes.number,
+    image: PropTypes.string,
     imageName: PropTypes.string,
     text: PropTypes.string,
   }),
   blogBox2: PropTypes.shape({
-    image: PropTypes.number,
+    image: PropTypes.string,
     imageName: PropTypes.string,
     text: PropTypes.string,
   }),
   blogBox3: PropTypes.shape({
-    image: PropTypes.number,
+    image: PropTypes.string,
     imageName: PropTypes.string,
     text: PropTypes.string,
   }),
