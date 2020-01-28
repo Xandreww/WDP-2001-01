@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styles from './Gallery.module.scss';
 import MiniGallery from '../../common/MiniGallery/MiniGallery';
 import GalleryNavbar from '../../layout/GalleryNavbar/GalleryNavbar';
-import Icons from '../../common/Icons/Icons';
+import Icons from '../../common/Icons/IconsContainer';
 import Button from '../../common/Button/Button';
 import StarsRating from '../../common/StarsRating/StarsRating';
 
@@ -36,7 +36,7 @@ class Gallery extends Component {
                     />
                   )}
                 </div>
-                <Icons />
+                <Icons selectedProduct={products[1]} />
                 <div className={styles.miniGallery}>
                   <MiniGallery products={products} />
                 </div>
