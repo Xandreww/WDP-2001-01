@@ -11,26 +11,28 @@ const ProductSearch = () => (
     <div className={styles.category}>
       <FontAwesomeIcon className={styles.icon} icon={faListUl} />
       <ul className={styles.categoryList}>
-        <ul className={styles.topcategory}>
-          <a href='#'>
-            <option value=''>Select a category</option>
-          </a>
-          <li className={styles.selected}>
-            <a href='#'>Bed</a>
-          </li>
-          <li className={styles.selected}>
-            <a href='#'>Chair</a>
-          </li>
-          <li className={styles.selected}>
-            <a href='#'>Sofa</a>
-          </li>
-          <li className={styles.selected}>
-            <a href='#'>Table</a>
-          </li>
-          <li className={styles.selected}>
-            <a href='#'>Dining</a>
-          </li>
-        </ul>
+        <li className={styles.topcategory}>
+          <ul>
+            <a href='#'>
+              <option value=''>Select a category</option>
+            </a>
+            <li className={styles.selected}>
+              <a href='#'>Bed</a>
+            </li>
+            <li className={styles.selected}>
+              <a href='#'>Chair</a>
+            </li>
+            <li className={styles.selected}>
+              <a href='#'>Sofa</a>
+            </li>
+            <li className={styles.selected}>
+              <a href='#'>Table</a>
+            </li>
+            <li className={styles.selected}>
+              <a href='#'>Dining</a>
+            </li>
+          </ul>
+        </li>
       </ul>
       <FontAwesomeIcon className={styles.icon} icon={faCaretDown} />
     </div>
