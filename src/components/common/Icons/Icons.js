@@ -10,7 +10,20 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import PropTypes from 'prop-types';
 
-const Icons = ({ removeFromCompare, addToCompare, selectedProduct, products }) => {
+const Icons = ({
+  removeFromCompare,
+  addToCompare,
+  addToFav,
+  removeFromFav,
+  selectedProduct,
+  products,
+}) => {
+  const favHandler = event => {
+    event.preventDefault();
+    selectedProduct.isFavorite
+      ? removeFromFav(selectedProduct.id)
+      : addToFav(selectedProduct.id);
+  };
   const compareHandler = event => {
     event.preventDefault();
     const prodToCompare = products.filter(product => product.toCompare).length;
@@ -25,7 +38,11 @@ const Icons = ({ removeFromCompare, addToCompare, selectedProduct, products }) =
 
   return (
     <ul className={styles.icons}>
-      <a href='#'>
+      <a
+        href='#'
+        className={selectedProduct.isFavorite && styles.linkActive}
+        onClick={e => favHandler(e)}
+      >
         <li>
           <FontAwesomeIcon
             className={styles.icon}
@@ -104,6 +121,8 @@ const Icons = ({ removeFromCompare, addToCompare, selectedProduct, products }) =
 Icons.propTypes = {
   addToCompare: PropTypes.func,
   removeFromCompare: PropTypes.func,
+  addToFav: PropTypes.func,
+  removeFromFav: PropTypes.func,
   selectedProduct: PropTypes.object,
   products: PropTypes.array,
 };
