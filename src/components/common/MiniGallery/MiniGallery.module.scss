@@ -1,0 +1,29 @@
+@import "../../../styles/settings.scss";
+
+.root {
+  background-color: $product-box-bg;
+
+  .photoContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .miniGalleryImage {
+      width: 60px;
+      height: 60px;
+      object-fit: cover;
+      margin: 5px 5px;
+    }
+
+    .iconBackground {
+      background-color: $button-bg;
+      padding: 19px 3px;
+    }
+
+    .icon {
+      font-size: 20px;
+      color: $button-text;
+      background-color: $button-bg;
+    }
+  }
+}
