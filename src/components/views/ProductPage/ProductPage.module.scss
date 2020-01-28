@@ -3,7 +3,7 @@
 .root {
   height: 400px;
   margin: auto;
-  background-color: #7f7f7f;
+  background-color: $medium-grey1;
   color: $product-box-bg;
 
   .sectionTitle {
@@ -22,7 +22,7 @@
   padding: $base-padding;
   margin: -250px auto 100px;
   background-color: $product-box-bg;
-  border: 1px solid #7f7f7f;
+  border: 1px solid $medium-grey1;
 
   position: relative;
   padding: 10px 0 10px 0;

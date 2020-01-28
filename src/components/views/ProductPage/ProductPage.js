@@ -41,7 +41,7 @@ const ProductPage = ({
   const product = products.find(prod => prod.id === productId);
 
   /* to affect scroll down afer link direct */
-  useEffect(() => window.scrollTo(0, 0));
+  useEffect(() => window.scrollTo(0, 0), []);
 
   if (!product) {
     return <Redirect to='/not-found' />;
