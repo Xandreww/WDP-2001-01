@@ -15,32 +15,32 @@
     color: $light;
     margin: 0;
     font-size: 18px;
-    }
+  }
 
-    .dots {
-      margin: 0;
-      display: flex;
-      justify-content: flex-end;
+  .dots {
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .dot {
+    display: flex;
+    span {
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      margin: 0 4px;
+      background-color: $light;
+      &:hover {
+        background-color: $primary-orange-brown;
+      }
     }
-    .dot {
-      display: flex;
-      span {
-        display: inline-block;
-        width: 12px;
-        height: 12px;
-        border-radius: 50%;
-        margin: 0 4px;
-        background-color: $light;
-          &:hover {
-            background-color: $primary-orange-brown;
-            }
-          }
-        }
-        &.active {
-          span {
-            background-color:$primary-orange-brown;
-          }
-          }
+  }
+  &.active {
+    span {
+      background-color: $primary-orange-brown;
+    }
+  }
 
   .btns {
     display: flex;
