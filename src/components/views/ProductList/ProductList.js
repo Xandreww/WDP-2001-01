@@ -1,9 +1,14 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
 import styles from './ProductList.module.scss';
+import ProductListBar from '../../layout/ProductListBar/ProductListBar';
 
-const ProductList = () => <div className={styles.root}>This is ProductList</div>;
-
-// ProductList.propTypes = {};
+const ProductList = () => {
+  return (
+    <div className={styles.root}>
+      <ProductListBar />
+      <div className={styles.content}>Content</div>
+    </div>
+  );
+};
 
 export default ProductList;
