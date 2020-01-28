@@ -2,4 +2,11 @@
 
 .root {
   padding: $base-padding 0;
+
+  .content {
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    padding: 50px 0 50px 0;
+    text-align: center;
+  }
 }
