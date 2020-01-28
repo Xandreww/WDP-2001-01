@@ -110,14 +110,10 @@ class NewFurniture extends React.Component {
       );
 
       pages.push(
-<<<<<<< HEAD
         <div
           className={'row ' + styles.swipeElement}
           key={'furniturePagesList' + i + '-' + activePage}
         >
-=======
-        <div className={'row ' + styles.swipeElement}>
->>>>>>> master
           {categoryProducts
             .slice(i * productCount, (i + 1) * productCount)
             .map(item => (
