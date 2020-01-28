@@ -17,6 +17,9 @@
     }],
     "unit-whitelist": null,
     "scss/selector-no-redundant-nesting-selector": true,
-    "scss/no-duplicate-dollar-variables": true
+    "scss/no-duplicate-dollar-variables": true,
+    "max-nesting-depth": [3, {
+      "ignore": ["blockless-at-rules", "pseudo-classes"]
+    }]
   }
 }
