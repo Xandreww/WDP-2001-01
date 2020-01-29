@@ -6,7 +6,7 @@ import Button from '../../common/Button/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
 import PromotedProductBox from '../../common/PromotedProductBox/PromotedProductBox';
-import HotDealsProductBox from '../../common/HotDealsProductBox/HotDealsProductBoxContainer';
+import HotDealsProductBox from '../../common/HotDealsProductBox/HotDealsProductBox';
 
 class Promoted extends React.Component {
   state = {
@@ -14,7 +14,7 @@ class Promoted extends React.Component {
   };
 
   render() {
-    const { promoted } = this.props;
+    const { promoted, hotDeals } = this.props;
 
     return (
       <div className={styles.root}>
@@ -35,7 +35,16 @@ class Promoted extends React.Component {
                   </a>
                 </p>
               </div>
-              <HotDealsProductBox />
+
+              <div className={styles.hotDealsList}>
+                {hotDeals.map(hotDeals => {
+                  return (
+                    <div key={hotDeals.id} className={`${styles.hotDealsProduct} `}>
+                      <HotDealsProductBox {...hotDeals} />
+                    </div>
+                  );
+                })}
+              </div>
             </div>
             <div className='col-8'>
               <div className={styles.promotedContainer}>
@@ -67,7 +76,7 @@ class Promoted extends React.Component {
 
 Promoted.propTypes = {
   promoted: PropTypes.array,
-  hotDealsProductBox: PropTypes.object,
+  hotDeals: PropTypes.array,
 };
 
 export default Promoted;
