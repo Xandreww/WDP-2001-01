@@ -36,7 +36,7 @@ class Gallery extends Component {
                     />
                   )}
                 </div>
-                <Icons selectedProduct={products[1]} />
+                <Icons selectedProduct={products[1] && products[1]} />
                 <div className={styles.miniGallery}>
                   <MiniGallery products={products} />
                 </div>
