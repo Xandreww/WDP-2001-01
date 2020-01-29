@@ -37,20 +37,17 @@ const Icons = ({
   };
 
   return (
-    <ul className={styles.icons}>
-      <a
-        href='#'
+    <div className={styles.icons}>
+      <button
         className={selectedProduct.isFavorite && styles.linkActive}
         onClick={e => favHandler(e)}
       >
-        <li>
-          <FontAwesomeIcon
-            className={styles.icon}
-            icon={faHeart}
-            fixedWidth
-            border
-          ></FontAwesomeIcon>
-        </li>
+        <FontAwesomeIcon
+          className={styles.icon}
+          icon={faHeart}
+          fixedWidth
+          border
+        ></FontAwesomeIcon>
         <span>
           <FontAwesomeIcon
             className={styles.caretLeft}
@@ -58,20 +55,17 @@ const Icons = ({
           ></FontAwesomeIcon>
           Add to favorities
         </span>
-      </a>
-      <a
-        href='#'
+      </button>
+      <button
         className={selectedProduct.toCompare && styles.linkActive}
         onClick={e => compareHandler(e)}
       >
-        <li>
-          <FontAwesomeIcon
-            className={styles.icon}
-            icon={faExchangeAlt}
-            fixedWidth
-            border
-          ></FontAwesomeIcon>
-        </li>
+        <FontAwesomeIcon
+          className={styles.icon}
+          icon={faExchangeAlt}
+          fixedWidth
+          border
+        ></FontAwesomeIcon>
         <span>
           <FontAwesomeIcon
             className={styles.caretLeft}
@@ -79,16 +73,14 @@ const Icons = ({
           ></FontAwesomeIcon>
           Add to compare
         </span>
-      </a>
-      <a href='#'>
-        <li>
-          <FontAwesomeIcon
-            className={styles.icon}
-            icon={faEye}
-            fixedWidth
-            border
-          ></FontAwesomeIcon>
-        </li>
+      </button>
+      <button>
+        <FontAwesomeIcon
+          className={styles.icon}
+          icon={faEye}
+          fixedWidth
+          border
+        ></FontAwesomeIcon>
         <span>
           <FontAwesomeIcon
             className={styles.caretLeft}
@@ -96,16 +88,14 @@ const Icons = ({
           ></FontAwesomeIcon>
           View details
         </span>
-      </a>
-      <a href='#' className={styles.linkActive}>
-        <li>
-          <FontAwesomeIcon
-            className={styles.icon}
-            icon={faShoppingBag}
-            fixedWidth
-            border
-          ></FontAwesomeIcon>
-        </li>
+      </button>
+      <button className={styles.linkActive}>
+        <FontAwesomeIcon
+          className={styles.icon}
+          icon={faShoppingBag}
+          fixedWidth
+          border
+        ></FontAwesomeIcon>
         <span>
           <FontAwesomeIcon
             className={styles.caretLeft}
@@ -113,8 +103,8 @@ const Icons = ({
           ></FontAwesomeIcon>
           Add to cart
         </span>
-      </a>
-    </ul>
+      </button>
+    </div>
   );
 };
 
