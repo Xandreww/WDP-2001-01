@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './ProductList.module.scss';
-import ProductListBar from '../../layout/ProductListBar/ProductListBar';
+import ProductListBar from '../../layout/ProductListBar/ProductListBarContainer';
 
 const ProductList = () => {
   return (

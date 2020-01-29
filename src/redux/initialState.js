@@ -1265,6 +1265,7 @@ const initialState = {
     toCompare: false,
     image: image20,
   },
+  sortBy: 'Price: Lower First',
 };
 
 export default initialState;
