@@ -1456,7 +1456,7 @@ const initialState = {
   ],
   hotDeals: [
     {
-      id: 'aenean-ru-bristique-1',
+      id: 1,
       name: 'Aenean Ru Bristique 1',
       category: 'bed',
       price: 30,
@@ -1465,11 +1465,11 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       isFavorite: false,
-      image: image20,
+      image: image27,
       isHotDeal: true,
     },
     {
-      id: 'aenean-ru-bristique-10',
+      id: 2,
       name: 'Aenean Ru Bristique 10',
       category: 'bed',
       price: 20,
@@ -1478,11 +1478,11 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       isFavorite: false,
-      image: image10,
+      image: image19,
       isHotDeal: true,
     },
     {
-      id: 'aenean-ru-bristique-11',
+      id: 3,
       name: 'Aenean Ru Bristique 11',
       category: 'bed',
       price: 49,
