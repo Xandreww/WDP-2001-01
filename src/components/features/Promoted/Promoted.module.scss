@@ -2,7 +2,7 @@
 
 .root {
   margin: 20px 0;
-  padding: 10px;
+  padding: 1rem 0;
 
   .promotedBar {
     padding: 12px 8px;
@@ -11,45 +11,52 @@
     justify-content: space-between;
     align-items: center;
   }
+
   .promotedBarTitle {
     color: $light;
     margin: 0;
     font-size: 18px;
-    }
+  }
 
-    .dots {
-      margin: 0;
-      display: flex;
-      justify-content: flex-end;
+  .dots {
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .dot {
+    display: flex;
+
+    span {
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      margin: 0 4px;
+      background-color: $light;
+
+      &:hover {
+        background-color: $primary-orange-brown;
+      }
     }
-    .dot {
-      display: flex;
-      span {
-        display: inline-block;
-        width: 12px;
-        height: 12px;
-        border-radius: 50%;
-        margin: 0 4px;
-        background-color: $light;
-          &:hover {
-            background-color: $primary-orange-brown;
-            }
-          }
-        }
-        &.active {
-          span {
-            background-color:$primary-orange-brown;
-          }
-          }
+  }
+
+  &.active {
+    span {
+      background-color: $primary-orange-brown;
+    }
+  }
 
   .btns {
     display: flex;
+
     .btn {
       width: 50%;
       text-align: center;
       background-color: $medium-grey3;
       color: $bright-grey;
       font-size: 20px;
+
       &:hover {
         background-color: $primary-orange-brown;
       }
