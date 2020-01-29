@@ -1,6 +1,101 @@
 @import "../../../styles/settings.scss";
 
 .root {
+  height: 400px;
+  margin: auto;
+  background-color: $medium-grey1;
+  color: $product-box-bg;
+
+  .sectionTitle {
+    text-transform: uppercase;
+  }
+
+  p {
+    margin-bottom: 0;
+    margin-top: 1rem;
+    text-transform: capitalize;
+    text-align: right;
+  }
+}
+
+.container {
   padding: $base-padding;
-  margin: 0 300px;
+  margin: -250px auto 100px;
+  background-color: $product-box-bg;
+  border: 1px solid $medium-grey1;
+
+  position: relative;
+  padding: 10px 0 10px 0;
+  background: {
+    color: $product-box-bg-photo;
+    size: contain;
+    position: center;
+    repeat: no-repeat;
+  }
+  overflow: hidden;
+  align-items: flex-end;
+}
+
+.descrow {
+  margin: 0;
+  padding: 3px 0;
+}
+
+.simpleButtons {
+  > * {
+    margin-right: 8px;
+  }
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.description {
+  padding: 10px;
+
+  .title {
+    font-size: 25px;
+  }
+
+  .divider {
+    border-top: 1px solid #7f7f7f;
+  }
+
+  .oldPrice {
+    display: inline-block;
+    padding: 0 5px;
+    font-weight: 300;
+    font-size: 20px;
+    color: $dark-grey4;
+    text-decoration-line: line-through;
+    text-decoration-color: $primary-orange-brown;
+    text-decoration-thickness: 3px;
+  }
+}
+
+.fb:hover {
+  background-color: #3b5998 !important;
+  text-decoration: none;
+}
+.gplus:hover {
+  background-color: #ea4335 !important;
+  text-decoration: none;
+}
+.tweet:hover {
+  background-color: #1da1f2 !important;
+  text-decoration: none;
+}
+.pinterest:hover {
+  background-color: #bd081c !important;
+  text-decoration: none;
+}
+.linkedin:hover {
+  background-color: #007bb5 !important;
+  text-decoration: none;
 }
