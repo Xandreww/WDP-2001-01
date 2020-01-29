@@ -13,8 +13,54 @@ class Promoted extends React.Component {
     activePage: 0,
   };
 
+  handlePageChange(newPage) {
+    this.setState({
+      activePage: newPage,
+    });
+  }
+
+  rightAction() {
+    const newPage = this.state.activePage;
+
+    this.setState(state => ({
+      activePage: newPage + 1,
+    }));
+  }
+
+  leftAction() {
+    const newPage = this.state.activePage;
+
+    this.setState(state => ({
+      activePage: newPage - 1,
+    }));
+  }
+
   render() {
     const { promoted, hotDeals } = this.props;
+    const { activePage } = this.state;
+
+    const pagesNumberOnSlide = 1;
+    const pagesCount = Math.ceil(hotDeals.length / pagesNumberOnSlide);
+
+    const dots = [];
+    const pages = [];
+    for (let i = 0; i < pagesCount; i++) {
+      dots.push(
+        <li key={i + activePage}>
+          <a
+            onClick={() => this.handlePageChange(i)}
+            className={i === activePage && styles.active}
+          >
+            page {i}
+          </a>
+        </li>
+      );
+      pages.push(
+        <div className={'row' + ' ' + styles.swipeContainer}>
+          <HotDealsProductBox {...hotDeals[i]} />
+        </div>
+      );
+    }
 
     return (
       <div className={styles.root}>
@@ -52,7 +98,12 @@ class Promoted extends React.Component {
                   {promoted.map(promoted => {
                     return (
                       <div key={promoted.id} className={styles.singlePromoted}>
-                        <PromotedProductBox {...promoted} />
+                        <PromotedProductBox
+                          {...promoted}
+                          nextPage={() => this.rightAction()}
+                          prevPage={() => this.leftAction()}
+                          currentPage={this.state.activePage}
+                        />
                       </div>
                     );
                   })}
