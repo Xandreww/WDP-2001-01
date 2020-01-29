@@ -93,6 +93,8 @@
 
   .miniGallery {
     width: 100%;
+    display: block;
+    flex-wrap: nowrap;
   }
 
   .rating {
@@ -172,6 +174,58 @@
         bottom: 0;
         right: 0;
       }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .root {
+    .panelBar {
+      margin-bottom: 10px;
+    }
+
+    .photo {
+      .leftImage {
+        height: 200px;
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .root {
+    .panelBar {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .root {
+    .rightColumn {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .root {
+    .rightColumn {
+      display: none;
+    }
+
+    .priceRating {
+      width: 60px;
+      height: 60px;
+    }
+
+    ul {
+      display: none;
+    }
+
+    .miniGallery {
+      display: block;
+      flex-wrap: nowrap;
     }
   }
 }
