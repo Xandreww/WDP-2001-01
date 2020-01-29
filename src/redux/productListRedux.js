@@ -8,11 +8,16 @@ const createActionName = name => `app/${reducerName}/${name}`;
 const CHANGE_SORT_METHOD = createActionName('CHANGE_SORT_METHOD');
 
 /* action creators */
-export const changeSortMethod = payload => ({ type: CHANGE_SORT_METHOD, payload });
+export const changeSortMethod = payload => {
+  console.log('payload', payload);
+  return {
+    type: CHANGE_SORT_METHOD,
+    payload,
+  };
+};
 
 /* reducer */
 export default function reducer(statePart = [], action = {}) {
-  console.log(action.type);
   switch (action.type) {
     case CHANGE_SORT_METHOD: {
       return {

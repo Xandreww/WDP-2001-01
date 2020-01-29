@@ -7,10 +7,8 @@ const mapStateToProps = state => ({
   sortBy: state.productList.sortBy,
 });
 
-const mapDispatchToProps = dispatch => {
-  return {
-    changeSortMethod: payload => dispatch(changeSortMethod(payload)),
-  };
-};
+const mapDispatchToProps = dispatch => ({
+  changeSortMethod: payload => dispatch(changeSortMethod(payload)),
+});
 
 export default connect(mapStateToProps, mapDispatchToProps)(ProductListBar);
