@@ -5,16 +5,17 @@ import PropTypes from 'prop-types';
 import Button from '../../common/Button/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
-import PromotedProductBox from '../../common/PromotedProductBox/PromotedProductBoxContainer';
+import PromotedProductBox from '../../common/PromotedProductBox/PromotedProductBox';
 import HotDealsProductBox from '../../common/HotDealsProductBox/HotDealsProductBoxContainer';
 
 class Promoted extends React.Component {
   state = {
     activePage: 0,
-    activeCategory: 'bed',
   };
 
   render() {
+    const { promoted } = this.props;
+
     return (
       <div className={styles.root}>
         <div className='container'>
@@ -37,14 +38,24 @@ class Promoted extends React.Component {
               <HotDealsProductBox />
             </div>
             <div className='col-8'>
-              <PromotedProductBox />
-              <div className={styles.btns}>
-                <Button className={styles.btn}>
-                  <FontAwesomeIcon icon={faAngleLeft}></FontAwesomeIcon>
-                </Button>
-                <Button className={styles.btn}>
-                  <FontAwesomeIcon icon={faAngleRight}></FontAwesomeIcon>
-                </Button>
+              <div className={styles.promotedContainer}>
+                <div className={styles.promotedContent}>
+                  {promoted.map(promoted => {
+                    return (
+                      <div key={promoted.id} className={styles.singlePromoted}>
+                        <PromotedProductBox {...promoted} />
+                      </div>
+                    );
+                  })}
+                </div>
+                <div className={styles.btns}>
+                  <Button className={styles.btn}>
+                    <FontAwesomeIcon icon={faAngleLeft}></FontAwesomeIcon>
+                  </Button>
+                  <Button className={styles.btn}>
+                    <FontAwesomeIcon icon={faAngleRight}></FontAwesomeIcon>
+                  </Button>
+                </div>
               </div>
             </div>
           </div>
@@ -55,7 +66,7 @@ class Promoted extends React.Component {
 }
 
 Promoted.propTypes = {
-  promotedProductBox: PropTypes.object,
+  promoted: PropTypes.array,
   hotDealsProductBox: PropTypes.object,
 };
 
