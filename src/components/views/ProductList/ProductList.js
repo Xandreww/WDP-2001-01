@@ -1,11 +1,11 @@
 import React from 'react';
 import styles from './ProductList.module.scss';
-import ProductListBar from '../../layout/ProductListBar/ProductListBarContainer';
+import ProductListBarContainer from '../../layout/ProductListBar/ProductListBarContainer';
 
 const ProductList = () => {
   return (
     <div className={styles.root}>
-      <ProductListBar />
+      <ProductListBarContainer />
       <div className={styles.content}>Content</div>
     </div>
   );

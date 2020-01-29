@@ -5,6 +5,7 @@ import cartReducer from './cartRedux';
 import categoriesReducer from './categoriesRedux';
 import productsReducer from './productsRedux';
 import otherReducer from './otherRedux';
+import productList from './productListRedux';
 
 // define reducers
 const reducers = {
@@ -12,6 +13,7 @@ const reducers = {
   categories: categoriesReducer,
   products: productsReducer,
   other: otherReducer,
+  productList: productList,
 };
 
 // add blank reducers for initial state properties without reducers

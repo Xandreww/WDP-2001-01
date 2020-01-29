@@ -1,6 +1,4 @@
 /* selectors */
-export const getAll = ({ cart }) => cart.products;
-export const getCount = ({ cart }) => cart.products.length;
 
 /* action name creator */
 const reducerName = 'productList';
@@ -10,10 +8,11 @@ const createActionName = name => `app/${reducerName}/${name}`;
 const CHANGE_SORT_METHOD = createActionName('CHANGE_SORT_METHOD');
 
 /* action creators */
-export const changeSortMethod = payload => ({ payload, type: CHANGE_SORT_METHOD });
+export const changeSortMethod = payload => ({ type: CHANGE_SORT_METHOD, payload });
 
 /* reducer */
 export default function reducer(statePart = [], action = {}) {
+  console.log(action.type);
   switch (action.type) {
     case CHANGE_SORT_METHOD: {
       return {
