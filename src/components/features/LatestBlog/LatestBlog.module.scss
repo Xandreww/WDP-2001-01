@@ -32,10 +32,12 @@
 
     .menu {
       text-align: center;
+
       ul {
         margin: 0;
         padding: 0;
         list-style: none;
+
         li {
           display: inline-block;
           margin: 0 0.5rem;
@@ -67,7 +69,7 @@
     .dots {
       position: absolute;
       right: 0;
-      top: 0;
+      top: 12px;
 
       ul {
         margin: 0;
@@ -97,10 +99,16 @@
       }
     }
   }
+
+  .blogBox {
+    display: flex;
+    justify-content: space-between;
+    background-color: $menu-bg;
+  }
 }
 
-.blogBox {
-  display: flex;
-  justify-content: space-between;
-  background-color: $menu-bg;
+@media (max-width: 992px) {
+  .blogBox {
+    flex-direction: column;
+  }
 }
