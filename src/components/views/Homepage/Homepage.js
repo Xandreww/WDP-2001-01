@@ -19,7 +19,6 @@ const Homepage = () => (
     <NewFurniture />
     <Gallery />
     <LatestBlog />
-    <Feedback />
     <Brands />
     <Feedback />
   </div>
