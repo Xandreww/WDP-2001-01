@@ -2,7 +2,7 @@
 
 .root {
   margin: 20px 0;
-  padding: 1rem 0;
+  padding: 10px;
 
   .promotedBar {
     padding: 12px 8px;
@@ -33,17 +33,17 @@
       height: 12px;
       border-radius: 50%;
       margin: 0 4px;
-      background-color: $light;
+      background-color: $promoted-dot-background-color;
 
       &:hover {
-        background-color: $primary-orange-brown;
+        background-color: $promoted-dot-background-color-hoover;
       }
     }
   }
 
   &.active {
     span {
-      background-color: $primary-orange-brown;
+      background-color: $promoted-dot-background-color-hoover;
     }
   }
 
