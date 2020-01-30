@@ -1,0 +1,8 @@
+diff a/src/components/features/LatestBlog/LatestBlog.module.scss b/src/components/features/LatestBlog/LatestBlog.module.scss	(rejected hunks)
+@@ -91,3 +96,3 @@
+-        &.active,
+-        &:hover {
+-          background-color: $new-furniture-dots-hover;
++      &.active,
++      &:hover {
++        background-color: $new-furniture-dots-hover;

@@ -19,7 +19,12 @@ const App = () => (
         <Switch>
           <Route exact path={'/'} component={Homepage} />
           <Route exact path={'/shop/:categoryId'} component={ProductList} />
-          <Route exact path={'/product/:productId'} component={ProductPageContainer} />
+          <Route
+            exact
+            path={'/product/:productId'}
+            component={ProductPageContainer}
+            ignoreScrollBehavior
+          />
           <Route component={ErrorNotFound} />
         </Switch>
       </MainLayout>
