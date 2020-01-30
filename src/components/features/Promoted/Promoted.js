@@ -98,21 +98,16 @@ class Promoted extends React.Component {
                   {promoted.map(promoted => {
                     return (
                       <div key={promoted.id} className={styles.singlePromoted}>
-                        <PromotedProductBox
-                          {...promoted}
-                          nextPage={() => this.rightAction()}
-                          prevPage={() => this.leftAction()}
-                          currentPage={this.state.activePage}
-                        />
+                        <PromotedProductBox {...promoted} />
                       </div>
                     );
                   })}
                 </div>
                 <div className={styles.btns}>
-                  <Button className={styles.btn}>
+                  <Button nextPage={() => this.leftAction()} className={styles.btn}>
                     <FontAwesomeIcon icon={faAngleLeft}></FontAwesomeIcon>
                   </Button>
-                  <Button className={styles.btn}>
+                  <Button nextPage={() => this.rightAction()} className={styles.btn}>
                     <FontAwesomeIcon icon={faAngleRight}></FontAwesomeIcon>
                   </Button>
                 </div>
