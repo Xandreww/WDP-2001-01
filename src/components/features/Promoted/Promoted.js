@@ -70,18 +70,11 @@ class Promoted extends React.Component {
               <div className={styles.promotedBar}>
                 <h4 className={`col-6 ${styles.promotedBarTitle}`}>HOT DEALS</h4>
                 <p className={`col-6 text-right ${styles.dots}`}>
-                  <a href='#' className={styles.dot}>
-                    <span></span>
-                  </a>
-                  <a href='#' className={styles.dot}>
-                    <span></span>
-                  </a>
-                  <a href='#' className={styles.dot}>
-                    <span></span>
-                  </a>
+                  <div className={'col-auto ' + styles.dots}>
+                    <ul>{dots}</ul>
+                  </div>
                 </p>
               </div>
-
               <div className={styles.hotDealsList}>
                 {hotDeals.map(hotDeals => {
                   return (
@@ -104,10 +97,16 @@ class Promoted extends React.Component {
                   })}
                 </div>
                 <div className={styles.btns}>
-                  <Button nextPage={() => this.leftAction()} className={styles.btn}>
+                  <Button
+                    onClick={() => this.leftActionPromoted()}
+                    className={styles.btn}
+                  >
                     <FontAwesomeIcon icon={faAngleLeft}></FontAwesomeIcon>
                   </Button>
-                  <Button nextPage={() => this.rightAction()} className={styles.btn}>
+                  <Button
+                    onClick={() => this.rightActionPromoted()}
+                    className={styles.btn}
+                  >
                     <FontAwesomeIcon icon={faAngleRight}></FontAwesomeIcon>
                   </Button>
                 </div>
