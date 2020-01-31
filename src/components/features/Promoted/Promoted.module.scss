@@ -22,28 +22,34 @@
     margin: 0;
     display: flex;
     justify-content: flex-end;
-  }
+    position: absolute;
+    right: 5px;
+    top: -10px;
 
-  .dot {
-    display: flex;
-
-    span {
-      display: inline-block;
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      margin: 0 4px;
-      background-color: $promoted-dot-background-color;
-
-      &:hover {
-        background-color: $promoted-dot-background-color-hoover;
-      }
+    ul {
+      margin: 0;
+      padding: 0 0 0 1rem;
+      list-style: none;
+      transform: translateY(15px);
     }
-  }
 
-  &.active {
-    span {
-      background-color: $promoted-dot-background-color-hoover;
+    li {
+      display: inline-block;
+      margin-left: 0.5rem;
+    }
+
+    a {
+      display: block;
+      width: 13px;
+      height: 13px;
+      border-radius: 6px;
+      background-color: $new-furniture-dots;
+      font-size: 0;
+
+      &.active,
+      &:hover {
+        background-color: $new-furniture-dots-hover;
+      }
     }
   }
 
