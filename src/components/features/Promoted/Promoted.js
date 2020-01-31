@@ -97,16 +97,10 @@ class Promoted extends React.Component {
                   })}
                 </div>
                 <div className={styles.btns}>
-                  <Button
-                    onClick={() => this.leftActionPromoted()}
-                    className={styles.btn}
-                  >
+                  <Button onClick={() => this.leftAction()} className={styles.btn}>
                     <FontAwesomeIcon icon={faAngleLeft}></FontAwesomeIcon>
                   </Button>
-                  <Button
-                    onClick={() => this.rightActionPromoted()}
-                    className={styles.btn}
-                  >
+                  <Button onClick={() => this.rightAction()} className={styles.btn}>
                     <FontAwesomeIcon icon={faAngleRight}></FontAwesomeIcon>
                   </Button>
                 </div>
