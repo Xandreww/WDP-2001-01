@@ -2,11 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './BlogBox.module.scss';
 import Button from '../Button/Button';
+import { Link } from 'react-router-dom';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faComments, faCalendarAlt } from '@fortawesome/free-solid-svg-icons';
 
-const BlogBox = ({ image, imageName, text, date, comments }) => {
+const BlogBox = ({ image, imageName, text, date, comments, id }) => {
   return (
     <div>
       <div className={styles.root}>
@@ -26,7 +27,7 @@ const BlogBox = ({ image, imageName, text, date, comments }) => {
                   icon={faComments}
                   className={styles.icon}
                 ></FontAwesomeIcon>{' '}
-                {comments}
+                {`${comments.length + 1} Comments`}
               </div>
             </div>
           </div>
@@ -34,7 +35,9 @@ const BlogBox = ({ image, imageName, text, date, comments }) => {
             <h3 className={styles.postDetailsHeader}>Products That Fight Static</h3>
             <p>{text}</p>
             <div>
-              <Button className={styles.btn}>Read More</Button>
+              <Link to={`/blog/${id}`}>
+                <Button className={styles.btn}>Read More</Button>
+              </Link>
             </div>
           </div>
         </div>
@@ -48,7 +51,8 @@ BlogBox.propTypes = {
   imageName: PropTypes.string,
   text: PropTypes.string,
   date: PropTypes.string,
-  comments: PropTypes.string,
+  comments: PropTypes.array,
+  id: PropTypes.number,
 };
 
 export default BlogBox;
