@@ -39,16 +39,17 @@ class Promoted extends React.Component {
 
   render() {
     const { promoted, hotDeals } = this.props;
-    const { activePage } = this.state;
+    const { activePage, activeHotDeals } = this.state;
 
     const pagesNumberOnSlide = 1;
     const pagesCount = Math.ceil(hotDeals.length / pagesNumberOnSlide);
 
+    const hotDealsPicture = hotDeals.filter(item => item.hotDeals === activeHotDeals);
+
     const dots = [];
-    const pages = [];
     for (let i = 0; i < pagesCount; i++) {
       dots.push(
-        <li key={i + activePage}>
+        <li>
           <a
             onClick={() => this.handlePageChange(i)}
             className={i === activePage && styles.active}
@@ -56,11 +57,6 @@ class Promoted extends React.Component {
             page {i}
           </a>
         </li>
-      );
-      pages.push(
-        <div className={'row' + ' ' + styles.swipeContainer}>
-          <HotDealsProductBox {...hotDeals[i]} />
-        </div>
       );
     }
 
@@ -78,13 +74,13 @@ class Promoted extends React.Component {
                 </p>
               </div>
               <div className={styles.hotDealsList}>
-                {hotDeals.map(hotDeals => {
-                  return (
-                    <div key={hotDeals.id} className={`${styles.hotDealsProduct} `}>
-                      <HotDealsProductBox {...hotDeals} />
+                {hotDealsPicture
+                  .slice(activePage * 1, (activePage + 1) * 1)
+                  .map(item => (
+                    <div key={item.id}>
+                      <HotDealsProductBox {...item} />
                     </div>
-                  );
-                })}
+                  ))}
               </div>
             </div>
             <div className='col-8'>
