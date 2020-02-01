@@ -11,8 +11,10 @@ import HotDealsProductBox from '../../common/HotDealsProductBox/HotDealsProductB
 class Promoted extends React.Component {
   state = {
     activeHotDealsPage: 1,
-    activePromotedPage: 2,
+    activePromotedPage: 0,
+    isUnmounted: false,
   };
+
   fade() {
     const fadeableElement = document.getElementById('fade');
     const fadeable = fadeableElement.classList;
@@ -31,11 +33,13 @@ class Promoted extends React.Component {
 
   handlePageChange(newPageHotDeals) {
     this.fade();
+    this.unmountTrue();
     setTimeout(() => {
       this.setState({
         activeHotDealsPage: newPageHotDeals,
       });
     }, 450);
+    this.unmountFalse();
   }
 
   leftAction() {
@@ -58,6 +62,30 @@ class Promoted extends React.Component {
     }, 450);
   }
 
+  componentDidMount() {
+    this.interval = setInterval(
+      () =>
+        this.handlePageChange(
+          this.state.activeHotDeals === this.props.hotDeals.length - 1
+            ? 0
+            : this.state.activeHotDeals + 1
+        ),
+      3000
+    );
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.interval);
+  }
+
+  unmountTrue() {
+    this.setState({ isUnmounted: true });
+  }
+
+  unmountFalse() {
+    setTimeout(() => this.setState({ isUnmounted: false }), 1000);
+  }
+
   render() {
     const { promoted, hotDeals } = this.props;
     const {
@@ -77,8 +105,24 @@ class Promoted extends React.Component {
       dots.push(
         <li>
           <a
-            onClick={() => this.handlePageChange(i)}
-            className={i === activeHotDealsPage && styles.active}
+            onClick={() => {
+              this.handlePageChange(i);
+              clearInterval(this.interval);
+              setTimeout(
+                () =>
+                  (this.interval = setInterval(
+                    () =>
+                      this.handlePageChange(
+                        this.state.activeHotDealsPage === this.props.hotDeals.length - 1
+                          ? 0
+                          : this.state.activeHotDealsPage + 1
+                      ),
+                    3000
+                  )),
+                7000
+              );
+            }}
+            className={i === activeHotDealsPage ? styles.active : undefined}
           >
             page {i}
           </a>
