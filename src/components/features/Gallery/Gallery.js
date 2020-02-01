@@ -2,14 +2,19 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styles from './Gallery.module.scss';
 import MiniGallery from '../../common/MiniGallery/MiniGallery';
-import GalleryNavbar from '../../layout/GalleryNavbar/GalleryNavbar';
+//import GalleryNavbar from '../../layout/GalleryNavbar/GalleryNavbar';
 import Icons from '../../common/Icons/IconsContainer';
 import Button from '../../common/Button/Button';
 import StarsRating from '../../common/StarsRating/StarsRating';
 
 class Gallery extends Component {
+  state = {
+    activeSubcategory: 'featured',
+  };
+
   render() {
-    const { products, changeRating } = this.props;
+    const { products, changeRating, subcategories } = this.props;
+    const { activeSubcategory } = this.state;
 
     return (
       <div className={styles.root}>
@@ -26,7 +31,20 @@ class Gallery extends Component {
                 </div>
               </div>
               <div className={styles.leftBorder}>
-                <GalleryNavbar />
+                <div className={styles.menu}>
+                  <ul>
+                    {subcategories.map(item => (
+                      <li
+                        className={item.id === activeSubcategory && styles.active}
+                        key={item.id}
+                      >
+                        <a onClick={() => this.handleSubcategoryChange(item.id)}>
+                          {item.name}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
                 <div className={styles.photo}>
                   {products[1] && (
                     <img
@@ -101,6 +119,7 @@ Gallery.propTypes = {
     })
   ),
   changeRating: PropTypes.func,
+  subcategories: PropTypes.array,
 };
 
 Gallery.defaultProps = {
