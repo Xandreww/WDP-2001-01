@@ -8,12 +8,10 @@ import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
 import PromotedProductBox from '../../common/PromotedProductBox/PromotedProductBox';
 import HotDealsProductBox from '../../common/HotDealsProductBox/HotDealsProductBox';
 
-import Swipeable from '../../common/Swipeable/Swipeable';
-
 class Promoted extends React.Component {
   state = {
-    activeHotDealsPage: 0,
-    activePromotedPage: 0,
+    activeHotDealsPage: 1,
+    activePromotedPage: 2,
   };
   fade() {
     const fadeableElement = document.getElementById('fade');
@@ -40,26 +38,24 @@ class Promoted extends React.Component {
     }, 450);
   }
 
-  handlePageChangePromoted(newPagePromoted) {
-    this.setState({
-      activePromotedPage: newPagePromoted,
-    });
-  }
-
   leftAction() {
     const newPagePromoted = this.state.activePromotedPage;
-
-    this.setState(state => ({
-      activePromotedPage: newPagePromoted - 1,
-    }));
+    this.fade();
+    setTimeout(() => {
+      this.setState(state => ({
+        activePromotedPage: newPagePromoted - 1,
+      }));
+    }, 450);
   }
 
   rightAction() {
     const newPagePromoted = this.state.activePromotedPage;
-
-    this.setState(state => ({
-      activePromotedPage: newPagePromoted + 1,
-    }));
+    this.fade();
+    setTimeout(() => {
+      this.setState(state => ({
+        activePromotedPage: newPagePromoted + 1,
+      }));
+    }, 450);
   }
 
   render() {
