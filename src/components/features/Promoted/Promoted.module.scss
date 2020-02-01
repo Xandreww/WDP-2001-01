@@ -61,7 +61,8 @@
       text-align: center;
       background-color: $promoted-btn-background-color;
       color: $promoted-bar-title-color;
-      font-size: 20px;
+      font-size: 22px;
+      padding: 7px;
 
       &:hover {
         background-color: $promoted-dot-background-color-hoover;
@@ -75,20 +76,9 @@
 
     .promotedContent {
       height: 100%;
-      max-height: 500px;
+      max-height: 540px;
       position: relative;
       overflow: hidden;
-    }
-  }
-
-  .hotDealsList {
-    overflow: hidden;
-    height: 500px;
-    position: relative;
-
-    .hotDealsProduct {
-      position: absolute;
-      width: 100%;
     }
   }
 }
