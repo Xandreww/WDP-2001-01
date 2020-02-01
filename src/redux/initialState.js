@@ -1293,6 +1293,24 @@ const initialState = {
       description: 'extra savings on all fabric sofas',
       isHotDeal: true,
     },
+    {
+      id: 4,
+      image: image19,
+      imageName: 'image',
+      softTitle: 'indoor',
+      strongTitle: 'furniture',
+      description: 'save up 50% of furniture',
+      isHotDeal: true,
+    },
+    {
+      id: 5,
+      image: image2,
+      imageName: 'image',
+      softTitle: 'indoor',
+      strongTitle: 'furniture',
+      description: 'save up 50% of furniture',
+      isHotDeal: true,
+    },
   ],
   hotDeals: [
     {
