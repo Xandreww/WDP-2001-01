@@ -55,3 +55,47 @@
     }
   }
 }
+
+@media (max-width: 1200px) {
+  .root {
+    padding-left: 100px;
+  }
+}
+
+@media (max-width: 991px) {
+  .root {
+    margin: 10 10;
+    padding: 10 10;
+  }
+}
+
+@media (max-width: 575px) {
+  .root {
+    padding: 40 40;
+
+    .text {
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      width: 100%;
+      transform: translate(-50%, -30%);
+      padding: 50px 0 40px 0;
+      text-align: center;
+      text-transform: uppercase;
+      color: #fff;
+      background-color: rgba(0, 0, 0, 0.2);
+      font-weight: 200;
+      font-size: 14px;
+
+      .title {
+        font-weight: 300;
+        font-size: 16px;
+      }
+    }
+
+    .mainBtn {
+      top: 90%;
+      font-size: 12px;
+    }
+  }
+}
