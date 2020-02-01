@@ -1,7 +1,8 @@
 import React from 'react';
 import styles from './SinglePost.module.scss';
+import PropTypes from 'prop-types';
 
-const SinglePost = () => (
+const SinglePost = ({ blog }) => (
   <div className={styles.root}>
     <div className='container'>
       <div className={'row'}>
@@ -20,6 +21,7 @@ const SinglePost = () => (
       <div className={'row'}>
         <div className={'col'}>
           <p>Content...</p>
+          <p>{blog[0].sampleText}</p>
         </div>
       </div>
       <div className={'row'}>
@@ -43,5 +45,9 @@ const SinglePost = () => (
     </div>
   </div>
 );
+
+SinglePost.propTypes = {
+  blog: PropTypes.object,
+};
 
 export default SinglePost;
