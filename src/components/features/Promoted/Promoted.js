@@ -8,6 +8,8 @@ import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
 import PromotedProductBox from '../../common/PromotedProductBox/PromotedProductBox';
 import HotDealsProductBox from '../../common/HotDealsProductBox/HotDealsProductBox';
 
+import Swipeable from '../../common/Swipeable/Swipeable';
+
 class Promoted extends React.Component {
   state = {
     activePage: 0,
@@ -88,13 +90,13 @@ class Promoted extends React.Component {
             <div className='col-8'>
               <div className={styles.promotedContainer}>
                 <div className={styles.promotedContent}>
-                  {promoted.map(promoted => {
-                    return (
-                      <div key={promoted.id} className={styles.singlePromoted}>
+                  <Swipeable next={this.rightAction} prev={this.leftAction}>
+                    {promoted.map(promoted => (
+                      <div className={styles.promotedContent} key={promoted.id}>
                         <PromotedProductBox {...promoted} />
                       </div>
-                    );
-                  })}
+                    ))}
+                  </Swipeable>
                 </div>
                 <div className={styles.btns}>
                   <Button onClick={() => this.leftAction()} className={styles.btn}>
