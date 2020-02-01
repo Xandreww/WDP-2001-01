@@ -64,7 +64,12 @@ class Promoted extends React.Component {
 
   render() {
     const { promoted, hotDeals } = this.props;
-    const { activeHotDealsPage, activeHotDeals } = this.state;
+    const {
+      activeHotDealsPage,
+      activeHotDeals,
+      activePromoted,
+      activePromotedPage,
+    } = this.state;
 
     const pagesNumberOnSlide = 1;
     const pagesCount = Math.ceil(hotDeals.length / pagesNumberOnSlide);
@@ -84,6 +89,8 @@ class Promoted extends React.Component {
         </li>
       );
     }
+
+    const promotedPicture = promoted.filter(item => item.promoted === activePromoted);
 
     return (
       <div className={styles.root}>
@@ -111,13 +118,13 @@ class Promoted extends React.Component {
             <div className='col-8'>
               <div className={styles.promotedContainer}>
                 <div className={styles.promotedContent}>
-                  <Swipeable next={this.rightAction} prev={this.leftAction}>
-                    {promoted.map(promoted => (
-                      <div className={styles.promotedContent} key={promoted.id}>
-                        <PromotedProductBox {...promoted} />
+                  {promotedPicture
+                    .slice(activePromotedPage, activePromotedPage + 1)
+                    .map(item => (
+                      <div key={item.id}>
+                        <PromotedProductBox {...item} />
                       </div>
                     ))}
-                  </Swipeable>
                 </div>
                 <div className={styles.btns}>
                   <Button onClick={() => this.leftAction()} className={styles.btn}>
