@@ -119,7 +119,7 @@ class Promoted extends React.Component {
                       ),
                     3000
                   )),
-                7000
+                3000
               );
             }}
             className={i === activeHotDealsPage ? styles.active : undefined}
