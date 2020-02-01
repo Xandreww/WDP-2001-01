@@ -12,34 +12,41 @@ import Swipeable from '../../common/Swipeable/Swipeable';
 
 class Promoted extends React.Component {
   state = {
-    activePage: 0,
+    activeHotDealsPage: 0,
+    activePromotedPage: 0,
   };
 
-  handlePageChange(newPage) {
+  handlePageChange(newPageHotDeals) {
     this.setState({
-      activePage: newPage,
+      activeHotDealsPage: newPageHotDeals,
     });
   }
 
-  rightAction() {
-    const newPage = this.state.activePage;
-
-    this.setState(state => ({
-      activePage: newPage + 1,
-    }));
+  handlePageChangePromoted(newPagePromoted) {
+    this.setState({
+      activePromotedPage: newPagePromoted,
+    });
   }
 
   leftAction() {
-    const newPage = this.state.activePage;
+    const newPagePromoted = this.state.activePromotedPage;
 
     this.setState(state => ({
-      activePage: newPage - 1,
+      activePromotedPage: newPagePromoted - 1,
+    }));
+  }
+
+  rightAction() {
+    const newPagePromoted = this.state.activePromotedPage;
+
+    this.setState(state => ({
+      activePromotedPage: newPagePromoted + 1,
     }));
   }
 
   render() {
     const { promoted, hotDeals } = this.props;
-    const { activePage, activeHotDeals } = this.state;
+    const { activeHotDealsPage, activeHotDeals } = this.state;
 
     const pagesNumberOnSlide = 1;
     const pagesCount = Math.ceil(hotDeals.length / pagesNumberOnSlide);
@@ -52,7 +59,7 @@ class Promoted extends React.Component {
         <li>
           <a
             onClick={() => this.handlePageChange(i)}
-            className={i === activePage && styles.active}
+            className={i === activeHotDealsPage && styles.active}
           >
             page {i}
           </a>
@@ -75,7 +82,7 @@ class Promoted extends React.Component {
               </div>
               <div className={styles.hotDealsList}>
                 {hotDealsPicture
-                  .slice(activePage * 1, (activePage + 1) * 1)
+                  .slice(activeHotDealsPage * 1, (activeHotDealsPage + 1) * 1)
                   .map(item => (
                     <div key={item.id}>
                       <HotDealsProductBox {...item} />
