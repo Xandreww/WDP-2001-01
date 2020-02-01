@@ -1407,7 +1407,7 @@ const initialState = {
   blog: [
     {
       id: 1,
-      image: image14,
+      image: image1,
       title: 'Comfortable beds',
       author: 'John Doe',
       date: '18 Nov 2018',
@@ -1440,6 +1440,12 @@ const initialState = {
           comment5:
             'Sed pulvinar, lectus id imperdiet eleifend, odio metus finibus massa.',
         },
+      ],
+      commentAuthors: [
+        { author1: 'Andy Brown' },
+        { author2: 'Julian Twain' },
+        { author3: 'Mark Markovsky' },
+        { author4: 'Dan Povavin' },
       ],
     },
   ],
