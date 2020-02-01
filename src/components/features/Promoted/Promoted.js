@@ -13,7 +13,7 @@ const Promoted = () => {
     <div className={styles.root}>
       <div className='container'>
         <div className='row'>
-          <div className='col-4'>
+          <div className={`col-4 ${styles.leftCol}`}>
             <div className={styles.promotedBar}>
               <h4 className={`col-6 ${styles.promotedBarTitle}`}>HOT DEALS</h4>
               <p className={`col-6 text-right ${styles.dots}`}>
@@ -30,7 +30,7 @@ const Promoted = () => {
             </div>
             <HotDealsProductBox />
           </div>
-          <div className='col-8'>
+          <div className={`col-12 col-md-8 ${styles.rightCol}`}>
             <PromotedProductBox />
             <div className={styles.btns}>
               <Button className={styles.btn}>

@@ -64,14 +64,14 @@
 
 @media (max-width: 991px) {
   .root {
-    margin: 10 10;
-    padding: 10 10;
+    margin: 0 0;
+    padding: 0 0;
   }
 }
 
 @media (max-width: 575px) {
   .root {
-    padding: 40 40;
+    padding: 0 0;
 
     .text {
       position: absolute;
@@ -85,17 +85,17 @@
       color: #fff;
       background-color: rgba(0, 0, 0, 0.2);
       font-weight: 200;
-      font-size: 14px;
+      font-size: 16px;
 
       .title {
         font-weight: 300;
-        font-size: 16px;
+        font-size: 24px;
       }
     }
 
     .mainBtn {
-      top: 90%;
-      font-size: 12px;
+      top: 65%;
+      font-size: 14px;
     }
   }
 }
