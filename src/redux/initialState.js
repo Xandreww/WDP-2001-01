@@ -120,6 +120,7 @@ const initialState = {
       toCompare: false,
       rated: true,
       image: image1,
+      subcategory: 'saleoff',
     },
     {
       id: 'aenean-ru-bristique-2',
@@ -136,6 +137,7 @@ const initialState = {
       toCompare: false,
       rated: true,
       image: image2,
+      subcategory: 'saleoff',
     },
     {
       id: 'aenean-ru-bristique-3',
@@ -152,6 +154,7 @@ const initialState = {
       toCompare: false,
       rated: false,
       image: image3,
+      subcategory: 'saleoff',
     },
     {
       id: 'aenean-ru-bristique-4',
@@ -168,6 +171,7 @@ const initialState = {
       toCompare: false,
       rated: false,
       image: image4,
+      subcategory: 'saleoff',
     },
     {
       id: 'aenean-ru-bristique-5',
@@ -184,6 +188,7 @@ const initialState = {
       toCompare: false,
       rated: false,
       image: image5,
+      subcategory: 'saleoff',
     },
     {
       id: 'aenean-ru-bristique-6',
@@ -200,6 +205,7 @@ const initialState = {
       toCompare: false,
       rated: false,
       image: image6,
+      subcategory: 'saleoff',
     },
     {
       id: 'aenean-ru-bristique-7',
@@ -216,6 +222,7 @@ const initialState = {
       toCompare: false,
       rated: false,
       image: image7,
+      subcategory: 'featured',
     },
     {
       id: 'aenean-ru-bristique-8',
@@ -232,6 +239,7 @@ const initialState = {
       toCompare: false,
       rated: false,
       image: image8,
+      subcategory: 'featured',
     },
     {
       id: 'aenean-ru-bristique-9',
@@ -247,6 +255,7 @@ const initialState = {
       toCompare: false,
       rated: false,
       image: image9,
+      subcategory: 'featured',
     },
     {
       id: 'aenean-ru-bristique-10',
@@ -262,6 +271,7 @@ const initialState = {
       toCompare: false,
       rated: false,
       image: image10,
+      subcategory: 'featured',
     },
     {
       id: 'aenean-ru-bristique-11',
@@ -277,6 +287,7 @@ const initialState = {
       toCompare: false,
       rated: false,
       image: image11,
+      subcategory: 'topseller',
     },
     {
       id: 'aenean-ru-bristique-12',
@@ -292,6 +303,7 @@ const initialState = {
       toCompare: false,
       rated: false,
       image: image12,
+      subcategory: 'topseller',
     },
     {
       id: 'aenean-ru-bristique-13',
@@ -307,6 +319,7 @@ const initialState = {
       toCompare: false,
       rated: false,
       image: image13,
+      subcategory: 'topseller',
     },
     {
       id: 'aenean-ru-bristique-14',
@@ -322,6 +335,7 @@ const initialState = {
       toCompare: false,
       rated: false,
       image: image14,
+      subcategory: 'topseller',
     },
     {
       id: 'aenean-ru-bristique-15',
@@ -337,6 +351,7 @@ const initialState = {
       toCompare: false,
       rated: false,
       image: image15,
+      subcategory: 'toprated',
     },
     {
       id: 'aenean-ru-bristique-16',
@@ -352,6 +367,7 @@ const initialState = {
       toCompare: false,
       rated: false,
       image: image16,
+      subcategory: 'toprated',
     },
     {
       id: 'aenean-ru-bristique-17',
@@ -367,6 +383,7 @@ const initialState = {
       toCompare: false,
       rated: false,
       image: image17,
+      subcategory: 'toprated',
     },
     {
       id: 'aenean-ru-bristique-18',
@@ -1425,6 +1442,12 @@ const initialState = {
     toCompare: false,
     image: image20,
   },
+  subcategories: [
+    { id: 'saleoff', name: 'Sale Off' },
+    { id: 'featured', name: 'Featured' },
+    { id: 'topseller', name: 'Top Seller' },
+    { id: 'toprated', name: 'Top Rated' },
+  ],
 };
 
 export default initialState;
