@@ -8,7 +8,6 @@ import Timer from '../Timer/Timer';
 import styles from './HotDealsProductBox.module.scss';
 
 const HotDealsProductBox = ({ products }) => {
-  // console.log('products props:', products);
   return (
     <div className={styles.root}>
       <ProductBox {...products} />
