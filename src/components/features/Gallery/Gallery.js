@@ -10,7 +10,18 @@ import StarsRating from '../../common/StarsRating/StarsRating';
 class Gallery extends Component {
   state = {
     activeSubcategory: 'featured',
+    activeProduct: {},
   };
+
+  handleSubcategoryChange(newSubcategory) {
+    this.setState({ activeSubcategory: newSubcategory });
+
+    this.handleProductChange({});
+  }
+
+  handleProductChange(newProduct) {
+    this.setState({ activeProduct: newProduct });
+  }
 
   render() {
     const { products, changeRating, subcategories } = this.props;
