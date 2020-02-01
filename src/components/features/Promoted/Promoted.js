@@ -15,11 +15,29 @@ class Promoted extends React.Component {
     activeHotDealsPage: 0,
     activePromotedPage: 0,
   };
+  fade() {
+    const fadeableElement = document.getElementById('fade');
+    const fadeable = fadeableElement.classList;
+
+    fadeable.add(styles.fadeOut);
+
+    setTimeout(() => {
+      fadeable.add(styles.fadeIn);
+    }, 550);
+
+    setTimeout(() => {
+      fadeable.remove(styles.fadeOut);
+      fadeable.remove(styles.fadeIn);
+    }, 1000);
+  }
 
   handlePageChange(newPageHotDeals) {
-    this.setState({
-      activeHotDealsPage: newPageHotDeals,
-    });
+    this.fade();
+    setTimeout(() => {
+      this.setState({
+        activeHotDealsPage: newPageHotDeals,
+      });
+    }, 450);
   }
 
   handlePageChangePromoted(newPagePromoted) {
