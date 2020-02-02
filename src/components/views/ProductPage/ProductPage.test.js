@@ -23,6 +23,7 @@ describe('Component ProductPage', () => {
   it('renders without crashing', () => {
     const component = shallow(<ProductPage />);
     expect(component).toBeTruthy();
+    //shallow(<ProductPage />);
   });
 });
 */

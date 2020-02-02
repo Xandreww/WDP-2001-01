@@ -44,7 +44,7 @@ const BlogBox = ({ image, imageName, text, date, comments }) => {
 };
 
 BlogBox.propTypes = {
-  image: PropTypes.number,
+  image: PropTypes.string,
   imageName: PropTypes.string,
   text: PropTypes.string,
   date: PropTypes.string,

@@ -58,7 +58,7 @@ class ProductPagePhoto extends React.Component {
     const pages = [];
     for (let i = 0; i < pagesCount; i++) {
       pages.push(
-        <div className={[styles.sliderRow, 'row'].join(' ')}>
+        <div className={[styles.sliderRow, 'row'].join(' ')} key={`div-${i}`}>
           {sampleBrands
             .slice(i * brandsNumberOnSlide, (i + 1) * brandsNumberOnSlide)
             .map(item => (

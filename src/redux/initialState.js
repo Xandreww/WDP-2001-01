@@ -120,6 +120,7 @@ const initialState = {
       toCompare: false,
       rated: true,
       image: image1,
+      subcategory: 'saleoff',
     },
     {
       id: 'aenean-ru-bristique-2',
@@ -128,7 +129,7 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam convallis mauris sed quam cursus, vitae luctus nibh scelerisque. Aliquam fringilla, magna vitae ullamcorper rutrum, nibh risus suscipit eros, eu ornare velit tellus quis leo. Suspendisse rhoncus mauris in auctor ornare. Aliquam facilisis aliquet sagittis.',
       price: 30,
-      oldPrice: null,
+      oldPrice: 10,
       stars: 1,
       promo: 'sale',
       newFurniture: true,
@@ -136,6 +137,7 @@ const initialState = {
       toCompare: false,
       rated: true,
       image: image2,
+      subcategory: 'saleoff',
     },
     {
       id: 'aenean-ru-bristique-3',
@@ -152,6 +154,7 @@ const initialState = {
       toCompare: false,
       rated: false,
       image: image3,
+      subcategory: 'saleoff',
     },
     {
       id: 'aenean-ru-bristique-4',
@@ -168,6 +171,7 @@ const initialState = {
       toCompare: false,
       rated: false,
       image: image4,
+      subcategory: 'saleoff',
     },
     {
       id: 'aenean-ru-bristique-5',
@@ -184,6 +188,7 @@ const initialState = {
       toCompare: false,
       rated: false,
       image: image5,
+      subcategory: 'saleoff',
     },
     {
       id: 'aenean-ru-bristique-6',
@@ -192,7 +197,7 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam convallis mauris sed quam cursus, vitae luctus nibh scelerisque. Aliquam fringilla, magna vitae ullamcorper rutrum, nibh risus suscipit eros, eu ornare velit tellus quis leo. Suspendisse rhoncus mauris in auctor ornare. Aliquam facilisis aliquet sagittis.',
       price: 30,
-      oldPrice: null,
+      oldPrice: 20,
       stars: 2,
       promo: 'sale',
       newFurniture: true,
@@ -200,6 +205,7 @@ const initialState = {
       toCompare: false,
       rated: false,
       image: image6,
+      subcategory: 'saleoff',
     },
     {
       id: 'aenean-ru-bristique-7',
@@ -207,8 +213,8 @@ const initialState = {
       category: 'bed',
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam convallis mauris sed quam cursus, vitae luctus nibh scelerisque. Aliquam fringilla, magna vitae ullamcorper rutrum, nibh risus suscipit eros, eu ornare velit tellus quis leo. Suspendisse rhoncus mauris in auctor ornare. Aliquam facilisis aliquet sagittis.',
-      price: 30,
-      oldPrice: null,
+      price: 65,
+      oldPrice: 100,
       stars: 2,
       promo: 'sale',
       newFurniture: true,
@@ -216,6 +222,7 @@ const initialState = {
       toCompare: false,
       rated: false,
       image: image7,
+      subcategory: 'featured',
     },
     {
       id: 'aenean-ru-bristique-8',
@@ -232,6 +239,7 @@ const initialState = {
       toCompare: false,
       rated: false,
       image: image8,
+      subcategory: 'featured',
     },
     {
       id: 'aenean-ru-bristique-9',
@@ -247,6 +255,7 @@ const initialState = {
       toCompare: false,
       rated: false,
       image: image9,
+      subcategory: 'featured',
     },
     {
       id: 'aenean-ru-bristique-10',
@@ -262,6 +271,7 @@ const initialState = {
       toCompare: false,
       rated: false,
       image: image10,
+      subcategory: 'featured',
     },
     {
       id: 'aenean-ru-bristique-11',
@@ -277,6 +287,8 @@ const initialState = {
       toCompare: false,
       rated: false,
       image: image11,
+      subcategory: 'topseller',
+      oldPrice: 22.99,
     },
     {
       id: 'aenean-ru-bristique-12',
@@ -292,6 +304,8 @@ const initialState = {
       toCompare: false,
       rated: false,
       image: image12,
+      subcategory: 'topseller',
+      oldPrice: 12.99,
     },
     {
       id: 'aenean-ru-bristique-13',
@@ -307,6 +321,8 @@ const initialState = {
       toCompare: false,
       rated: false,
       image: image13,
+      subcategory: 'topseller',
+      oldPrice: 9.99,
     },
     {
       id: 'aenean-ru-bristique-14',
@@ -322,6 +338,8 @@ const initialState = {
       toCompare: false,
       rated: false,
       image: image14,
+      subcategory: 'topseller',
+      oldPrice: 2.99,
     },
     {
       id: 'aenean-ru-bristique-15',
@@ -337,6 +355,8 @@ const initialState = {
       toCompare: false,
       rated: false,
       image: image15,
+      subcategory: 'toprated',
+      oldPrice: 5.99,
     },
     {
       id: 'aenean-ru-bristique-16',
@@ -352,6 +372,8 @@ const initialState = {
       toCompare: false,
       rated: false,
       image: image16,
+      subcategory: 'toprated',
+      oldPrice: 15.99,
     },
     {
       id: 'aenean-ru-bristique-17',
@@ -367,6 +389,8 @@ const initialState = {
       toCompare: false,
       rated: false,
       image: image17,
+      subcategory: 'toprated',
+      oldPrice: 25.99,
     },
     {
       id: 'aenean-ru-bristique-18',
@@ -382,6 +406,8 @@ const initialState = {
       toCompare: false,
       rated: false,
       image: image18,
+      subcategory: 'toprated',
+      oldPrice: 5,
     },
     {
       id: 'aenean-ru-bristique-19',
@@ -397,6 +423,8 @@ const initialState = {
       toCompare: false,
       rated: false,
       image: image19,
+      subcategory: 'toprated',
+      oldPrice: 5,
     },
     {
       id: 'aenean-ru-bristique-20',
@@ -412,6 +440,8 @@ const initialState = {
       toCompare: false,
       rated: false,
       image: image20,
+      subcategory: 'saleoff',
+      oldPrice: 10,
     },
     {
       id: 'aenean-ru-bristique-21',
@@ -427,6 +457,8 @@ const initialState = {
       toCompare: false,
       rated: false,
       image: image21,
+      subcategory: 'saleoff',
+      oldPrice: 15,
     },
     {
       id: 'aenean-ru-bristique-22',
@@ -442,6 +474,8 @@ const initialState = {
       toCompare: false,
       rated: false,
       image: image22,
+      subcategory: 'toprated',
+      oldPrice: 5,
     },
     {
       id: 'aenean-ru-bristique-23',
@@ -457,6 +491,8 @@ const initialState = {
       toCompare: false,
       rated: false,
       image: image23,
+      subcategory: 'toprated',
+      oldPrice: 5,
     },
     {
       id: 'aenean-ru-bristique-24',
@@ -1425,6 +1461,12 @@ const initialState = {
     toCompare: false,
     image: image20,
   },
+  subcategories: [
+    { id: 'saleoff', name: 'Sale Off' },
+    { id: 'featured', name: 'Featured' },
+    { id: 'topseller', name: 'Top Seller' },
+    { id: 'toprated', name: 'Top Rated' },
+  ],
 };
 
 export default initialState;
