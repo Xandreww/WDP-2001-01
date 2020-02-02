@@ -14,7 +14,7 @@ class Gallery extends Component {
     activeSubcategory: 'featured',
     activeProduct: {},
     startIndex: 0,
-    finishIndex: 5,
+    finishIndex: 6,
   };
 
   handleSubcategoryChange(newSubcategory) {
@@ -38,8 +38,8 @@ class Gallery extends Component {
 
     if (finishIndex < subcategoryProducts.length) {
       this.setState({
-        startIndex: startIndex + 5,
-        finishIndex: finishIndex + 5,
+        startIndex: startIndex + 6,
+        finishIndex: finishIndex + 6,
       });
     }
   }
@@ -50,8 +50,8 @@ class Gallery extends Component {
     event.preventDefault();
     if (startIndex > 0 && finishIndex > 0) {
       this.setState({
-        startIndex: startIndex - 5,
-        finishIndex: finishIndex - 5,
+        startIndex: startIndex - 6,
+        finishIndex: finishIndex - 6,
       });
     }
   }
