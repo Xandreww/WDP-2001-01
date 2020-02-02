@@ -11,7 +11,7 @@ import HotDealsProductBox from '../../common/HotDealsProductBox/HotDealsProductB
 class Promoted extends React.Component {
   state = {
     activeHotDealsPage: 1,
-    activePromotedPage: 0,
+    activePromotedPage: 2,
     isUnmounted: false,
   };
 
