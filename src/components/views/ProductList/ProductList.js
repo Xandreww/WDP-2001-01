@@ -16,10 +16,9 @@ const ProductList = ({ categories, products, mode }) => {
   } else {
     const { id } = category;
     const pages = [];
-    const dots = [];
     const activeCategory = id;
-    const activePage = 0;
-    const splitPage = true;
+    let activePage = 0;
+    let splitPage = true;
 
     const getProductCountFromMode = mode => {
       switch (mode) {
@@ -38,9 +37,9 @@ const ProductList = ({ categories, products, mode }) => {
       const newPage = activePage;
 
       if (splitPage) {
-        this.setState({ activePage: newPage + 1 });
+        activePage = newPage + 1;
       } else {
-        this.setState({ splitPage: true });
+        splitPage = true;
       }
     };
 
@@ -48,9 +47,9 @@ const ProductList = ({ categories, products, mode }) => {
       const newPage = activePage;
 
       if (splitPage) {
-        this.setState({ activePage: newPage - 1 });
+        activePage = newPage - 1;
       } else {
-        this.setState({ splitPage: true });
+        splitPage = true;
       }
     };
 
@@ -59,16 +58,6 @@ const ProductList = ({ categories, products, mode }) => {
     const pagesCount = Math.ceil(categoryProducts.length / productCount);
 
     for (let i = 0; i < pagesCount; i++) {
-      dots.push(
-        <li>
-          <a
-            onClick={() => this.handlePageChange(i)}
-            className={i === activePage && styles.active}
-          >
-            page {i}
-          </a>
-        </li>
-      );
       pages.push(
         <div className={'row ' + styles.swipeElement}>
           {categoryProducts
@@ -93,23 +82,6 @@ const ProductList = ({ categories, products, mode }) => {
             <div className={'row no-gutters align-items-end ' + styles.panelBarElement}>
               <div className={'col-auto ' + styles.heading}>
                 <h3>{category.name}</h3>
-              </div>
-              <div className={'col ' + styles.menu}>
-                <ul>
-                  {categories.map(item => (
-                    <li key={item.id}>
-                      <a
-                        className={item.id === activeCategory && styles.active}
-                        onClick={() => this.handleCategoryChange(item.id)}
-                      >
-                        {item.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className={'col-auto ' + styles.dots}>
-                <ul>{dots}</ul>
               </div>
             </div>
           </div>
