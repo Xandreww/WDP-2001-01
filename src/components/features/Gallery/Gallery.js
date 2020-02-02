@@ -74,23 +74,6 @@ class Gallery extends Component {
                 <div className={styles.miniGallery}>
                   <MiniGallery products={products} />
                 </div>
-                <div className={styles.rating}>
-                  <div className={styles.priceRating}>
-                    <h2 className={styles.priceLower}>$120.00</h2>
-                    <h2 className={styles.priceHigher}>$160.00</h2>
-                  </div>
-                  {products[1] && (
-                    <div className={styles.starRating}>
-                      <h5>{products[1].name}</h5>
-                      <StarsRating
-                        stars={products[1].stars}
-                        rated={products[1].rated}
-                        changeRating={changeRating}
-                        id={products[1].id}
-                      />
-                    </div>
-                  )}
-                </div>
               </div>
             </div>
             {/* col 1 ends here */}
