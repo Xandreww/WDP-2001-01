@@ -7,7 +7,7 @@ import StarsRating from '../../common/StarsRating/StarsRating';
 import GalleryBox from '../../common/GalleryBox/GalleryBox';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
+import { faChevronRight, faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 
 class Gallery extends Component {
   state = {
@@ -74,8 +74,8 @@ class Gallery extends Component {
                 </div>
                 <Icons selectedProduct={products[1] && products[1]} />
                 <div className={styles.miniGallery}>
-                  <Button className={styles.button}>
-                    <FontAwesomeIcon icon={faAngleLeft} />
+                  <Button className={styles.button} variant='main'>
+                    <FontAwesomeIcon className={styles.icon} icon={faChevronLeft} />
                   </Button>
                   {subcategoryProducts.slice().map(item => (
                     <div key={item.id} className={styles.singleImage}>
@@ -86,8 +86,8 @@ class Gallery extends Component {
                       />
                     </div>
                   ))}
-                  <Button className={styles.button}>
-                    <FontAwesomeIcon icon={faAngleRight} />
+                  <Button className={styles.button} variant='main'>
+                    <FontAwesomeIcon className={styles.icon} icon={faChevronRight} />
                   </Button>
                 </div>
               </div>
