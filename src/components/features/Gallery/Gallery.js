@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styles from './Gallery.module.scss';
-import MiniGallery from '../../common/MiniGallery/MiniGallery';
 import Icons from '../../common/Icons/IconsContainer';
 import Button from '../../common/Button/Button';
 import StarsRating from '../../common/StarsRating/StarsRating';
@@ -75,7 +74,6 @@ class Gallery extends Component {
                 </div>
                 <Icons selectedProduct={products[1] && products[1]} />
                 <div className={styles.miniGallery}>
-                  <MiniGallery products={products} />
                   <Button className={styles.button}>
                     <FontAwesomeIcon icon={faAngleLeft} />
                   </Button>
