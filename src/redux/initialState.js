@@ -1406,6 +1406,7 @@ const initialState = {
     {
       id: 0,
       image: image14,
+      imageName: 'image-14',
       title: 'Comfortable beds',
       author: 'John Doe',
       date: '18 Nov 2018',
@@ -1436,6 +1437,7 @@ const initialState = {
     {
       id: 1,
       image: image20,
+      imageName: 'image-20',
       title: 'Comfortable beds',
       author: 'John Doe',
       date: '12 Dec 2017',
@@ -1466,6 +1468,7 @@ const initialState = {
     {
       id: 2,
       image: image18,
+      imageName: 'image-18',
       title: 'Comfortable beds',
       author: 'John Doe',
       date: '18 Nov 2018',
