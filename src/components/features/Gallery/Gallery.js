@@ -79,7 +79,11 @@ class Gallery extends Component {
                   </Button>
                   {subcategoryProducts.slice().map(item => (
                     <div key={item.id} className={styles.singleImage}>
-                      <img src={item.image} alt={item.name} />
+                      <img
+                        src={item.image}
+                        alt={item.name}
+                        onClick={() => this.handleProductChange(item)}
+                      />
                     </div>
                   ))}
                   <Button className={styles.button}>
