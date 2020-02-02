@@ -247,4 +247,23 @@
       }
     }
   }
+
+  .icon {
+    font-size: 25px;
+    color: $button-text;
+  }
+
+  .button {
+    padding: 0;
+    width: 33px;
+    height: 70px;
+    text-align: center;
+    position: relative;
+
+    > * {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
 }
