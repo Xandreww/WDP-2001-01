@@ -66,9 +66,9 @@ class Promoted extends React.Component {
     this.interval = setInterval(
       () =>
         this.handlePageChange(
-          this.state.activeHotDeals === this.props.hotDeals.length - 1
+          this.state.activeHotDealsPage === this.props.hotDeals.length - 1
             ? 0
-            : this.state.activeHotDeals + 1
+            : this.state.activeHotDealsPage + 1
         ),
       3000
     );
