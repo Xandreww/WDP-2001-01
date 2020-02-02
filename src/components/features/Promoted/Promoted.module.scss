@@ -80,10 +80,36 @@
 
 @media (max-width: 991px) {
   .root {
+    .leftCol {
+      display: none;
+    }
+
+    .rightCol {
+      padding: 0 0;
+      margin: 0 0;
+    }
+
     .dots {
       width: 100%;
       margin-top: 30px;
       text-align: center;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .root {
+    max-width: 100%;
+    margin: 20px 0 0 20px;
+    padding: 20px 0 0 20px;
+
+    .leftCol {
+      display: none;
+    }
+
+    .rightCol {
+      padding: 0 0;
+      margin: 0 0;
     }
   }
 }
