@@ -13,6 +13,8 @@ class Gallery extends Component {
   state = {
     activeSubcategory: 'featured',
     activeProduct: {},
+    startIndex: 0,
+    finishIndex: 5,
   };
 
   handleSubcategoryChange(newSubcategory) {
@@ -25,9 +27,38 @@ class Gallery extends Component {
     this.setState({ activeProduct: newProduct });
   }
 
+  handleNextButton(event) {
+    const { startIndex, finishIndex } = this.state;
+
+    const subcategoryProducts = this.props.products.filter(
+      item => item.subcategory === this.state.activeSubcategory
+    );
+
+    event.preventDefault();
+
+    if (finishIndex < subcategoryProducts.length) {
+      this.setState({
+        startIndex: startIndex + 5,
+        finishIndex: finishIndex + 5,
+      });
+    }
+  }
+
+  handlePrevButton(event) {
+    const { startIndex, finishIndex } = this.state;
+
+    event.preventDefault();
+    if (startIndex > 0 && finishIndex > 0) {
+      this.setState({
+        startIndex: startIndex - 5,
+        finishIndex: finishIndex - 5,
+      });
+    }
+  }
+
   render() {
     const { products, changeRating, subcategories } = this.props;
-    const { activeSubcategory, activeProduct } = this.state;
+    const { activeSubcategory, activeProduct, startIndex, finishIndex } = this.state;
 
     const subcategoryProducts = products.filter(
       item => item.subcategory === activeSubcategory
@@ -74,10 +105,14 @@ class Gallery extends Component {
                 </div>
                 <Icons selectedProduct={products[1] && products[1]} />
                 <div className={styles.miniGallery}>
-                  <Button className={styles.button} variant='main'>
+                  <Button
+                    className={styles.button}
+                    variant='main'
+                    onClick={event => this.handlePrevButton(event)}
+                  >
                     <FontAwesomeIcon className={styles.icon} icon={faChevronLeft} />
                   </Button>
-                  {subcategoryProducts.slice().map(item => (
+                  {subcategoryProducts.slice(startIndex, finishIndex).map(item => (
                     <div key={item.id} className={styles.singleImage}>
                       <img
                         src={item.image}
@@ -86,7 +121,11 @@ class Gallery extends Component {
                       />
                     </div>
                   ))}
-                  <Button className={styles.button} variant='main'>
+                  <Button
+                    className={styles.button}
+                    variant='main'
+                    onClick={event => this.handleNextButton(event)}
+                  >
                     <FontAwesomeIcon className={styles.icon} icon={faChevronRight} />
                   </Button>
                 </div>
