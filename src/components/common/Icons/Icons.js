@@ -39,7 +39,7 @@ const Icons = ({
   return (
     <div className={styles.icons}>
       <button
-        className={selectedProduct.isFavorite && styles.linkActive}
+        className={selectedProduct.isFavorite ? styles.linkActive : null}
         onClick={e => favHandler(e)}
       >
         <FontAwesomeIcon
@@ -57,7 +57,7 @@ const Icons = ({
         </span>
       </button>
       <button
-        className={selectedProduct.toCompare && styles.linkActive}
+        className={selectedProduct.toCompare ? styles.linkActive : null}
         onClick={e => compareHandler(e)}
       >
         <FontAwesomeIcon
