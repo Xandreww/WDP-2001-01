@@ -13,7 +13,7 @@ const GalleryBox = ({ name, image, price, oldPrice, id, stars }) => {
       </div>
       <div className={styles.priceBox}>
         <div className={styles.price}>${price}</div>
-        <div className={styles.priceOld}>{oldPrice}</div>
+        <div className={styles.priceOld}>${oldPrice}</div>
       </div>
     </div>
   );
