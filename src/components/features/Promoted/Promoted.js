@@ -7,8 +7,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
 import PromotedProductBox from '../../common/PromotedProductBox/PromotedProductBoxContainer';
 import HotDealsProductBox from '../../common/HotDealsProductBox/HotDealsProductBoxContainer';
+import Swipeable from '../../common/Swipeable/Swipeable';
 
 const Promoted = () => {
+  const activePage = 0;
   return (
     <div className={styles.root}>
       <div className='container'>
@@ -42,6 +44,11 @@ const Promoted = () => {
             </div>
           </div>
         </div>
+        <Swipeable
+          nextPage={() => activePage + 1}
+          prevPage={() => activePage - 1}
+          currentPage={activePage}
+        ></Swipeable>
       </div>
     </div>
   );
