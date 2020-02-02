@@ -1,15 +1,68 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styles from './Gallery.module.scss';
-import MiniGallery from '../../common/MiniGallery/MiniGallery';
-import GalleryNavbar from '../../layout/GalleryNavbar/GalleryNavbar';
 import Icons from '../../common/Icons/IconsContainer';
 import Button from '../../common/Button/Button';
 import StarsRating from '../../common/StarsRating/StarsRating';
+import GalleryBox from '../../common/GalleryBox/GalleryBox';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronRight, faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 
 class Gallery extends Component {
+  state = {
+    activeSubcategory: 'featured',
+    activeProduct: {},
+    startIndex: 0,
+    finishIndex: 6,
+  };
+
+  handleSubcategoryChange(newSubcategory) {
+    this.setState({ activeSubcategory: newSubcategory });
+
+    this.handleProductChange({});
+  }
+
+  handleProductChange(newProduct) {
+    this.setState({ activeProduct: newProduct });
+  }
+
+  handleNextButton(event) {
+    const { startIndex, finishIndex } = this.state;
+
+    const subcategoryProducts = this.props.products.filter(
+      item => item.subcategory === this.state.activeSubcategory
+    );
+
+    event.preventDefault();
+
+    if (finishIndex < subcategoryProducts.length) {
+      this.setState({
+        startIndex: startIndex + 6,
+        finishIndex: finishIndex + 6,
+      });
+    }
+  }
+
+  handlePrevButton(event) {
+    const { startIndex, finishIndex } = this.state;
+
+    event.preventDefault();
+    if (startIndex > 0 && finishIndex > 0) {
+      this.setState({
+        startIndex: startIndex - 6,
+        finishIndex: finishIndex - 6,
+      });
+    }
+  }
+
   render() {
-    const { products, changeRating } = this.props;
+    const { products, changeRating, subcategories } = this.props;
+    const { activeSubcategory, activeProduct, startIndex, finishIndex } = this.state;
+
+    const subcategoryProducts = products.filter(
+      item => item.subcategory === activeSubcategory
+    );
 
     return (
       <div className={styles.root}>
@@ -26,38 +79,55 @@ class Gallery extends Component {
                 </div>
               </div>
               <div className={styles.leftBorder}>
-                <GalleryNavbar />
+                <div className={styles.menu}>
+                  <ul>
+                    {subcategories.map(item => (
+                      <li
+                        className={item.id === activeSubcategory && styles.active}
+                        key={item.id}
+                      >
+                        <a onClick={() => this.handleSubcategoryChange(item.id)}>
+                          {item.name}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
                 <div className={styles.photo}>
-                  {products[1] && (
-                    <img
-                      className={styles.leftImage}
-                      src={products[1].image}
-                      alt={products[1].name}
-                    />
-                  )}
+                  {activeProduct.id
+                    ? ''
+                    : this.handleProductChange(subcategoryProducts[0])}
+                  {subcategoryProducts
+                    .filter(product => product.id === activeProduct.id)
+                    .map(item => (
+                      <GalleryBox key={item.id} {...item} />
+                    ))}
                 </div>
                 <Icons selectedProduct={products[1] && products[1]} />
                 <div className={styles.miniGallery}>
-                  <MiniGallery products={products} />
-                </div>
-                <div className={styles.rating}>
-                  <div className={styles.priceRating}>
-                    <h2 className={styles.priceLower}>$120.00</h2>
-                    <h2 className={styles.priceHigher}>$160.00</h2>
-                  </div>
-                  {products[1] && (
-                    <div className={styles.starRating}>
-                      <h5>{products[1].name}</h5>
-                      <StarsRating
-                        stars={products[1].stars}
-                        rated={products[1].rated}
-                        changeRating={changeRating}
-                        id={products[1].id}
+                  <Button
+                    className={styles.button}
+                    variant='main'
+                    onClick={event => this.handlePrevButton(event)}
+                  >
+                    <FontAwesomeIcon className={styles.icon} icon={faChevronLeft} />
+                  </Button>
+                  {subcategoryProducts.slice(startIndex, finishIndex).map(item => (
+                    <div key={item.id} className={styles.singleImage}>
+                      <img
+                        src={item.image}
+                        alt={item.name}
+                        onClick={() => this.handleProductChange(item)}
                       />
-                      <div className={styles.corner + ' ' + styles.leftCorner}></div>
-                      <div className={styles.corner + ' ' + styles.rightCorner}></div>
                     </div>
-                  )}
+                  ))}
+                  <Button
+                    className={styles.button}
+                    variant='main'
+                    onClick={event => this.handleNextButton(event)}
+                  >
+                    <FontAwesomeIcon className={styles.icon} icon={faChevronRight} />
+                  </Button>
                 </div>
               </div>
             </div>
@@ -101,6 +171,7 @@ Gallery.propTypes = {
     })
   ),
   changeRating: PropTypes.func,
+  subcategories: PropTypes.array,
 };
 
 Gallery.defaultProps = {

@@ -11,6 +11,7 @@ import Homepage from './components/views/Homepage/Homepage';
 import ProductList from './components/views/ProductList/ProductList';
 import ProductPageContainer from './components/views/ProductPage/ProductPageContainer';
 import ErrorNotFound from './components/views/ErrorNotFound/ErrorNotFound';
+import BlogPage from './components/views/BlogPage/BlogPage';
 
 const App = () => (
   <Provider store={store}>
@@ -25,6 +26,7 @@ const App = () => (
             component={ProductPageContainer}
             ignoreScrollBehavior
           />
+          <Route exact path={'/blog/:blogId'} component={BlogPage} />
           <Route component={ErrorNotFound} />
         </Switch>
       </MainLayout>

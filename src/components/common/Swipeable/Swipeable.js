@@ -26,7 +26,7 @@ const Swipeable = ({ children, nextPage, prevPage, currentPage }) => {
     // eslint-disable-next-line react/display-name
     renderPrevButton: () => {
       return (
-        <div className={'swiper-button-prev' + ' ' + styles.button}>
+        <div className={'swiper-button-prev ' + styles.button}>
           <FontAwesomeIcon icon={faAngleLeft} />
         </div>
       );
@@ -34,7 +34,7 @@ const Swipeable = ({ children, nextPage, prevPage, currentPage }) => {
     // eslint-disable-next-line react/display-name
     renderNextButton: () => {
       return (
-        <div className={'swiper-button-next' + ' ' + styles.button}>
+        <div className={'swiper-button-next ' + styles.button}>
           <FontAwesomeIcon icon={faAngleRight} />
         </div>
       );
