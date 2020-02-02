@@ -82,3 +82,23 @@
     }
   }
 }
+@media (max-width: 991px) {
+  .root {
+    .priceBox {
+      width: 80px;
+      height: 80px;
+      bottom: 100px;
+    }
+
+    .nameBox {
+      bottom: 20px;
+      right: 15px;
+      height: 80px;
+
+      .name {
+        font-size: 14px;
+        font-weight: 300;
+      }
+    }
+  }
+}
