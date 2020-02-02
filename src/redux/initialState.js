@@ -129,7 +129,7 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam convallis mauris sed quam cursus, vitae luctus nibh scelerisque. Aliquam fringilla, magna vitae ullamcorper rutrum, nibh risus suscipit eros, eu ornare velit tellus quis leo. Suspendisse rhoncus mauris in auctor ornare. Aliquam facilisis aliquet sagittis.',
       price: 30,
-      oldPrice: null,
+      oldPrice: 10,
       stars: 1,
       promo: 'sale',
       newFurniture: true,
@@ -197,7 +197,7 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam convallis mauris sed quam cursus, vitae luctus nibh scelerisque. Aliquam fringilla, magna vitae ullamcorper rutrum, nibh risus suscipit eros, eu ornare velit tellus quis leo. Suspendisse rhoncus mauris in auctor ornare. Aliquam facilisis aliquet sagittis.',
       price: 30,
-      oldPrice: null,
+      oldPrice: 20,
       stars: 2,
       promo: 'sale',
       newFurniture: true,
@@ -399,6 +399,8 @@ const initialState = {
       toCompare: false,
       rated: false,
       image: image18,
+      subcategory: 'toprated',
+      oldPrice: 5,
     },
     {
       id: 'aenean-ru-bristique-19',
@@ -414,6 +416,8 @@ const initialState = {
       toCompare: false,
       rated: false,
       image: image19,
+      subcategory: 'toprated',
+      oldPrice: 5,
     },
     {
       id: 'aenean-ru-bristique-20',
@@ -429,6 +433,8 @@ const initialState = {
       toCompare: false,
       rated: false,
       image: image20,
+      subcategory: 'saleoff',
+      oldPrice: 10,
     },
     {
       id: 'aenean-ru-bristique-21',
@@ -444,6 +450,8 @@ const initialState = {
       toCompare: false,
       rated: false,
       image: image21,
+      subcategory: 'saleoff',
+      oldPrice: 15,
     },
     {
       id: 'aenean-ru-bristique-22',
@@ -459,6 +467,8 @@ const initialState = {
       toCompare: false,
       rated: false,
       image: image22,
+      subcategory: 'toprated',
+      oldPrice: 5,
     },
     {
       id: 'aenean-ru-bristique-23',
@@ -474,6 +484,8 @@ const initialState = {
       toCompare: false,
       rated: false,
       image: image23,
+      subcategory: 'toprated',
+      oldPrice: 5,
     },
     {
       id: 'aenean-ru-bristique-24',
