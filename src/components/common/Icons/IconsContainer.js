@@ -1,12 +1,11 @@
 import { connect } from 'react-redux';
-import ProductPage from './ProductPage';
+import Icons from './Icons';
 import {
   getAll,
-  addToFav,
-  removeFromFav,
   addToCompare,
   removeFromCompare,
-  changeRating,
+  addToFav,
+  removeFromFav,
 } from '../../../redux/productsRedux';
 
 const mapStateToProps = state => ({
@@ -20,8 +19,6 @@ const mapDispatchToProps = dispatch => ({
   /* toCompare */
   addToCompare: payload => dispatch(addToCompare(payload)),
   removeFromCompare: payload => dispatch(removeFromCompare(payload)),
-  /* rating */
-  changeRating: (payload, stars) => dispatch(changeRating(payload, stars)),
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(ProductPage);
+export default connect(mapStateToProps, mapDispatchToProps)(Icons);

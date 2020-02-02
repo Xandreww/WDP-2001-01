@@ -1,6 +1,6 @@
 @import "../../../styles/settings.scss";
 
-.root{
+.root {
   padding: 10px;
 
   .row {
@@ -9,86 +9,88 @@
 
     &:hover {
       text-decoration: none;
+
       .postDetails .postDetailsHeader {
         color: $blog-postDetails-color-hoover;
       }
+
       .postDetails .btn {
         background-color: $blog-postDetails-color-hoover;
         border: none;
       }
     }
+  }
 
-    .imgs {
-      position: relative;
-      background: {
-        color: $blog-details-background-color;
-        size: cover;
-        position: center;
-      }
-
-      img {
-        width: 100%;
-      }
-
-      .details {
-        padding: 15px 20px;
-        display: flex;
-        background-color: $blog-details-background-color;
-        font-size: 14px;
-        position: absolute;
-        margin-left: 10%;
-        margin-right: 10%;
-        width: 80%;
-        bottom: 0;
-
-        & > * {
-          flex: 1 1 auto;
-        }
-
-        .date {
-          text-align: left;
-          color: $blog-icon-color;
-        }
-
-        .comments {
-          text-align: right;
-          color: $blog-icon-color;
-        }
-      }
+  .imgs {
+    position: relative;
+    background: {
+      color: $blog-details-background-color;
+      size: cover;
+      position: center;
     }
 
-    .postDetails {
-      padding: 25px;
+    img {
+      width: 100%;
+    }
+  }
 
-      .postDetailsHeader {
-        color: $blog-postDetails-color;
-        font-size: 18px;
-        line-height: 24px;
-        letter-spacing: 1px;
-      }
+  .details {
+    padding: 5px 5px;
+    display: flex;
+    background-color: $blog-details-background-color;
+    font-size: 14px;
+    position: absolute;
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+    bottom: 0;
+    flex: 1 1 auto;
 
-      p {
-        font-size: 16px;
-        line-height: 24px;
-        color: $blog-postDetails-color;
-        text-align: justify;
-      }
+    .date {
+      flex: 1 1 auto;
+      text-align: left;
+      color: $blog-icon-color;
+    }
+
+    .comments {
+      flex: 1 1 auto;
+      text-align: right;
+      color: $blog-icon-color;
+    }
+  }
+
+  .postDetails {
+    padding: 25px;
+
+    .postDetailsHeader {
+      color: $blog-postDetails-color;
+      font-size: 18px;
+      line-height: 24px;
+      letter-spacing: 1px;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 24px;
+      color: $blog-postDetails-color;
+      text-align: justify;
+    }
 
     .icon {
       color: $blog-postDetails-color;
       font-size: 16px;
     }
+
     .btn {
       position: relative;
-      left:30%;
-      text-align:center;
+      left: 30%;
+      text-align: center;
       background-color: $blog-postDetails-background-color;
-      color:  $blog-postDetails-btn-color;
+      color: $blog-postDetails-btn-color;
       text-transform: uppercase;
       font-weight: bold;
       padding: 12px 18px;
       text-decoration: none;
-      }
     }
   }
 }

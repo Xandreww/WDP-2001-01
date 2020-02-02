@@ -5,7 +5,23 @@
 
 ## Opis projektu
 
-DO UZUPEŁNIENIA
+Projekt ten jest przykładową stroną sklepu zakodowaną z darmowego szablonu PSD, 
+w celu nauki kodowania stron i pracy w zespole projektowym.
+
+W rozwoju projektu pomagały :
+- system zarządzania projektami **Jira**,
+- hostingowy serwis internetowy **GitHub**,
+- dedykowany komunikator.
+
+Strona została przygotowana w śodowisku **React** z wykorzystaniem **Reduxa** i innych bibliotek.
+
+Struktura katalogów projektu:
+- **src** - główny katalog źródłowy,
+  - **/assets** - katalog ze zdjęciami, z których korzysta strona,
+  - **/components** - katalog główny z wszystkimi komponentami, podzielony został na cztery podkatalogi.
+  - **/redux** - katalog z plikami związanymi z obsługą magazynu **(Reduxa)**,
+  - **/styles** - katalog, gdzie są umieszczone globalne pliki styli.
+
 
 ## Demo
 
