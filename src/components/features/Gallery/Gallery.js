@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styles from './Gallery.module.scss';
 import MiniGallery from '../../common/MiniGallery/MiniGallery';
-//import GalleryNavbar from '../../layout/GalleryNavbar/GalleryNavbar';
 import Icons from '../../common/Icons/IconsContainer';
 import Button from '../../common/Button/Button';
 import StarsRating from '../../common/StarsRating/StarsRating';
+import GalleryBox from '../../common/GalleryBox/GalleryBox';
 
 class Gallery extends Component {
   state = {
@@ -25,7 +25,11 @@ class Gallery extends Component {
 
   render() {
     const { products, changeRating, subcategories } = this.props;
-    const { activeSubcategory } = this.state;
+    const { activeSubcategory, activeProduct } = this.state;
+
+    const subcategoryProducts = products.filter(
+      item => item.subcategory === activeSubcategory
+    );
 
     return (
       <div className={styles.root}>
@@ -57,13 +61,14 @@ class Gallery extends Component {
                   </ul>
                 </div>
                 <div className={styles.photo}>
-                  {products[1] && (
-                    <img
-                      className={styles.leftImage}
-                      src={products[1].image}
-                      alt={products[1].name}
-                    />
-                  )}
+                  {activeProduct.id
+                    ? ''
+                    : this.handleProductChange(subcategoryProducts[0])}
+                  {subcategoryProducts
+                    .filter(product => product.id === activeProduct.id)
+                    .map(item => (
+                      <GalleryBox key={item.id} {...item} />
+                    ))}
                 </div>
                 <Icons selectedProduct={products[1] && products[1]} />
                 <div className={styles.miniGallery}>
@@ -83,8 +88,6 @@ class Gallery extends Component {
                         changeRating={changeRating}
                         id={products[1].id}
                       />
-                      <div className={styles.corner + ' ' + styles.leftCorner}></div>
-                      <div className={styles.corner + ' ' + styles.rightCorner}></div>
                     </div>
                   )}
                 </div>
