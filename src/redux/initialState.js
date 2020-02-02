@@ -213,7 +213,7 @@ const initialState = {
       category: 'bed',
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam convallis mauris sed quam cursus, vitae luctus nibh scelerisque. Aliquam fringilla, magna vitae ullamcorper rutrum, nibh risus suscipit eros, eu ornare velit tellus quis leo. Suspendisse rhoncus mauris in auctor ornare. Aliquam facilisis aliquet sagittis.',
-      price: 30,
+      price: 65,
       oldPrice: 100,
       stars: 2,
       promo: 'sale',
