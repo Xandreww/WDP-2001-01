@@ -13,4 +13,10 @@ test('redirects to page not found', () => {
     </Router>
   );
   expect(history.location.pathname).toBe('/not-found');
+/*
+describe('ProductPage', () => {
+  it('renders without crashing', () => {
+    //shallow(<ProductPage />);
+  });
 });
+*/
