@@ -10,7 +10,6 @@ import Feedback from '../../features/Feedback/FeedbackContainer';
 import Brands from '../../features/Brands/BrandsContainer';
 import Gallery from '../../features/Gallery/GalleryContainer';
 import LatestBlog from '../../features/LatestBlog/LatestBlogContainer.js';
-import SinglePost from '../../features/SinglePost/SinglePostContainer';
 
 const Homepage = () => (
   <div className={styles.root}>
@@ -22,7 +21,6 @@ const Homepage = () => (
     <LatestBlog />
     <Brands />
     <Feedback />
-    <SinglePost />
   </div>
 );
 

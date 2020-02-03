@@ -11,7 +11,7 @@ import Homepage from './components/views/Homepage/Homepage';
 import ProductListContainer from './components/views/ProductList/ProductListContainer';
 import ProductPageContainer from './components/views/ProductPage/ProductPageContainer';
 import ErrorNotFound from './components/views/ErrorNotFound/ErrorNotFound';
-import BlogPage from './components/views/BlogPage/BlogPage';
+import BlogPage from './components/views/BlogPage/BlogPageContainer';
 
 const App = () => (
   <Provider store={store}>
