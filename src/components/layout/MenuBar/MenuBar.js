@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ProductSearch from '../../features/ProductSearch/ProductSearch';
@@ -52,40 +53,28 @@ class MenuBar extends Component {
                 <FontAwesomeIcon icon={faTimes}>x</FontAwesomeIcon>
               </Button>
               <ul>
-                <li>
-                  <a href='#' onClick={this.toggleMenu} className={styles.active}>
+                <li onClick={this.toggleMenu}>
+                  <Link to='/' className={styles.active}>
                     Home
-                  </a>
+                  </Link>
                 </li>
-                <li>
-                  <a href='#' onClick={this.toggleMenu}>
-                    Furniture
-                  </a>
+                <li onClick={this.toggleMenu}>
+                  <Link to={`${process.env.PUBLIC_URL}/shop/dining`}>Furniture</Link>
                 </li>
-                <li>
-                  <a href='#' onClick={this.toggleMenu}>
-                    Chair
-                  </a>
+                <li onClick={this.toggleMenu}>
+                  <Link to={`${process.env.PUBLIC_URL}/shop/chair`}>Chair</Link>
                 </li>
-                <li>
-                  <a href='#' onClick={this.toggleMenu}>
-                    Table
-                  </a>
+                <li onClick={this.toggleMenu}>
+                  <Link to={`${process.env.PUBLIC_URL}/shop/table`}>Table</Link>
                 </li>
-                <li>
-                  <a href='#' onClick={this.toggleMenu}>
-                    Sofa
-                  </a>
+                <li onClick={this.toggleMenu}>
+                  <Link to={`${process.env.PUBLIC_URL}/shop/sofa`}>Sofa</Link>
                 </li>
-                <li>
-                  <a href='#' onClick={this.toggleMenu}>
-                    Bedroom
-                  </a>
+                <li onClick={this.toggleMenu}>
+                  <Link to={`${process.env.PUBLIC_URL}/shop/bed`}>Bedroom</Link>
                 </li>
-                <li>
-                  <a href='#' onClick={this.toggleMenu}>
-                    Blog
-                  </a>
+                <li onClick={this.toggleMenu}>
+                  <Link to={`${process.env.PUBLIC_URL}/blog`}>Blog</Link>
                 </li>
               </ul>
             </div>

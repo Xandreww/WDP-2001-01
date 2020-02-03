@@ -32,37 +32,37 @@
 
     .menu {
       text-align: center;
+    }
 
-      ul {
-        margin: 0;
-        padding: 0;
-        list-style: none;
+    .menu ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
 
-        li {
-          display: inline-block;
-          margin: 0 0.5rem;
-          font-weight: 600;
+    .menu ul li {
+      display: inline-block;
+      margin: 0 0.5rem;
+      font-weight: 600;
+    }
 
-          a {
-            color: $new-furniture-menu;
-            position: relative;
-            text-decoration: none;
-            font-size: 18px;
-            display: block;
+    .menu ul li a {
+      color: $new-furniture-menu;
+      position: relative;
+      text-decoration: none;
+      font-size: 18px;
+      display: block;
+    }
 
-            &.active,
-            &:hover {
-              &::before {
-                content: "";
-                position: absolute;
-                bottom: -4px;
-                left: 0;
-                width: 100%;
-                border-bottom: 4px solid $new-furniture-line-elem;
-              }
-            }
-          }
-        }
+    .menu ul li a &.active,
+    &:hover {
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        width: 100%;
+        border-bottom: 4px solid $new-furniture-line-elem;
       }
     }
 
@@ -70,32 +70,32 @@
       position: absolute;
       right: 0;
       top: 12px;
+    }
 
-      ul {
-        margin: 0;
-        padding: 0 0 0 1rem;
-        list-style: none;
-        background-color: $new-furniture-bg-dots;
-        transform: translateY(15px);
+    .dots ul {
+      margin: 0;
+      padding: 0 0 0 1rem;
+      list-style: none;
+      background-color: $new-furniture-bg-dots;
+      transform: translateY(15px);
+    }
 
-        li {
-          display: inline-block;
-          margin-left: 0.5rem;
+    .dots ul li {
+      display: inline-block;
+      margin-left: 0.5rem;
+    }
 
-          a {
-            display: block;
-            width: 13px;
-            height: 13px;
-            border-radius: 6px;
-            background-color: $new-furniture-dots;
-            font-size: 0;
+    .dots ul li a {
+      display: block;
+      width: 13px;
+      height: 13px;
+      border-radius: 6px;
+      background-color: $new-furniture-dots;
+      font-size: 0;
 
-            &.active,
-            &:hover {
-              background-color: $new-furniture-dots-hover;
-            }
-          }
-        }
+      &.active,
+      &:hover {
+        background-color: $new-furniture-dots-hover;
       }
     }
   }
