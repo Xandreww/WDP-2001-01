@@ -18,6 +18,24 @@
   }
 }
 
+.topMenu {
+  display: inline-block;
+  border: 1px solid $product-box-menu;
+  margin-top: 10px;
+  background-color: $product-box-bg;
+
+  a {
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1.2rem;
+    color: $product-box-menu;
+
+    &:hover {
+      color: $menu-active;
+    }
+  }
+}
+
 .container {
   padding: $base-padding;
   margin: -250px auto 100px;

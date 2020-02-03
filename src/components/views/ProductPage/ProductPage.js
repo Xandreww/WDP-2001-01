@@ -86,6 +86,22 @@ const ProductPage = ({
               <Col md={{ span: 3, offset: 7 }}>
                 <p>{`Home > Furniture > ${category}`}</p>
               </Col>
+              <Col lg={8} sm={12}>
+                <ul>
+                  <li className={styles.topMenu}>
+                    <a href='#'>DESCRIPTION</a>
+                  </li>
+                  <li className={styles.topMenu}>
+                    <a href='#'>REVIEWS(0)</a>
+                  </li>
+                  <li className={styles.topMenu}>
+                    <a href='#'>SPECIFICATION</a>
+                  </li>
+                  <li className={styles.topMenu}>
+                    <a href='#'>CUSTOM TAB</a>
+                  </li>
+                </ul>
+              </Col>
             </Row>
           </Container>
         </Jumbotron>
