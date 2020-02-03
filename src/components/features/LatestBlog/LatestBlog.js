@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import styles from './LatestBlog.module.scss';
 import BlogBox from '../../common/BlogBox/BlogBox';
 
-const LatestBlog = ({ blogBox1, blogBox2, blogBox3 }) => {
+const LatestBlog = ({ blogs }) => {
   return (
     <div className={styles.root}>
       <div className='container'>
@@ -30,9 +30,9 @@ const LatestBlog = ({ blogBox1, blogBox2, blogBox3 }) => {
           </div>
         </div>
         <div className={styles.blogBox}>
-          <BlogBox {...blogBox1} />
-          <BlogBox {...blogBox2} />
-          <BlogBox {...blogBox3} />
+          {blogs.map(blog => {
+            return <BlogBox {...blog} key={blog.id} />;
+          })}
         </div>
       </div>
     </div>
@@ -40,21 +40,7 @@ const LatestBlog = ({ blogBox1, blogBox2, blogBox3 }) => {
 };
 
 LatestBlog.propTypes = {
-  blogBox1: PropTypes.shape({
-    image: PropTypes.string,
-    imageName: PropTypes.string,
-    text: PropTypes.string,
-  }),
-  blogBox2: PropTypes.shape({
-    image: PropTypes.string,
-    imageName: PropTypes.string,
-    text: PropTypes.string,
-  }),
-  blogBox3: PropTypes.shape({
-    image: PropTypes.string,
-    imageName: PropTypes.string,
-    text: PropTypes.string,
-  }),
+  blogs: PropTypes.array,
 };
 
 export default LatestBlog;

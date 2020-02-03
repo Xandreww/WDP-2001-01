@@ -3,7 +3,7 @@
 .root {
   .row {
     border-bottom: 1px solid $bar-borderbottom;
-    margin: 20px 0 100px 0;
+    margin: 20px 0 50px 0;
     padding: 10px 0;
 
     .header {
@@ -34,92 +34,93 @@
       position: absolute;
       left: 10px;
       background-color: $bar-background;
-
-      li {
-        float: left;
-        position: relative;
-        text-decoration: none;
-        width: 100%;
-        padding: 5px;
-        border: 1px solid $bar-borderbutton;
-        border-top: none;
-        background-color: $bar-backgroundhover;
-
-        &:hover {
-          a {
-            color: $bar-colorhover;
-          }
-        }
-
-        a {
-          text-decoration: none;
-          color: inherit;
-          padding-left: 6px;
-        }
-      }
     }
 
-    .dropdown {
+    ul li {
+      float: left;
       position: relative;
+      text-decoration: none;
+      width: 100%;
+      padding: 5px;
+      border: 1px solid $bar-borderbutton;
+      border-top: none;
+      background-color: $bar-backgroundhover;
 
-      button {
-        margin-left: 10px;
-        background-color: transparent;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border: 1px solid $bar-colorlink;
-        height: 40px;
-
-        &:hover {
+      &:hover {
+        a {
           color: $bar-colorhover;
-          background-color: $bar-backgroundhover;
-        }
-
-        p {
-          padding: 5px;
-        }
-
-        .dropdownIconOne,
-        .dropdownIconTwo {
-          margin-right: 5px;
-        }
-
-        .dropdownIconOne {
-          margin-left: 40px;
-        }
-
-        .dropdownIconTwo {
-          margin-left: 20px;
         }
       }
-      &:hover {
-        ul {
-          display: block;
-        }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+        padding-left: 6px;
       }
     }
+  }
 
-    .icons {
+  .dropdown {
+    position: relative;
+
+    button {
+      margin-left: 10px;
+      background-color: transparent;
       display: flex;
       align-items: center;
       justify-content: center;
-      border: 1px solid black;
+      border: 1px solid $bar-colorlink;
       height: 40px;
-      width: 70px;
 
-      .icon {
-        font-size: 30px;
-        padding: 5px;
-
-        &:hover {
-          color: $bar-colorhover;
-        }
+      &:hover {
+        color: $bar-colorhover;
+        background-color: $bar-backgroundhover;
       }
 
-      .active {
+      p {
+        padding: 5px;
+      }
+
+      .dropdownIconOne,
+      .dropdownIconTwo {
+        margin-right: 5px;
+      }
+
+      .dropdownIconOne {
+        margin-left: 40px;
+      }
+
+      .dropdownIconTwo {
+        margin-left: 20px;
+      }
+    }
+
+    &:hover {
+      ul {
+        display: block;
+      }
+    }
+  }
+
+  .icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    height: 40px;
+    width: 70px;
+
+    .icon {
+      font-size: 30px;
+      padding: 5px;
+
+      &:hover {
         color: $bar-colorhover;
       }
+    }
+
+    .active {
+      color: $bar-colorhover;
     }
   }
 }

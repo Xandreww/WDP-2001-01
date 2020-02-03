@@ -50,8 +50,8 @@
     &:hover {
       border: none;
       cursor: pointer;
-      box-shadow: 0px 0px 12px $medium-grey3;
-      background-color: $primary-orange-brown;
+      background-color: $promoted-dot-background-color-hoover;
+      text-decoration: none;
     }
   }
 }

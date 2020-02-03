@@ -1416,30 +1416,101 @@ const initialState = {
       image: clientPhoto4,
     },
   ],
-  blogBox1: {
-    image: image14,
-    imageName: 'image',
-    date: '18 Nov 2018',
-    comments: ' 5 Comments',
-    text:
-      'Wherry Cat onine tails draft league line Jack Ketch Nelsons folly Sink me lanyard case shot. Gabion bowsprit bring a spring upon her cable port pink hardtack yawl gunwalls starboard ahoy. Execution dock dead men tell no tales barkadeer yo-ho-ho poop deck barque weigh anchor sheet maroon bilge water.',
-  },
-  blogBox2: {
-    image: image20,
-    imageName: 'image',
-    date: '12 Dec 2017',
-    comments: ' 6 Comments',
-    text:
-      'Splice the main brace yu Shiver me timbers Jack Ketch long clothes poop deck scuttle Sail ho schooner. Salmagundi holystone log hulk skysail lugsail cutlass Admiral of the Black gangplank long clothes. Pressgang hogshead Gold Road scuttle heave down jack loot spyglass clipper rutters sheet maroon bilge.',
-  },
-  blogBox3: {
-    image: image18,
-    imageName: 'image',
-    date: '12 Jan 2020',
-    comments: ' 4 Comments',
-    text:
-      'Starboard hempen bilge gally no prey, no pay mutiny deadlights dance the hempen jig Arr nipperkin. Square-rigged jury mast rigging grog blossom Arr cackle fruit nipper weigh anchor sutler hardtack. Swab hearties cackle fruit cutlass grog blossom man-of-war barkadeer dead men tell no tales schooner cog. ',
-  },
+  blogs: [
+    {
+      id: 0,
+      image: image14,
+      imageName: 'image-14',
+      title: 'Comfortable beds',
+      author: 'John Doe',
+      date: '18 Nov 2018',
+      sampleText:
+        'Wherry Cat onine tails draft league line Jack Ketch Nelsons folly Sink me lanyard case shot. Gabion bowsprit bring a spring upon her cable port pink hardtack yawl gunwalls starboard ahoy. Execution dock dead men tell no tales barkadeer yo-ho-ho poop deck barque weigh anchor sheet maroon bilge water.',
+      fullText: `Curabitur sodales a dolor id commodo. Donec finibus tincidunt eros sit amet rutrum. Curabitur varius odio id commodo pulvinar. Donec ac sollicitudin metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque quis sagittis libero. Maecenas vehicula ornare facilisis. Aenean lobortis, augue gravida laoreet tincidunt, libero tortor dapibus risus, vel suscipit orci tortor vel nisi. Nam congue turpis vitae mi porttitor pretium. Pellentesque rutrum eros eget sapien mollis consectetur. Fusce hendrerit fermentum purus. Aenean scelerisque lacus risus, ac tincidunt urna euismod in. Morbi vestibulum velit non lorem feugiat, sed laoreet elit molestie.....`,
+      comments: [
+        {
+          id: 0,
+          content:
+            'Suspendisse imperdiet in magna lacinia hendrerit. Proin tincidunt molestie tincidunt.',
+          author: 'Jan Nowak',
+        },
+        {
+          id: 1,
+          content:
+            'Suspendisse imperdiet in magna lacinia hendrerit. Proin tincidunt molestie tincidunt.',
+          author: 'Jan Nowak',
+        },
+        {
+          id: 2,
+          content:
+            'Suspendisse imperdiet in magna lacinia hendrerit. Proin tincidunt molestie tincidunt.',
+          author: 'Jan Nowak',
+        },
+      ],
+    },
+    {
+      id: 1,
+      image: image20,
+      imageName: 'image-20',
+      title: 'Comfortable beds',
+      author: 'John Doe',
+      date: '12 Dec 2017',
+      sampleText:
+        'Wherry Cat onine tails draft league line Jack Ketch Nelsons folly Sink me lanyard case shot. Gabion bowsprit bring a spring upon her cable port pink hardtack yawl gunwalls starboard ahoy. Execution dock dead men tell no tales barkadeer yo-ho-ho poop deck barque weigh anchor sheet maroon bilge water.',
+      fullText: `Curabitur sodales a dolor id commodo. Donec finibus tincidunt eros sit amet rutrum. Curabitur varius odio id commodo pulvinar. Donec ac sollicitudin metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque quis sagittis libero. Maecenas vehicula ornare facilisis. Aenean lobortis, augue gravida laoreet tincidunt, libero tortor dapibus risus, vel suscipit orci tortor vel nisi. Nam congue turpis vitae mi porttitor pretium. Pellentesque rutrum eros eget sapien mollis consectetur. Fusce hendrerit fermentum purus. Aenean scelerisque lacus risus, ac tincidunt urna euismod in. Morbi vestibulum velit non lorem feugiat, sed laoreet elit molestie.....`,
+      comments: [
+        {
+          id: 0,
+          content:
+            'Suspendisse imperdiet in magna lacinia hendrerit. Proin tincidunt molestie tincidunt.',
+          author: 'Jan Nowak',
+        },
+        {
+          id: 1,
+          content:
+            'Suspendisse imperdiet in magna lacinia hendrerit. Proin tincidunt molestie tincidunt.',
+          author: 'Jan Nowak',
+        },
+        {
+          id: 2,
+          content:
+            'Suspendisse imperdiet in magna lacinia hendrerit. Proin tincidunt molestie tincidunt.',
+          author: 'Jan Nowak',
+        },
+      ],
+    },
+    {
+      id: 2,
+      image: image18,
+      imageName: 'image-18',
+      title: 'Comfortable beds',
+      author: 'John Doe',
+      date: '18 Nov 2018',
+      sampleText:
+        'Wherry Cat onine tails draft league line Jack Ketch Nelsons folly Sink me lanyard case shot. Gabion bowsprit bring a spring upon her cable port pink hardtack yawl gunwalls starboard ahoy. Execution dock dead men tell no tales barkadeer yo-ho-ho poop deck barque weigh anchor sheet maroon bilge water.',
+      fullText: `Curabitur sodales a dolor id commodo. Donec finibus tincidunt eros sit amet rutrum. Curabitur varius odio id commodo pulvinar. Donec ac sollicitudin metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque quis sagittis libero. Maecenas vehicula ornare facilisis. Aenean lobortis, augue gravida laoreet tincidunt, libero tortor dapibus risus, vel suscipit orci tortor vel nisi. Nam congue turpis vitae mi porttitor pretium. Pellentesque rutrum eros eget sapien mollis consectetur. Fusce hendrerit fermentum purus. Aenean scelerisque lacus risus, ac tincidunt urna euismod in. Morbi vestibulum velit non lorem feugiat, sed laoreet elit molestie.....`,
+      comments: [
+        {
+          id: 0,
+          content:
+            'Suspendisse imperdiet in magna lacinia hendrerit. Proin tincidunt molestie tincidunt.',
+          author: 'Jan Nowak',
+        },
+        {
+          id: 1,
+          content:
+            'Suspendisse imperdiet in magna lacinia hendrerit. Proin tincidunt molestie tincidunt.',
+          author: 'Jan Nowak',
+        },
+        {
+          id: 2,
+          content:
+            'Suspendisse imperdiet in magna lacinia hendrerit. Proin tincidunt molestie tincidunt.',
+          author: 'Jan Nowak',
+        },
+      ],
+    },
+  ],
 
   promotedProductBox: {
     image: image9,
@@ -1461,6 +1532,94 @@ const initialState = {
     toCompare: false,
     image: image20,
   },
+  promoted: [
+    {
+      id: 1,
+      image: image9,
+      imageName: 'image',
+      softTitle: 'indoor',
+      strongTitle: 'furniture',
+      description: 'save up 50% of furniture',
+      isHotDeal: true,
+    },
+    {
+      id: 2,
+      image: image15,
+      imageName: 'image',
+      softTitle: 'modern',
+      strongTitle: 'furniture',
+      description: 'extra savings on dining table',
+      isHotDeal: true,
+    },
+    {
+      id: 3,
+      image: image3,
+      imageName: 'image',
+      softTitle: 'fabric sofa',
+      strongTitle: 'sales',
+      description: 'extra savings on all fabric sofas',
+      isHotDeal: true,
+    },
+    {
+      id: 4,
+      image: image19,
+      imageName: 'image',
+      softTitle: 'indoor',
+      strongTitle: 'furniture',
+      description: 'save up 50% of furniture',
+      isHotDeal: true,
+    },
+    {
+      id: 5,
+      image: image2,
+      imageName: 'image',
+      softTitle: 'indoor',
+      strongTitle: 'furniture',
+      description: 'save up 50% of furniture',
+      isHotDeal: true,
+    },
+  ],
+  hotDeals: [
+    {
+      id: 1,
+      name: 'Aenean Ru Bristique 1',
+      category: 'bed',
+      price: 30,
+      oldPrice: 45,
+      stars: 2,
+      promo: 'sale',
+      newFurniture: true,
+      isFavorite: false,
+      image: image27,
+      isHotDeal: true,
+    },
+    {
+      id: 2,
+      name: 'Aenean Ru Bristique 10',
+      category: 'bed',
+      price: 20,
+      oldPrice: 65,
+      stars: 5,
+      promo: 'sale',
+      newFurniture: true,
+      isFavorite: false,
+      image: image19,
+      isHotDeal: true,
+    },
+    {
+      id: 3,
+      name: 'Aenean Ru Bristique 11',
+      category: 'bed',
+      price: 49,
+      oldPrice: 95,
+      stars: 4,
+      promo: 'sale',
+      newFurniture: true,
+      isFavorite: false,
+      image: image11,
+      isHotDeal: true,
+    },
+  ],
   subcategories: [
     { id: 'saleoff', name: 'Sale Off' },
     { id: 'featured', name: 'Featured' },
