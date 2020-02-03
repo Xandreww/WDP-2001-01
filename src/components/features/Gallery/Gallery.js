@@ -69,7 +69,7 @@ class Gallery extends Component {
         <div className='container'>
           <div className='row'>
             {/* col 1 starts here */}
-            <div className={'col-6'}>
+            <div className={'col-12 col-md-6'}>
               <div className={styles.panelBar}>
                 <div className='row no-gutters align-items-end'>
                   <div className={'col-auto ' + styles.heading}>
