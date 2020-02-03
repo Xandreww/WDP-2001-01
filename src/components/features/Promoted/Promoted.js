@@ -12,7 +12,6 @@ class Promoted extends React.Component {
   state = {
     activeHotDealsPage: 1,
     activePromotedPage: 2,
-    isUnmounted: false,
   };
 
   fade() {
@@ -33,13 +32,11 @@ class Promoted extends React.Component {
 
   handlePageChange(newPageHotDeals) {
     this.fade();
-    this.unmountTrue();
     setTimeout(() => {
       this.setState({
         activeHotDealsPage: newPageHotDeals,
       });
     }, 450);
-    this.unmountFalse();
   }
 
   leftAction() {
@@ -76,14 +73,6 @@ class Promoted extends React.Component {
 
   componentWillUnmount() {
     clearInterval(this.interval);
-  }
-
-  unmountTrue() {
-    this.setState({ isUnmounted: true });
-  }
-
-  unmountFalse() {
-    setTimeout(() => this.setState({ isUnmounted: false }), 1000);
   }
 
   render() {
