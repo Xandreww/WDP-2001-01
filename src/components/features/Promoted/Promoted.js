@@ -59,7 +59,7 @@ class Promoted extends React.Component {
     }, 450);
   }
 
-  componentDidMount() {
+  interval() {
     this.interval = setInterval(
       () =>
         this.handlePageChange(
@@ -69,6 +69,10 @@ class Promoted extends React.Component {
         ),
       3000
     );
+  }
+
+  componentDidMount() {
+    this.interval();
   }
 
   componentWillUnmount() {
@@ -97,19 +101,7 @@ class Promoted extends React.Component {
             onClick={() => {
               this.handlePageChange(i);
               clearInterval(this.interval);
-              setTimeout(
-                () =>
-                  (this.interval = setInterval(
-                    () =>
-                      this.handlePageChange(
-                        this.state.activeHotDealsPage === this.props.hotDeals.length - 1
-                          ? 0
-                          : this.state.activeHotDealsPage + 1
-                      ),
-                    3000
-                  )),
-                3000
-              );
+              setTimeout(() => this.interval(), 3000);
             }}
             className={i === activeHotDealsPage ? styles.active : undefined}
           >
