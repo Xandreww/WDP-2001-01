@@ -1,6 +1,8 @@
 @import "../../../styles/settings.scss";
 
 .root {
+  height: 100%;
+
   .panelBar {
     position: relative;
 
@@ -102,7 +104,9 @@
 
   .blogBox {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+    align-items: flex-end;
+    margin: 10px 0;
     background-color: $menu-bg;
   }
 }
