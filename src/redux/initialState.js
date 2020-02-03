@@ -120,6 +120,7 @@ const initialState = {
       toCompare: false,
       rated: true,
       image: image1,
+      subcategory: 'saleoff',
     },
     {
       id: 'aenean-ru-bristique-2',
@@ -128,7 +129,7 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam convallis mauris sed quam cursus, vitae luctus nibh scelerisque. Aliquam fringilla, magna vitae ullamcorper rutrum, nibh risus suscipit eros, eu ornare velit tellus quis leo. Suspendisse rhoncus mauris in auctor ornare. Aliquam facilisis aliquet sagittis.',
       price: 30,
-      oldPrice: null,
+      oldPrice: 10,
       stars: 1,
       promo: 'sale',
       newFurniture: true,
@@ -136,6 +137,7 @@ const initialState = {
       toCompare: false,
       rated: true,
       image: image2,
+      subcategory: 'saleoff',
     },
     {
       id: 'aenean-ru-bristique-3',
@@ -152,6 +154,7 @@ const initialState = {
       toCompare: false,
       rated: false,
       image: image3,
+      subcategory: 'saleoff',
     },
     {
       id: 'aenean-ru-bristique-4',
@@ -168,6 +171,7 @@ const initialState = {
       toCompare: false,
       rated: false,
       image: image4,
+      subcategory: 'saleoff',
     },
     {
       id: 'aenean-ru-bristique-5',
@@ -184,6 +188,7 @@ const initialState = {
       toCompare: false,
       rated: false,
       image: image5,
+      subcategory: 'saleoff',
     },
     {
       id: 'aenean-ru-bristique-6',
@@ -192,7 +197,7 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam convallis mauris sed quam cursus, vitae luctus nibh scelerisque. Aliquam fringilla, magna vitae ullamcorper rutrum, nibh risus suscipit eros, eu ornare velit tellus quis leo. Suspendisse rhoncus mauris in auctor ornare. Aliquam facilisis aliquet sagittis.',
       price: 30,
-      oldPrice: null,
+      oldPrice: 20,
       stars: 2,
       promo: 'sale',
       newFurniture: true,
@@ -200,6 +205,7 @@ const initialState = {
       toCompare: false,
       rated: false,
       image: image6,
+      subcategory: 'saleoff',
     },
     {
       id: 'aenean-ru-bristique-7',
@@ -207,8 +213,8 @@ const initialState = {
       category: 'bed',
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam convallis mauris sed quam cursus, vitae luctus nibh scelerisque. Aliquam fringilla, magna vitae ullamcorper rutrum, nibh risus suscipit eros, eu ornare velit tellus quis leo. Suspendisse rhoncus mauris in auctor ornare. Aliquam facilisis aliquet sagittis.',
-      price: 30,
-      oldPrice: null,
+      price: 65,
+      oldPrice: 100,
       stars: 2,
       promo: 'sale',
       newFurniture: true,
@@ -216,6 +222,7 @@ const initialState = {
       toCompare: false,
       rated: false,
       image: image7,
+      subcategory: 'featured',
     },
     {
       id: 'aenean-ru-bristique-8',
@@ -232,6 +239,7 @@ const initialState = {
       toCompare: false,
       rated: false,
       image: image8,
+      subcategory: 'featured',
     },
     {
       id: 'aenean-ru-bristique-9',
@@ -247,6 +255,7 @@ const initialState = {
       toCompare: false,
       rated: false,
       image: image9,
+      subcategory: 'featured',
     },
     {
       id: 'aenean-ru-bristique-10',
@@ -262,6 +271,7 @@ const initialState = {
       toCompare: false,
       rated: false,
       image: image10,
+      subcategory: 'featured',
     },
     {
       id: 'aenean-ru-bristique-11',
@@ -277,6 +287,8 @@ const initialState = {
       toCompare: false,
       rated: false,
       image: image11,
+      subcategory: 'topseller',
+      oldPrice: 22.99,
     },
     {
       id: 'aenean-ru-bristique-12',
@@ -292,6 +304,8 @@ const initialState = {
       toCompare: false,
       rated: false,
       image: image12,
+      subcategory: 'topseller',
+      oldPrice: 12.99,
     },
     {
       id: 'aenean-ru-bristique-13',
@@ -307,6 +321,8 @@ const initialState = {
       toCompare: false,
       rated: false,
       image: image13,
+      subcategory: 'topseller',
+      oldPrice: 9.99,
     },
     {
       id: 'aenean-ru-bristique-14',
@@ -322,6 +338,8 @@ const initialState = {
       toCompare: false,
       rated: false,
       image: image14,
+      subcategory: 'topseller',
+      oldPrice: 2.99,
     },
     {
       id: 'aenean-ru-bristique-15',
@@ -337,6 +355,8 @@ const initialState = {
       toCompare: false,
       rated: false,
       image: image15,
+      subcategory: 'toprated',
+      oldPrice: 5.99,
     },
     {
       id: 'aenean-ru-bristique-16',
@@ -352,6 +372,8 @@ const initialState = {
       toCompare: false,
       rated: false,
       image: image16,
+      subcategory: 'toprated',
+      oldPrice: 15.99,
     },
     {
       id: 'aenean-ru-bristique-17',
@@ -367,6 +389,8 @@ const initialState = {
       toCompare: false,
       rated: false,
       image: image17,
+      subcategory: 'toprated',
+      oldPrice: 25.99,
     },
     {
       id: 'aenean-ru-bristique-18',
@@ -382,6 +406,8 @@ const initialState = {
       toCompare: false,
       rated: false,
       image: image18,
+      subcategory: 'toprated',
+      oldPrice: 5,
     },
     {
       id: 'aenean-ru-bristique-19',
@@ -397,6 +423,8 @@ const initialState = {
       toCompare: false,
       rated: false,
       image: image19,
+      subcategory: 'toprated',
+      oldPrice: 5,
     },
     {
       id: 'aenean-ru-bristique-20',
@@ -412,6 +440,8 @@ const initialState = {
       toCompare: false,
       rated: false,
       image: image20,
+      subcategory: 'saleoff',
+      oldPrice: 10,
     },
     {
       id: 'aenean-ru-bristique-21',
@@ -427,6 +457,8 @@ const initialState = {
       toCompare: false,
       rated: false,
       image: image21,
+      subcategory: 'saleoff',
+      oldPrice: 15,
     },
     {
       id: 'aenean-ru-bristique-22',
@@ -442,6 +474,8 @@ const initialState = {
       toCompare: false,
       rated: false,
       image: image22,
+      subcategory: 'toprated',
+      oldPrice: 5,
     },
     {
       id: 'aenean-ru-bristique-23',
@@ -457,6 +491,8 @@ const initialState = {
       toCompare: false,
       rated: false,
       image: image23,
+      subcategory: 'toprated',
+      oldPrice: 5,
     },
     {
       id: 'aenean-ru-bristique-24',
@@ -1380,30 +1416,101 @@ const initialState = {
       image: clientPhoto4,
     },
   ],
-  blogBox1: {
-    image: image14,
-    imageName: 'image',
-    date: '18 Nov 2018',
-    comments: ' 5 Comments',
-    text:
-      'Wherry Cat onine tails draft league line Jack Ketch Nelsons folly Sink me lanyard case shot. Gabion bowsprit bring a spring upon her cable port pink hardtack yawl gunwalls starboard ahoy. Execution dock dead men tell no tales barkadeer yo-ho-ho poop deck barque weigh anchor sheet maroon bilge water.',
-  },
-  blogBox2: {
-    image: image20,
-    imageName: 'image',
-    date: '12 Dec 2017',
-    comments: ' 6 Comments',
-    text:
-      'Splice the main brace yu Shiver me timbers Jack Ketch long clothes poop deck scuttle Sail ho schooner. Salmagundi holystone log hulk skysail lugsail cutlass Admiral of the Black gangplank long clothes. Pressgang hogshead Gold Road scuttle heave down jack loot spyglass clipper rutters sheet maroon bilge.',
-  },
-  blogBox3: {
-    image: image18,
-    imageName: 'image',
-    date: '12 Jan 2020',
-    comments: ' 4 Comments',
-    text:
-      'Starboard hempen bilge gally no prey, no pay mutiny deadlights dance the hempen jig Arr nipperkin. Square-rigged jury mast rigging grog blossom Arr cackle fruit nipper weigh anchor sutler hardtack. Swab hearties cackle fruit cutlass grog blossom man-of-war barkadeer dead men tell no tales schooner cog. ',
-  },
+  blogs: [
+    {
+      id: 0,
+      image: image14,
+      imageName: 'image-14',
+      title: 'Comfortable beds',
+      author: 'John Doe',
+      date: '18 Nov 2018',
+      sampleText:
+        'Wherry Cat onine tails draft league line Jack Ketch Nelsons folly Sink me lanyard case shot. Gabion bowsprit bring a spring upon her cable port pink hardtack yawl gunwalls starboard ahoy. Execution dock dead men tell no tales barkadeer yo-ho-ho poop deck barque weigh anchor sheet maroon bilge water.',
+      fullText: `Curabitur sodales a dolor id commodo. Donec finibus tincidunt eros sit amet rutrum. Curabitur varius odio id commodo pulvinar. Donec ac sollicitudin metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque quis sagittis libero. Maecenas vehicula ornare facilisis. Aenean lobortis, augue gravida laoreet tincidunt, libero tortor dapibus risus, vel suscipit orci tortor vel nisi. Nam congue turpis vitae mi porttitor pretium. Pellentesque rutrum eros eget sapien mollis consectetur. Fusce hendrerit fermentum purus. Aenean scelerisque lacus risus, ac tincidunt urna euismod in. Morbi vestibulum velit non lorem feugiat, sed laoreet elit molestie.....`,
+      comments: [
+        {
+          id: 0,
+          content:
+            'Suspendisse imperdiet in magna lacinia hendrerit. Proin tincidunt molestie tincidunt.',
+          author: 'Jan Nowak',
+        },
+        {
+          id: 1,
+          content:
+            'Suspendisse imperdiet in magna lacinia hendrerit. Proin tincidunt molestie tincidunt.',
+          author: 'Jan Nowak',
+        },
+        {
+          id: 2,
+          content:
+            'Suspendisse imperdiet in magna lacinia hendrerit. Proin tincidunt molestie tincidunt.',
+          author: 'Jan Nowak',
+        },
+      ],
+    },
+    {
+      id: 1,
+      image: image20,
+      imageName: 'image-20',
+      title: 'Comfortable beds',
+      author: 'John Doe',
+      date: '12 Dec 2017',
+      sampleText:
+        'Wherry Cat onine tails draft league line Jack Ketch Nelsons folly Sink me lanyard case shot. Gabion bowsprit bring a spring upon her cable port pink hardtack yawl gunwalls starboard ahoy. Execution dock dead men tell no tales barkadeer yo-ho-ho poop deck barque weigh anchor sheet maroon bilge water.',
+      fullText: `Curabitur sodales a dolor id commodo. Donec finibus tincidunt eros sit amet rutrum. Curabitur varius odio id commodo pulvinar. Donec ac sollicitudin metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque quis sagittis libero. Maecenas vehicula ornare facilisis. Aenean lobortis, augue gravida laoreet tincidunt, libero tortor dapibus risus, vel suscipit orci tortor vel nisi. Nam congue turpis vitae mi porttitor pretium. Pellentesque rutrum eros eget sapien mollis consectetur. Fusce hendrerit fermentum purus. Aenean scelerisque lacus risus, ac tincidunt urna euismod in. Morbi vestibulum velit non lorem feugiat, sed laoreet elit molestie.....`,
+      comments: [
+        {
+          id: 0,
+          content:
+            'Suspendisse imperdiet in magna lacinia hendrerit. Proin tincidunt molestie tincidunt.',
+          author: 'Jan Nowak',
+        },
+        {
+          id: 1,
+          content:
+            'Suspendisse imperdiet in magna lacinia hendrerit. Proin tincidunt molestie tincidunt.',
+          author: 'Jan Nowak',
+        },
+        {
+          id: 2,
+          content:
+            'Suspendisse imperdiet in magna lacinia hendrerit. Proin tincidunt molestie tincidunt.',
+          author: 'Jan Nowak',
+        },
+      ],
+    },
+    {
+      id: 2,
+      image: image18,
+      imageName: 'image-18',
+      title: 'Comfortable beds',
+      author: 'John Doe',
+      date: '18 Nov 2018',
+      sampleText:
+        'Wherry Cat onine tails draft league line Jack Ketch Nelsons folly Sink me lanyard case shot. Gabion bowsprit bring a spring upon her cable port pink hardtack yawl gunwalls starboard ahoy. Execution dock dead men tell no tales barkadeer yo-ho-ho poop deck barque weigh anchor sheet maroon bilge water.',
+      fullText: `Curabitur sodales a dolor id commodo. Donec finibus tincidunt eros sit amet rutrum. Curabitur varius odio id commodo pulvinar. Donec ac sollicitudin metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque quis sagittis libero. Maecenas vehicula ornare facilisis. Aenean lobortis, augue gravida laoreet tincidunt, libero tortor dapibus risus, vel suscipit orci tortor vel nisi. Nam congue turpis vitae mi porttitor pretium. Pellentesque rutrum eros eget sapien mollis consectetur. Fusce hendrerit fermentum purus. Aenean scelerisque lacus risus, ac tincidunt urna euismod in. Morbi vestibulum velit non lorem feugiat, sed laoreet elit molestie.....`,
+      comments: [
+        {
+          id: 0,
+          content:
+            'Suspendisse imperdiet in magna lacinia hendrerit. Proin tincidunt molestie tincidunt.',
+          author: 'Jan Nowak',
+        },
+        {
+          id: 1,
+          content:
+            'Suspendisse imperdiet in magna lacinia hendrerit. Proin tincidunt molestie tincidunt.',
+          author: 'Jan Nowak',
+        },
+        {
+          id: 2,
+          content:
+            'Suspendisse imperdiet in magna lacinia hendrerit. Proin tincidunt molestie tincidunt.',
+          author: 'Jan Nowak',
+        },
+      ],
+    },
+  ],
 
   promotedProductBox: {
     image: image9,
@@ -1425,6 +1532,12 @@ const initialState = {
     toCompare: false,
     image: image20,
   },
+  subcategories: [
+    { id: 'saleoff', name: 'Sale Off' },
+    { id: 'featured', name: 'Featured' },
+    { id: 'topseller', name: 'Top Seller' },
+    { id: 'toprated', name: 'Top Rated' },
+  ],
 };
 
 export default initialState;
