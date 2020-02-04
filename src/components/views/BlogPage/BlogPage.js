@@ -36,11 +36,6 @@ const BlogPage = ({ blogs, match }) => {
           <p className={styles.postDate}>{blogs[match.params.blogId].date}</p>
         </div>
         <div className={styles.border}>
-          {/* <div className={'row ' + styles.fullTextRow}>
-            <div className={'col'}>
-              <p className={styles.fullTextP}>{blogs[match.params.blogId].fullText}</p>
-            </div>
-          </div> */}
           <div className={'row ' + styles.fullTextRow}>
             <div className={'col'}>
               <p className={styles.fullTextP}>
