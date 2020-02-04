@@ -2,7 +2,7 @@
 
 .root {
   position: relative;
-  margin-top: 65px;
+  margin: 65px 0 0 0;
 
   img {
     width: 100%;
@@ -16,7 +16,7 @@
     left: 50%;
     width: 100%;
     transform: translate(-50%, -50%);
-    padding: 60px 0 40px 0;
+    padding: 60px 0 0 0;
     text-align: center;
     text-transform: uppercase;
     color: #fff;
@@ -52,6 +52,58 @@
       cursor: pointer;
       background-color: $promoted-dot-background-color-hoover;
       text-decoration: none;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .root {
+    padding-left: 100px;
+  }
+}
+
+@media (max-width: 991px) {
+  .root {
+    margin: 0 0;
+    padding: 0 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .root {
+    margin: 0 0;
+    padding: 0 0;
+  }
+}
+
+@media (max-width: 575px) {
+  .root {
+    padding: 0 0;
+    margin: 0 0;
+
+    .text {
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      width: 100%;
+      transform: translate(-50%, -30%);
+      padding: 50px 0 40px 0;
+      text-align: center;
+      text-transform: uppercase;
+      color: #fff;
+      background-color: rgba(0, 0, 0, 0.2);
+      font-weight: 200;
+      font-size: 16px;
+
+      .title {
+        font-weight: 300;
+        font-size: 24px;
+      }
+    }
+
+    .mainBtn {
+      top: 65%;
+      font-size: 14px;
     }
   }
 }

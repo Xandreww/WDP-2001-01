@@ -41,22 +41,43 @@ class Promoted extends React.Component {
 
   leftAction() {
     const newPagePromoted = this.state.activePromotedPage;
+    const pagesPromotedCount = Math.ceil(this.props.promoted.length / 1);
+
     this.fade();
-    setTimeout(() => {
-      this.setState(state => ({
-        activePromotedPage: newPagePromoted - 1,
-      }));
-    }, 450);
+    if (this.state.activePromotedPage <= 0) {
+      setTimeout(() => {
+        this.setState(state => ({
+          activePromotedPage: pagesPromotedCount - 1,
+        }));
+      }, 450);
+    } else {
+      setTimeout(() => {
+        this.setState(state => ({
+          activePromotedPage: newPagePromoted - 1,
+        }));
+      }, 450);
+    }
   }
 
   rightAction() {
     const newPagePromoted = this.state.activePromotedPage;
+    const pagesPromotedCount = Math.ceil(this.props.promoted.length / 1);
+
     this.fade();
-    setTimeout(() => {
-      this.setState(state => ({
-        activePromotedPage: newPagePromoted + 1,
-      }));
-    }, 450);
+
+    if (this.state.activePromotedPage <= pagesPromotedCount - 2) {
+      setTimeout(() => {
+        this.setState(state => ({
+          activePromotedPage: newPagePromoted + 1,
+        }));
+      }, 450);
+    } else {
+      setTimeout(() => {
+        this.setState(state => ({
+          activePromotedPage: 1,
+        }));
+      }, 450);
+    }
   }
 
   interval() {
@@ -117,7 +138,7 @@ class Promoted extends React.Component {
       <div className={styles.root}>
         <div className='container'>
           <div className='row'>
-            <div className='col-4'>
+            <div className={`col-4 ${styles.leftCol}`}>
               <div className={styles.promotedBar}>
                 <h4 className={`col-6 ${styles.promotedBarTitle}`}>HOT DEALS</h4>
                 <p className={`col-6 text-right ${styles.dots}`}>
@@ -136,7 +157,7 @@ class Promoted extends React.Component {
                   ))}
               </div>
             </div>
-            <div className='col-8'>
+            <div className={`col-12 col-lg-8 ${styles.rightCol}`}>
               <div className={styles.promotedContainer}>
                 <div className={styles.promotedContent}>
                   {promotedPicture
