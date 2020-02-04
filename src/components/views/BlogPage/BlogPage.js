@@ -5,6 +5,11 @@ import PropTypes from 'prop-types';
 const BlogPage = ({ blogs, match }) => {
   /* to affect scroll down afer link direct */
   useEffect(() => window.scrollTo(0, 0), []);
+
+  function createMarkup() {
+    return { __html: blogs[match.params.blogId].fullText };
+  }
+
   return (
     <div className={styles.root}>
       <div className='container'>
@@ -31,9 +36,16 @@ const BlogPage = ({ blogs, match }) => {
           <p className={styles.postDate}>{blogs[match.params.blogId].date}</p>
         </div>
         <div className={styles.border}>
-          <div className={'row ' + styles.fullTextRow}>
+          {/* <div className={'row ' + styles.fullTextRow}>
             <div className={'col'}>
               <p className={styles.fullTextP}>{blogs[match.params.blogId].fullText}</p>
+            </div>
+          </div> */}
+          <div className={'row ' + styles.fullTextRow}>
+            <div className={'col'}>
+              <p className={styles.fullTextP}>
+                <div dangerouslySetInnerHTML={createMarkup()} />
+              </p>
             </div>
           </div>
           <div className={'row'}>
